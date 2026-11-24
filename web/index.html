@@ -43,6 +43,8 @@
           <div id="map-legend" class="map-legend"></div>
         </article>
         <article class="map-card">
+          <div class="map-view-control"><span>Map view</span><div role="group" aria-label="Map view"><button id="map-view-compare" type="button" aria-pressed="true">Compare</button><button id="map-view-focus" type="button" aria-pressed="false">Focus</button></div></div>
+          <p id="map-view-note" class="map-view-note" aria-live="polite">Compare county quantities using the color scale.</p>
           <div class="map-control"><label for="map-metric">Map measure</label><select id="map-metric"><option value="units">Units authorized</option><option value="change">Change from prior year (%)</option><option value="units_5_plus">Units in 5+ unit buildings</option></select><span id="map-year"></span></div>
           <div class="map-layout"><div id="county-map" class="county-map" aria-label="Interactive map of Utah counties"></div></div>
           <div id="map-insight" class="map-insight" aria-live="polite"><strong>Utah</strong><span>Hover, focus, or select a county.</span></div>

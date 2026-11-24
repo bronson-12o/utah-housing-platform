@@ -138,7 +138,69 @@ async function actualWorkflow(browser, engine, width) {
   assert.deepEqual(http, []);
   results.push({ group: "actual_workflow", engine, width, rows: served.annual.length, annual_totals: 5,
     counties: 29, keyboard: "Enter and Space", download: "exact served JSON", ratios, passed: true });
+  await mapViewWorkflow(page, engine, width, served);
+  assert.deepEqual(errors, []);
+  assert.deepEqual(http, []);
   await page.close();
+}
+
+async function mapViewWorkflow(page, engine, width, served) {
+  await page.locator("#county-filter").selectOption("49035");
+  await page.locator("#map-metric").selectOption("units");
+  const fills = () => page.locator(".county-path").evaluateAll(paths => Object.fromEntries(paths.map(path => [path.dataset.geoid, path.getAttribute("fill")])));
+  const metrics = () => page.locator(".metric strong, .statewide-summary strong").allTextContents();
+  const original = await fills(), originalMetrics = await metrics();
+  assert.equal(await page.locator("#map-view-compare").getAttribute("aria-pressed"), "true");
+  await page.locator("#map-view-focus").focus();
+  await page.keyboard.press("Enter");
+  assert.equal(await page.locator("#map-view-focus").getAttribute("aria-pressed"), "true");
+  assert.equal(new URL(page.url()).searchParams.get("view"), "focus");
+  assert.deepEqual(await metrics(), originalMetrics, "Changing presentation must not alter facts or county/year selection.");
+  const focused = await fills();
+  assert.equal(focused["49035"], "#ff4b35");
+  assert.equal(Object.values(focused).filter(fill => fill === "#ff4b35").length, 1);
+  assert.ok(Object.entries(focused).every(([id, fill]) => fill === (id === "49035" ? "#ff4b35" : "#cbd0d6")));
+  assert.match(await page.locator("#map-legend").innerText(), /selection, not quantity/);
+  assert.doesNotMatch(await page.locator("#map-legend").innerText(), /quintile/);
+  await page.reload();
+  await page.locator("#application").waitFor({ state: "visible" });
+  assert.equal(await page.locator("#map-view-focus").getAttribute("aria-pressed"), "true");
+  assert.deepEqual(await metrics(), originalMetrics);
+  await page.locator('.county-path[data-geoid="49049"]').focus();
+  await page.keyboard.press("Space");
+  assert.equal((await fills())["49049"], "#ff4b35");
+  assert.equal((await fills())["49035"], "#cbd0d6");
+  await page.locator("#year-filter").selectOption("2021");
+  await page.locator("#map-metric").selectOption("change");
+  assert.ok(Object.values(await fills()).every(fill => fill === "url(#missing-fill)"), "Absent prior-year values must remain hatched in Focus.");
+  assert.equal(await page.locator("#metric-change").innerText(), "Unavailable");
+  await page.locator("#map-metric").selectOption("units_5_plus");
+  assert.equal((await fills())["49049"], "#ff4b35");
+  await page.locator("#year-filter").selectOption("2025");
+  await page.locator("#map-metric").selectOption("units");
+  await page.locator("#county-filter").selectOption("49035");
+  await page.locator("#map-view-compare").click();
+  assert.equal(new URL(page.url()).searchParams.has("view"), false);
+  assert.deepEqual(await fills(), original, "Compare must restore every original quantitative bin exactly.");
+  assert.deepEqual(await metrics(), originalMetrics);
+  await page.locator("#map-view-focus").click();
+  await page.screenshot({ path: path.join(output, `${engine}-${width}-focus.png`), fullPage: true });
+  await page.locator("#reset-county").click();
+  assert.equal(await page.locator("#county-filter").inputValue(), "all");
+  assert.ok(Object.values(await fills()).every(fill => fill === "#cbd0d6"));
+  assert.match(await page.locator("#map-view-note").innerText(), /Choose a county/);
+  assert.equal(await page.locator("#metric-units").innerText(), format(sum(2025)));
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+  const downloadEvent = page.waitForEvent("download");
+  await page.locator("#download-data").click();
+  const download = await downloadEvent;
+  assert.deepEqual(JSON.parse(fs.readFileSync(await download.path())), served);
+  const invalid = new URL(base.href); invalid.searchParams.set("view", "invalid");
+  await page.goto(invalid.href);
+  await page.locator("#application").waitFor({ state: "visible" });
+  assert.equal(await page.locator("#map-view-compare").getAttribute("aria-pressed"), "true");
+  assert.equal(new URL(page.url()).searchParams.has("view"), false);
+  results.push({ group: "map_views", engine, width, selection: "only one orange county", compare: "all original quantity fills restored", url_restore: true, keyboard: true, missing_values: "hatched", download: "exact snapshot", passed: true });
 }
 
 async function contractCases(browser, engine) {
@@ -173,6 +235,13 @@ async function contractCases(browser, engine) {
       return { units: textBounds("statewide-units"), buildings: textBounds("statewide-buildings") };
     });
     assert.ok(headerBounds.units.right <= headerBounds.buildings.left, "Unknown statewide totals must not overlap their neighboring metric.");
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    const unknownCounty = value.annual.find(row => row.year === 2025 && row.units === null).geoid;
+    await page.locator("#county-filter").selectOption(unknownCounty);
+    await page.locator("#map-view-focus").click();
+    assert.equal(await page.locator(`.county-path[data-geoid="${unknownCounty}"]`).getAttribute("fill"), "url(#missing-fill)");
+    assert.equal(await page.locator("#metric-units").innerText(), "Not reported");
+    assert.equal(await page.locator("#quality-summary").innerText(), "Needs attention");
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
     results.push({ group: "controlled_contract", engine, width, case: "honest_unknown_needs_attention", passed: true });
     await page.close();
@@ -219,6 +288,9 @@ async function loadingCases(browser) {
   await missing.locator("#application").waitFor({ state: "visible" });
   assert.equal(await missing.locator("#county-table tr").count(), 29);
   assert.ok((await missing.locator("#county-map").innerText()).includes("could not be loaded"));
+  await missing.locator("#map-view-focus").click();
+  assert.ok((await missing.locator("#county-map").innerText()).includes("could not be loaded"));
+  assert.equal(await missing.locator("#county-table tr").count(), 29);
   assert.equal(await missing.locator('a[href="#source-geometry"]').isVisible(), false);
   results.push({ group: "loading", case: "missing geometry retains table", passed: true }); await missing.close();
 }

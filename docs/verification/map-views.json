@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scope": "Compare/Focus presentation toggle; unchanged public source data, county geometry and backend.",
+  "browser_checks": 95,
+  "original_browser_cases": 89,
+  "additional_view_workflows": 6,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "viewport_widths": [
+    1440,
+    390,
+    320
+  ],
+  "behaviors": [
+    "Compare is the default and restores all original quantity fills exactly.",
+    "Focus shows a gray map and a single orange selected county; its legend states that color means selection, not quantity.",
+    "No arbitrary county is selected when Focus opens without a county; a visible prompt explains the empty selection.",
+    "View survives reload/share URLs and invalid values fall back to Compare.",
+    "Keyboard county selection, year/measure changes, exact snapshot download and no horizontal overflow pass.",
+    "Unknown selected values remain hatched and Needs attention; missing geometry retains the table."
+  ],
+  "runtime_web_sha256": {
+    "app.js": "e11a024ff1460210610d2daedd3f426c1e052504f479a42eb0e36f44a1723b56",
+    "assets/tabler/LICENSE": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+    "assets/tabler/README.md": "2ba5c4d1fbda5408fef7db031763bcb1a86322cc20ecdb8ce33772de8aae9d47",
+    "assets/tabler/building-estate.svg": "471c0fead15f2f20d9908793c0c6184958063e17933a8ecd4bc73f306f7d7103",
+    "assets/tabler/download.svg": "c13f6f9cf87deee99e331622169efd59cd764b376994540347e50d6bb5e2e0ef",
+    "assets/tabler/external-link.svg": "95de8d4e3e77d34b39a94e157ff26b5a860015c6ce3056794f63dd3a55805bbc",
+    "data/housing.json": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+    "data/utah-counties.geojson": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc",
+    "index.html": "6975b302844e9cae1386cff5dfa76a35978745578dcf95cbdfe2e54f72ebde37",
+    "styles.css": "27d1cfa9654a9277caf2d82e270ed7ebde184cd82156c80024cc9e04101dd77b"
+  },
+  "limits": [
+    "Browser emulation is not a physical-device or exhaustive accessibility audit.",
+    "Existing validation cases are preserved; backend and Census facts are unchanged. Local runtime and deployed-site verification are recorded separately."
+  ]
+}

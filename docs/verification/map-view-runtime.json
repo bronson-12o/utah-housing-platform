@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-24T23:23:12.353472+00:00",
+  "image_id": "sha256:08e435ebb0b199d01d4dc8a3bbddafcd7139d791f2b6bd495d63110ec50c0d08",
+  "scope": "Map presentation update only; existing Compose application services and local kind dashboard.",
+  "web_file_sha256": {
+    "index.html": "6975b302844e9cae1386cff5dfa76a35978745578dcf95cbdfe2e54f72ebde37",
+    "styles.css": "27d1cfa9654a9277caf2d82e270ed7ebde184cd82156c80024cc9e04101dd77b",
+    "app.js": "e11a024ff1460210610d2daedd3f426c1e052504f479a42eb0e36f44a1723b56",
+    "data/utah-counties.geojson": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc",
+    "data/housing.json": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+    "assets/tabler/LICENSE": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+    "assets/tabler/download.svg": "c13f6f9cf87deee99e331622169efd59cd764b376994540347e50d6bb5e2e0ef",
+    "assets/tabler/README.md": "2ba5c4d1fbda5408fef7db031763bcb1a86322cc20ecdb8ce33772de8aae9d47",
+    "assets/tabler/external-link.svg": "95de8d4e3e77d34b39a94e157ff26b5a860015c6ce3056794f63dd3a55805bbc",
+    "assets/tabler/building-estate.svg": "471c0fead15f2f20d9908793c0c6184958063e17933a8ecd4bc73f306f7d7103"
+  },
+  "package_file_sha256": {
+    "warehouse.py": "7c3661453082aa6d5cb07c26d509ce3061e68131975dd8343cab00e46cd0e9fc",
+    "definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
+    "schema.sql": "ffaaecfdb27deed8ee3fa18cb6cd1c8c9d7f1cc446aa7e18afc9be3e8eda4acd",
+    "__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
+    "parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef",
+    "api.py": "014da4e14b6091f3774e4be9b5d395ee949ce879b2ec3bba1a01ce6d405995d4",
+    "cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
+    "pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "ready": {
+    "compose": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 145,
+      "reference_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "synthetic": false
+    },
+    "fixture": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 2,
+      "reference_years": [
+        2025
+      ],
+      "synthetic": true
+    },
+    "kubernetes": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 145,
+      "reference_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "synthetic": false
+    }
+  },
+  "preserved": [
+    "Database containers/pod not restarted",
+    "Real annual rows, sources and run history unchanged",
+    "No Kubernetes jobs created",
+    "CronJob remains suspended; Dagster schedule remains stopped"
+  ],
+  "limits": [
+    "Backend code and existing recovery tests are unchanged; no new outage/recovery drill was performed.",
+    "Public portfolio deployment is checked separately."
+  ]
+}

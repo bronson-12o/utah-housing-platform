@@ -6,9 +6,18 @@
 
 [Explore the dashboard](https://bronsonhatch.com/utah-housing/) · [Verification evidence](docs/verification/README.md) · [Source and metric guide](docs/SOURCES.md)
 
-![Actual county explorer: statewide totals, ranked counties, quantitative map and selected Salt Lake County metrics](docs/images/county-explorer-sharp-v2.jpg)
+![Actual county explorer: statewide totals, ranked counties, quantitative map and selected Salt Lake County metrics](docs/images/county-explorer-compare-v3.jpg)
 
-The map uses five quantity classes from dark blue to cyan. An orange outline marks the selected county without changing its quantity color. Statewide totals stay separate from the selected county's figures; all 29 counties, detailed comparisons, building mix and source receipts remain available.
+Use **Compare** to see relative county quantities from dark blue to cyan. Switch to **Focus** for a gray map with only the selected county highlighted in orange. Focus colors identify selection, not quantity; the legend and county details make that distinction explicit. County, year and measure stay selected when switching, and a copied link retains the view. Statewide totals remain separate from the selected county's figures.
+
+<details>
+<summary>Focus on one county</summary>
+
+![Actual Focus view: gray Utah map with Salt Lake County highlighted](docs/images/county-explorer-focus-v3.jpg)
+
+[Open Focus with Salt Lake County selected](https://bronsonhatch.com/utah-housing/?year=2025&county=49035&view=focus)
+
+</details>
 
 <details>
 <summary>Inspect the actual source and validation receipts</summary>
@@ -124,7 +133,9 @@ Built by Bronson Hatch with AI coding agents for implementation and independent 
 <details>
 <summary>Earlier interface captures, preserved for reference</summary>
 
-These are actual captures of the earlier interface. The current county explorer is shown above.
+These are actual captures of the earlier interfaces. The current Compare and Focus views are shown above.
+
+![Earlier blue county explorer](docs/images/county-explorer-sharp-v2.jpg)
 
 ![Actual dashboard: Utah county map, annual trend and building mix](docs/images/dashboard-overview.png)
 
