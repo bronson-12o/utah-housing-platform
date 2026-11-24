@@ -1,0 +1,181 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: utah-housing
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: housing-config
+  namespace: utah-housing
+data:
+  HOUSING_DATA_DIR: /data
+  HOUSING_YEARS: "2021:2025"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: warehouse-data
+  namespace: utah-housing
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pipeline-data
+  namespace: utah-housing
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: warehouse
+  namespace: utah-housing
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector:
+    matchLabels: {app: housing-warehouse}
+  template:
+    metadata:
+      labels: {app: housing-warehouse}
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:17-bookworm@sha256:1eff563f6c868b9b433566e9f3cf6e5c79fbd3b95bf70ec7277d376cdbfc50d7
+          env:
+            - {name: POSTGRES_USER, value: housing}
+            - {name: POSTGRES_DB, value: housing}
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: housing-secret, key: password}
+          ports:
+            - {containerPort: 5432}
+          readinessProbe:
+            exec:
+              command: [pg_isready, -U, housing, -d, housing]
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          resources:
+            requests: {cpu: 100m, memory: 128Mi}
+            limits: {cpu: "1", memory: 512Mi}
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/postgresql/data}
+      volumes:
+        - name: data
+          persistentVolumeClaim: {claimName: warehouse-data}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: warehouse
+  namespace: utah-housing
+spec:
+  selector: {app: housing-warehouse}
+  ports:
+    - {port: 5432, targetPort: 5432}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: annual-source-check
+  namespace: utah-housing
+spec:
+  schedule: "0 9 20 * *"
+  timeZone: America/Denver
+  # Opt-in: no repeated background fetches until the owner deliberately resumes.
+  suspend: true
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      activeDeadlineSeconds: 240
+      template:
+        metadata:
+          labels: {app: housing-pipeline}
+        spec:
+          restartPolicy: Never
+          securityContext: {fsGroup: 10001}
+          containers:
+            - name: pipeline
+              image: utah-housing-platform:local
+              imagePullPolicy: Never
+              command: [sh, -c, "python -m utah_housing init && python -m utah_housing backfill --years 2021:2025 --output /data/exports/housing.json"]
+              envFrom:
+                - configMapRef: {name: housing-config}
+              env:
+                - name: POSTGRES_PASSWORD
+                  valueFrom:
+                    secretKeyRef: {name: housing-secret, key: password}
+                - {name: DATABASE_URL, value: "postgresql://housing:$(POSTGRES_PASSWORD)@warehouse:5432/housing"}
+              resources:
+                requests: {cpu: 100m, memory: 128Mi}
+                limits: {cpu: "1", memory: 768Mi}
+              volumeMounts:
+                - {name: data, mountPath: /data}
+          volumes:
+            - name: data
+              persistentVolumeClaim: {claimName: pipeline-data}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+  namespace: utah-housing
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: housing-dashboard}
+  template:
+    metadata:
+      labels: {app: housing-dashboard}
+    spec:
+      securityContext: {fsGroup: 10001}
+      containers:
+        - name: dashboard
+          image: utah-housing-platform:local
+          imagePullPolicy: Never
+          ports:
+            - {containerPort: 8080}
+          envFrom:
+            - configMapRef: {name: housing-config}
+          env:
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: housing-secret, key: password}
+            - {name: DATABASE_URL, value: "postgresql://housing:$(POSTGRES_PASSWORD)@warehouse:5432/housing"}
+          readinessProbe:
+            httpGet: {path: /health/ready, port: 8080}
+            periodSeconds: 3
+          livenessProbe:
+            httpGet: {path: /health, port: 8080}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          resources:
+            requests: {cpu: 100m, memory: 128Mi}
+            limits: {cpu: "1", memory: 512Mi}
+          volumeMounts:
+            - {name: data, mountPath: /data}
+      volumes:
+        - name: data
+          persistentVolumeClaim: {claimName: pipeline-data}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard
+  namespace: utah-housing
+spec:
+  selector: {app: housing-dashboard}
+  ports:
+    - {port: 8080, targetPort: 8080}

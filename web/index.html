@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore Utah housing construction authorizations with original Census sources, reproducible data checks, and a county-level view."
+    />
+    <meta name="theme-color" content="#153e35" />
+    <title>Utah Housing Data Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the data</a>
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Utah Housing Data Platform home"
+        ><span class="brand-mark" aria-hidden="true">UH<span>↗</span></span
+        ><span>Utah Housing<span class="brand-sub">Data Platform</span></span></a
+      >
+      <nav aria-label="Page navigation">
+        <a href="#explore">Explore the data</a><a href="#sources">Sources & checks</a
+        ><a class="portfolio-link" href="https://bronsonhatch.com/#selected-work"
+          >Portfolio <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main">
+      <section class="introduction" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> Public data. A traceable pipeline.
+          </p>
+          <h1 id="page-title">Where is Utah<br />building next?</h1>
+          <p class="intro-copy">
+            Follow residential construction authorizations across Utah’s counties. See what changed,
+            compare the building mix, and trace every number back to its source.
+          </p>
+        </div>
+        <aside class="intro-note">
+          <span class="note-rule" aria-hidden="true"></span>
+          <p>From public records<br />to a clearer picture.</p>
+          <span id="coverage-label">Annual county data</span
+          ><span class="snapshot-tag">Read-only data snapshot</span>
+        </aside>
+      </section>
+
+      <div id="loading" class="notice" role="status">
+        <span class="loading-dot" aria-hidden="true"></span> Loading the verified data snapshot…
+      </div>
+      <section id="load-error" class="notice error-notice" role="alert" hidden>
+        <h2>The data couldn’t be loaded.</h2>
+        <p id="load-error-message">Please check your connection and try again.</p>
+        <button id="retry-load" class="button">Try again</button>
+      </section>
+
+      <div id="application" hidden>
+        <section class="explore-controls" id="explore" aria-label="Explore filters">
+          <div class="section-intro">
+            <span class="section-number">01 / EXPLORE</span>
+            <h2>Start with the county.</h2>
+          </div>
+          <div class="filters">
+            <div>
+              <label for="year-filter">Reporting year</label
+              ><select id="year-filter"></select>
+            </div>
+            <div>
+              <label for="county-filter">Geography</label
+              ><select id="county-filter">
+                <option value="all">All Utah counties</option>
+              </select>
+            </div>
+            <button id="download-data" class="download-button" type="button">
+              <span aria-hidden="true">↓</span> Download snapshot
+            </button>
+          </div>
+        </section>
+
+        <div class="context-line">
+          <p id="filter-context"></p>
+          <span id="filter-announcement" class="sr-only" aria-live="polite"></span>
+        </div>
+        <section class="metrics" aria-label="Selected annual summary">
+          <article class="metric">
+            <p>Units authorized</p>
+            <strong id="metric-units">—</strong
+            ><span id="metric-units-note">Residential units, not completed homes</span>
+          </article>
+          <article class="metric">
+            <p>Change from prior year</p>
+            <strong id="metric-change">—</strong
+            ><span id="metric-change-note">Same counties and annual basis</span>
+          </article>
+          <article class="metric">
+            <p>Buildings authorized</p>
+            <strong id="metric-buildings">—</strong
+            ><span>One building can contain multiple units</span>
+          </article>
+          <article class="metric">
+            <p>Units in 5+ unit buildings</p>
+            <strong id="metric-multifamily">—</strong
+            ><span id="metric-multifamily-note">Share of authorized units</span>
+          </article>
+        </section>
+
+        <section class="map-and-trend" aria-label="County map and annual trends">
+          <article class="map-card">
+            <div class="card-heading">
+              <div>
+                <p class="eyebrow light">THE COUNTY VIEW</p>
+                <h2>A state, many stories.</h2>
+              </div>
+              <span id="map-year" class="map-year"></span>
+            </div>
+            <div class="map-control">
+              <label for="map-metric">Map measure</label
+              ><select id="map-metric">
+                <option value="units">Units authorized</option>
+                <option value="change">Change from prior year (%)</option>
+                <option value="units_5_plus">Units in 5+ unit buildings</option>
+              </select>
+            </div>
+            <div class="map-layout">
+              <div
+                id="county-map"
+                class="county-map"
+                aria-label="Interactive map of Utah counties"
+              ></div>
+              <aside class="map-side">
+                <p class="map-prompt">Choose a county<br />to look closer.</p>
+                <div id="map-insight" class="map-insight" aria-live="polite">
+                  <strong>Utah</strong><span>Hover, focus, or select a county.</span>
+                </div>
+                <button id="reset-county" class="map-reset" type="button" hidden>
+                  Show all counties <span aria-hidden="true">↗</span>
+                </button>
+                <div id="map-legend" class="map-legend"></div>
+              </aside>
+            </div>
+            <p class="map-caption">
+              Official Census TIGERweb boundaries, generalized for display. Counts are not
+              population-adjusted.
+              <a href="#source-geometry">Map source <span aria-hidden="true">↗</span></a>
+            </p>
+          </article>
+
+          <div class="chart-stack">
+            <article class="chart-card">
+              <div class="chart-title">
+                <div>
+                  <p class="eyebrow">THE ANNUAL TREND</p>
+                  <h2 id="trend-heading">Utah, over time.</h2>
+                </div>
+                <span class="mini-label">Units authorized</span>
+              </div>
+              <div id="trend-chart" class="trend-chart"></div>
+              <p class="chart-note">
+                Annual records are compared with annual records. Monthly and year-to-date figures
+                are not added together.
+              </p>
+            </article>
+            <article class="chart-card mix-card">
+              <div class="chart-title">
+                <div>
+                  <p class="eyebrow">THE BUILDING MIX</p>
+                  <h2 id="mix-heading">What kind of housing?</h2>
+                </div>
+              </div>
+              <div id="mix-chart" class="mix-chart"></div>
+              <p class="chart-note">
+                These are authorized <strong>units</strong> grouped by the number of units in each
+                building—not a count of completed homes.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="county-section" aria-labelledby="county-table-title">
+          <div class="section-header">
+            <div>
+              <span class="section-number">02 / COMPARE</span>
+              <h2 id="county-table-title">Put the counties side by side.</h2>
+            </div>
+            <p>Ranked by units authorized.<br />Choose a name to focus the charts.</p>
+          </div>
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="County comparison table, scroll horizontally on smaller screens"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">County</th>
+                  <th scope="col">Units</th>
+                  <th scope="col">Prior-year change</th>
+                  <th scope="col">Buildings</th>
+                  <th scope="col">5+ unit share</th>
+                </tr>
+              </thead>
+              <tbody id="county-table"></tbody>
+            </table>
+          </div>
+          <p class="table-footnote" id="table-footnote"></p>
+        </section>
+
+        <section class="sources-section" id="sources" aria-labelledby="sources-title">
+          <div class="section-header">
+            <div>
+              <span class="section-number">03 / TRUST & TRACE</span>
+              <h2 id="sources-title">A number should have a way back.</h2>
+            </div>
+            <p>
+              This view is a saved export.<br />The receipts describe its captured pipeline run.
+            </p>
+          </div>
+          <div class="trust-grid">
+            <article class="trust-card">
+              <div class="trust-icon" aria-hidden="true">✓</div>
+              <h3>Checked before it’s shown.</h3>
+              <p>
+                Inspect the snapshot’s validation results and keep missing values separate from
+                reported zeroes.
+              </p>
+              <div id="quality-summary" class="quality-summary"></div>
+              <ul id="quality-checks" class="quality-checks"></ul>
+            </article>
+            <article class="trust-card">
+              <div class="trust-icon" aria-hidden="true">↻</div>
+              <h3>A captured pipeline receipt.</h3>
+              <p>
+                Refreshes and failures belong in a run ledger. These are recorded results, not a
+                live connection to a running scheduler.
+              </p>
+              <dl id="run-receipt" class="receipt"></dl>
+            </article>
+            <article class="trust-card source-card">
+              <div class="trust-icon" aria-hidden="true">↗</div>
+              <h3>Original public sources.</h3>
+              <p>
+                Each input records where it came from, when it was retrieved, and its SHA-256
+                fingerprint.
+              </p>
+              <div id="source-summary"></div>
+              <details>
+                <summary>Inspect source records</summary>
+                <div id="source-records" class="source-records"></div>
+              </details>
+            </article>
+          </div>
+          <details class="definitions">
+            <summary>What these numbers mean—and what they don’t</summary>
+            <div>
+              <p>
+                <strong>Units authorized</strong> are housing units authorized by building permits.
+                They are not completed homes, homes for sale, or occupied households. One building
+                can authorize several units.
+              </p>
+              <p>
+                <strong>Prior-year change</strong> compares the same county and annual basis. A
+                missing or zero prior-year denominator is shown as unavailable. Large percentage
+                changes in small counties can reflect small absolute differences.
+              </p>
+              <p>
+                <strong>Construction valuation</strong>, where present in the downloaded data, is
+                reported permit construction value in nominal U.S. dollars. It is not a property
+                sale price or inflation-adjusted market value.
+              </p>
+              <p>
+                <strong>Freshness</strong> distinguishes the source reporting period, retrieval
+                date, and export date. An export generated this year does not make an earlier
+                reporting year current. This platform is descriptive and does not predict future
+                construction.
+              </p>
+            </div>
+          </details>
+        </section>
+
+        <footer class="footer">
+          <div>
+            <a class="footer-brand" href="./">Utah Housing Data Platform</a>
+            <p>Public data. Reproducible checks. A view you can trace.</p>
+          </div>
+          <div>
+            <p id="freshness-note"></p>
+            <p id="snapshot-generated"></p>
+            <a id="repository-link" href="#" hidden
+              >Explore the project on GitHub <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </footer>
+      </div>
+    </main>
+    <noscript
+      ><p class="notice">
+        This dashboard needs JavaScript to read the data export and render the charts. The original
+        Census source files remain available at
+        <a href="https://www.census.gov/construction/bps/">census.gov/construction/bps</a>.
+      </p></noscript
+    >
+  </body>
+</html>

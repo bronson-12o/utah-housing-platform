@@ -1,0 +1,61 @@
+name: utah-housing-platform
+x-application: &application
+  image: utah-housing-platform:local
+  build: .
+  environment: &environment
+    DATABASE_URL: postgresql://housing:${POSTGRES_PASSWORD:?Run python3 scripts/local.py setup first}@db:5432/housing
+    HOUSING_DATA_DIR: /data
+    HOUSING_YEARS: "2021:2025"
+    DAGSTER_HOME: /data/dagster
+  volumes:
+    - pipeline_data:/data
+  depends_on:
+    db:
+      condition: service_healthy
+services:
+  db:
+    image: postgres:17-bookworm@sha256:1eff563f6c868b9b433566e9f3cf6e5c79fbd3b95bf70ec7277d376cdbfc50d7
+    ports:
+      - "127.0.0.1:15487:5432"
+    environment:
+      POSTGRES_USER: housing
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run python3 scripts/local.py setup first}
+      POSTGRES_DB: housing
+    volumes:
+      - warehouse_data:/var/lib/postgresql/data
+      - ./deploy/docker/init.sql:/docker-entrypoint-initdb.d/10-fixture.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U housing -d housing"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  app:
+    <<: *application
+    ports:
+      - "127.0.0.1:${HOUSING_PORT:-8087}:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health/ready',timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  pipeline:
+    <<: *application
+    profiles: [tools]
+    entrypoint: ["python", "-m", "utah_housing"]
+  dagster:
+    <<: *application
+    command: ["sh", "-c", "mkdir -p /data/dagster && exec dagster dev --host 0.0.0.0 --port 3000 --module-name utah_housing.definitions"]
+    ports:
+      - "127.0.0.1:${DAGSTER_PORT:-3007}:3000"
+  fixture-app:
+    <<: *application
+    profiles: [fixture]
+    command: ["python", "-m", "utah_housing", "serve", "--synthetic", "--host", "0.0.0.0", "--port", "8080"]
+    environment:
+      <<: *environment
+      DATABASE_URL: postgresql://housing:${POSTGRES_PASSWORD}@db:5432/housing_fixture
+    ports:
+      - "127.0.0.1:${HOUSING_FIXTURE_PORT:-8088}:8080"
+volumes:
+  warehouse_data:
+  pipeline_data:

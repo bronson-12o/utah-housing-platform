@@ -1,0 +1,44 @@
+{
+  "snapshot_sha256": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+  "rows": 145,
+  "mode": "independent-source-reconciliation",
+  "field_checks": 1305,
+  "years": [
+    {
+      "year": 2021,
+      "county_units": 39058,
+      "state_units": 39058,
+      "valuation_rounding_difference_usd": 272,
+      "state_sha256": "82fea768a93c91a702c91727d8dea64d2573f835dc9858b11d0e63a4092c524b"
+    },
+    {
+      "year": 2022,
+      "county_units": 31749,
+      "state_units": 31749,
+      "valuation_rounding_difference_usd": 509,
+      "state_sha256": "c973dde1f227de2c825ac0ce20b604979291080c7a1f70e9c953bf5a13980790"
+    },
+    {
+      "year": 2023,
+      "county_units": 25361,
+      "state_units": 25361,
+      "valuation_rounding_difference_usd": -342,
+      "state_sha256": "c3915919cc2b58ccb2be6c9e6000f064236aeaa9d032f9352d60c0f484b4a583"
+    },
+    {
+      "year": 2024,
+      "county_units": 23902,
+      "state_units": 23902,
+      "valuation_rounding_difference_usd": -123,
+      "state_sha256": "8dd34fb3bc362a0d6c1e6832161432dd833aff9be49ebebc128335635c59e7d0"
+    },
+    {
+      "year": 2025,
+      "county_units": 26775,
+      "state_units": 26775,
+      "valuation_rounding_difference_usd": -442,
+      "state_sha256": "eab29258ada8389b9f469c566eb6eb074cf128aa94c471e89f818a20a4d83afb"
+    }
+  ],
+  "status": "passed"
+}

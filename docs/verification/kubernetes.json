@@ -1,0 +1,33 @@
+{
+  "scope": "Dedicated local kind cluster only",
+  "checks": {
+    "api_matches_all145_published_rows": true,
+    "readiness": true,
+    "schedule_suspended": true,
+    "controlled_invalid_job_retried_then_failed_without_data_change": true,
+    "corrected_refresh_completed_without_duplicate_rows": true,
+    "postgres_pod_replacement_preserved145_rows_on_pvc": true,
+    "dashboard_restart_preserved_api": true,
+    "final_runtime_matches_local_source": true,
+    "all_package_files_match_final_source": true
+  },
+  "errors": [],
+  "invalid_job": {
+    "name": "controlled-invalid-1795552628",
+    "failed_attempts": 2
+  },
+  "application_image_id": "docker.io/library/import-2026-11-24@sha256:70d671664acb6d638b345abc519d4638e1ec3024140be6ec39551684da6e9661",
+  "runtime_warehouse_sha256": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb",
+  "status": "passed",
+  "package_files": {
+    "cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
+    "schema.sql": "ffaaecfdb27deed8ee3fa18cb6cd1c8c9d7f1cc446aa7e18afc9be3e8eda4acd",
+    "warehouse.py": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb",
+    "__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
+    "definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
+    "pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
+    "api.py": "47ba1b298857e8f3f9168dd81b8f7693050c32ea86a7dd9e007a9483349b9470",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef"
+  }
+}

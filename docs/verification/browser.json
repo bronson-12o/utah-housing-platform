@@ -1,0 +1,123 @@
+{
+  "scope": "Actual exported data rendered independently; source-to-export correctness is separately checked by coordinator.",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "actual_export_rows": 145,
+      "annual_totals_rendered": 5,
+      "map_counties": 29,
+      "county_year_map_filters": "passed",
+      "keyboard_map": "passed",
+      "missing_prior_year": "unavailable",
+      "download": "exact payload",
+      "source_link": "expands original receipt",
+      "horizontal_overflow": false,
+      "errors": [],
+      "http": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "actual_export_rows": 145,
+      "annual_totals_rendered": 5,
+      "map_counties": 29,
+      "county_year_map_filters": "passed",
+      "keyboard_map": "passed",
+      "missing_prior_year": "unavailable",
+      "download": "exact payload",
+      "source_link": "expands original receipt",
+      "horizontal_overflow": false,
+      "errors": [],
+      "http": []
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "actual_export_rows": 145,
+      "annual_totals_rendered": 5,
+      "map_counties": 29,
+      "county_year_map_filters": "passed",
+      "keyboard_map": "passed",
+      "missing_prior_year": "unavailable",
+      "download": "exact payload",
+      "source_link": "expands original receipt",
+      "horizontal_overflow": false,
+      "errors": [],
+      "http": []
+    },
+    {
+      "test": "HTTP failure then retry",
+      "status": "passed"
+    },
+    {
+      "test": "duplicate county/year withholds dashboard",
+      "status": "passed"
+    },
+    {
+      "test": "unknown units never zero-filled",
+      "status": "passed"
+    },
+    {
+      "test": "missing map keeps verified data table",
+      "status": "passed"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "actual_export_rows": 145,
+      "annual_totals_rendered": 5,
+      "map_counties": 29,
+      "county_year_map_filters": "passed",
+      "keyboard_map": "passed",
+      "missing_prior_year": "unavailable",
+      "download": "exact payload",
+      "source_link": "expands original receipt",
+      "horizontal_overflow": false,
+      "errors": [],
+      "http": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "actual_export_rows": 145,
+      "annual_totals_rendered": 5,
+      "map_counties": 29,
+      "county_year_map_filters": "passed",
+      "keyboard_map": "passed",
+      "missing_prior_year": "unavailable",
+      "download": "exact payload",
+      "source_link": "expands original receipt",
+      "horizontal_overflow": false,
+      "errors": [],
+      "http": []
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "actual_export_rows": 145,
+      "annual_totals_rendered": 5,
+      "map_counties": 29,
+      "county_year_map_filters": "passed",
+      "keyboard_map": "passed",
+      "missing_prior_year": "unavailable",
+      "download": "exact payload",
+      "source_link": "expands original receipt",
+      "horizontal_overflow": false,
+      "errors": [],
+      "http": []
+    }
+  ],
+  "recorded_at_utc": "2026-11-24T20:29:28.856859+00:00",
+  "status": "passed",
+  "normal_cases": 6,
+  "negative_cases": 4,
+  "viewport_height": 1100,
+  "scope_note": "Actual snapshot-to-UI checks reported by the dashboard reviewer; independent source-to-export checks are separate.",
+  "screenshots": [
+    "docs/images/dashboard-overview.png",
+    "docs/images/dashboard-county-view.png",
+    "docs/images/dashboard-mobile.png"
+  ],
+  "snapshot_sha256": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d"
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-24T20:39:51.146005+00:00",
+  "status": "passed",
+  "image": {
+    "tag": "utah-housing-platform:local",
+    "id": "sha256:7de5005949a0eb26eec9cbeddb5229b3c24f6b3cbd54c3c517fa26d3742c699a",
+    "reviewed_worktree_manifest_sha256": "0ab0112670afa71a7f856a5e56821748a584104de7733857d1c2522f71c5daf3",
+    "package_file_sha256": {
+      "cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
+      "schema.sql": "ffaaecfdb27deed8ee3fa18cb6cd1c8c9d7f1cc446aa7e18afc9be3e8eda4acd",
+      "warehouse.py": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb",
+      "__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
+      "definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
+      "pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
+      "api.py": "47ba1b298857e8f3f9168dd81b8f7693050c32ea86a7dd9e007a9483349b9470",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef"
+    },
+    "package_manifest_sha256": "f4c216a783cbbf9b07de30ce49202e5942867b6f204a6f69bfee7a468caeb4ff",
+    "source_match": "Every installed package file/schema matches the corresponding published src/utah_housing file; reviewed worktree aggregate additionally included development packaging metadata."
+  },
+  "scope": "Local Docker Compose, separate PostgreSQL real and synthetic-fixture databases; no paid services.",
+  "tests": {
+    "passed": 39,
+    "failed": 0,
+    "skipped": 0,
+    "postgresql_integration_tests": 9,
+    "note": "Synthetic isolated schemas; no real source rows modified by tests."
+  },
+  "real_backfill": {
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "current_rows": 145,
+    "sources": 5,
+    "repeat_statuses": [
+      "noop",
+      "noop",
+      "noop",
+      "noop",
+      "noop"
+    ],
+    "changed_rows": 0,
+    "source_sha256_by_year": {
+      "2021": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6",
+      "2022": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c",
+      "2023": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158",
+      "2024": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6",
+      "2025": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    }
+  },
+  "dagster": {
+    "job": "housing_refresh",
+    "run_id": "0fc113c3-8eae-4ead-a4e8-201ef00c135c",
+    "status": "RUN_SUCCESS",
+    "source_bound_export": "passed",
+    "monthly_schedule": "stopped_by_default"
+  },
+  "readiness": {
+    "real": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 145,
+      "reference_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "synthetic": false
+    },
+    "synthetic_fixture": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 2,
+      "reference_years": [
+        2025
+      ],
+      "synthetic": true
+    }
+  },
+  "recovery": {
+    "database_outage_http": {
+      "/health": 200,
+      "/health/ready": 503,
+      "/api/housing": 503,
+      "/data/housing.json": 503
+    },
+    "database_restart_readiness": "ready",
+    "app_restart_readiness": "ready",
+    "annual_rows_unchanged": true,
+    "source_versions_unchanged": true,
+    "annual_rows_sha256": "a52bfc54e8fc513ae3d7fb4ef8e81cdc976353b51a75105b35724b3b87d08c2d"
+  },
+  "commands": [
+    {
+      "check": "final-docker-tests",
+      "exit_code": 0,
+      "seconds": 2.08
+    },
+    {
+      "check": "final-real-backfill",
+      "exit_code": 0,
+      "seconds": 2.33
+    },
+    {
+      "check": "final-fixture-load",
+      "exit_code": 0,
+      "seconds": 0.85
+    },
+    {
+      "check": "final-dagster-job",
+      "exit_code": 0,
+      "seconds": 9.8
+    }
+  ],
+  "limits": [
+    "Annual building authorizations, not completions or current listings.",
+    "Controlled database outage and ordinary restart were verified; hard-killed run reconciliation is not implemented.",
+    "Frozen public demo is a verified captured snapshot, not a hosted live warehouse."
+  ]
+}

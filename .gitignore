@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.env
+.env.*
+!.env.example
+data/*
+!data/.gitkeep
+artifacts/
+node_modules/
+.DS_Store
+web/data/.*.lock

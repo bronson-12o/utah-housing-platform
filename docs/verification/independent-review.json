@@ -1,0 +1,171 @@
+{
+  "scope": "Independent bounded runtime adversarial checks, separate from raw Census source reconciliation.",
+  "status": "passed",
+  "recorded_at_utc": "2026-11-24T20:37:30.905299+00:00",
+  "synthetic_data_only": true,
+  "database_isolation": "Unique temporary schema in a disposable housing_fixture database, dropped after each run. No real application database writes.",
+  "original_findings_corrected": [
+    "Cross-process exports could overwrite a newer snapshot with an older generation",
+    "A new fingerprint with an older retrieval timestamp could activate stale source content",
+    "Malformed frozen root/nested containers could return internal errors",
+    "Derived county/state totals could exceed exact browser integers",
+    "The 5+ unit category could admit positive units with zero buildings"
+  ],
+  "runtime_checks": [
+    {
+      "case": "unseen_older_source_rejected",
+      "passed": true
+    },
+    {
+      "case": "cross_process_export_order",
+      "second_waited": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "final_units": 24,
+      "passed": true
+    },
+    {
+      "case": "malformed_snapshot_array",
+      "housing_http": 503,
+      "ready_http": 503,
+      "passed": true
+    },
+    {
+      "case": "malformed_snapshot_null",
+      "housing_http": 503,
+      "ready_http": 503,
+      "passed": true
+    },
+    {
+      "case": "malformed_snapshot_number",
+      "housing_http": 503,
+      "ready_http": 503,
+      "passed": true
+    },
+    {
+      "case": "malformed_snapshot_metadata_array",
+      "housing_http": 503,
+      "ready_http": 503,
+      "passed": true
+    },
+    {
+      "case": "malformed_snapshot_quality_array",
+      "housing_http": 503,
+      "ready_http": 503,
+      "passed": true
+    },
+    {
+      "case": "malformed_snapshot_sources_array_element",
+      "housing_http": 503,
+      "ready_http": 503,
+      "passed": true
+    },
+    {
+      "case": "derived_county_browser_bound",
+      "passed": true
+    },
+    {
+      "case": "state_aggregate_browser_bound",
+      "passed": true
+    },
+    {
+      "case": "zero_buildings_positive_5plus_units",
+      "passed": true
+    }
+  ],
+  "runtime_checks_passed": 11,
+  "runtime_checks_total": 11,
+  "api_boundary_checks": [
+    {
+      "case": "static-private-file-boundary",
+      "path": "/.env",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "case": "static-private-file-boundary",
+      "path": "/src/utah_housing/warehouse.py",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "case": "static-private-file-boundary",
+      "path": "/data/raw/",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "case": "static-private-file-boundary",
+      "path": "/../.env",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "case": "static-private-file-boundary",
+      "path": "/%2e%2e/.env",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "case": "no-api-writes",
+      "path": "/api/housing",
+      "status": 405,
+      "passed": true
+    },
+    {
+      "case": "no-api-writes",
+      "path": "/api/runs",
+      "status": 405,
+      "passed": true
+    },
+    {
+      "case": "no-api-writes",
+      "path": "/api/sources",
+      "status": 405,
+      "passed": true
+    },
+    {
+      "case": "private-exception-details-hidden",
+      "path": "/api/housing",
+      "status": 503,
+      "passed": true
+    },
+    {
+      "case": "private-exception-details-hidden",
+      "path": "/api/runs",
+      "status": 503,
+      "passed": true
+    },
+    {
+      "case": "private-exception-details-hidden",
+      "path": "/api/sources",
+      "status": 503,
+      "passed": true
+    },
+    {
+      "case": "private-exception-details-hidden",
+      "path": "/health/ready",
+      "status": 503,
+      "passed": true
+    }
+  ],
+  "api_boundary_checks_passed": 12,
+  "api_boundary_checks_total": 12,
+  "runtime_file_sha256": {
+    "src/utah_housing/__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
+    "src/utah_housing/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/utah_housing/api.py": "47ba1b298857e8f3f9168dd81b8f7693050c32ea86a7dd9e007a9483349b9470",
+    "src/utah_housing/cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
+    "src/utah_housing/definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
+    "src/utah_housing/parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef",
+    "src/utah_housing/pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
+    "src/utah_housing/warehouse.py": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb"
+  },
+  "limitations": [
+    "These specific engineering cases do not certify every future input or production load.",
+    "Retrieval order is observation order, not an official Census revision sequence.",
+    "Source-to-export accuracy is checked separately by verify_snapshot.py and source-reconciliation.json."
+  ]
+}

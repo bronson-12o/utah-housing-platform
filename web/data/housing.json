@@ -1,0 +1,6872 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-24T20:23:26.719566+00:00",
+    "title": "Utah Housing Data Platform",
+    "mode": "warehouse_export",
+    "synthetic": false,
+    "source_urls": [
+      "https://www2.census.gov/econ/bps/County/co2021a.txt",
+      "https://www2.census.gov/econ/bps/County/co2022a.txt",
+      "https://www2.census.gov/econ/bps/County/co2023a.txt",
+      "https://www2.census.gov/econ/bps/County/co2024a.txt",
+      "https://www2.census.gov/econ/bps/County/co2025a.txt"
+    ],
+    "periods": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "semantics": "New privately-owned residential units authorized by building permits; not completed homes, listings, sales or population.",
+    "validation": "Structural, source-binding and arithmetic engineering checks; not an independent Census audit.",
+    "freshness_note": "Annual reference periods shown; the retrieved source may be revised later. No real-time housing claim."
+  },
+  "annual": [
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49001",
+      "units": 62,
+      "units_1": 56,
+      "units_2": 2,
+      "buildings": 58,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 56,
+      "buildings_2": 1,
+      "county_fips": "001",
+      "county_name": "Beaver County",
+      "valuation_1": 18177394,
+      "valuation_2": 273259,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 56,
+          "buildings": 56,
+          "valuation_usd": 18177394
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 273259
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 451143
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 451143,
+      "valuation_usd": 18901796,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49003",
+      "units": 881,
+      "units_1": 468,
+      "units_2": 2,
+      "buildings": 505,
+      "units_3_4": 43,
+      "state_fips": "49",
+      "buildings_1": 468,
+      "buildings_2": 1,
+      "county_fips": "003",
+      "county_name": "Box Elder County",
+      "valuation_1": 116108126,
+      "valuation_2": 322000,
+      "units_5_plus": 368,
+      "buildings_3_4": 11,
+      "reported_only": {
+        "1": {
+          "units": 370,
+          "buildings": 370,
+          "valuation_usd": 92245732
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 322000
+        },
+        "3_4": {
+          "units": 43,
+          "buildings": 11,
+          "valuation_usd": 4730000
+        },
+        "5_plus": {
+          "units": 368,
+          "buildings": 25,
+          "valuation_usd": 29750000
+        }
+      },
+      "valuation_3_4": 4730000,
+      "valuation_usd": 150910126,
+      "buildings_5_plus": 25,
+      "valuation_5_plus": 29750000,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49005",
+      "units": 1137,
+      "units_1": 902,
+      "units_2": 0,
+      "buildings": 935,
+      "units_3_4": 35,
+      "state_fips": "49",
+      "buildings_1": 902,
+      "buildings_2": 0,
+      "county_fips": "005",
+      "county_name": "Cache County",
+      "valuation_1": 286464637,
+      "valuation_2": 0,
+      "units_5_plus": 200,
+      "buildings_3_4": 9,
+      "reported_only": {
+        "1": {
+          "units": 902,
+          "buildings": 902,
+          "valuation_usd": 286464637
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 35,
+          "buildings": 9,
+          "valuation_usd": 8365514
+        },
+        "5_plus": {
+          "units": 200,
+          "buildings": 24,
+          "valuation_usd": 27730316
+        }
+      },
+      "valuation_3_4": 8365514,
+      "valuation_usd": 322560467,
+      "buildings_5_plus": 24,
+      "valuation_5_plus": 27730316,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49007",
+      "units": 42,
+      "units_1": 42,
+      "units_2": 0,
+      "buildings": 42,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 42,
+      "buildings_2": 0,
+      "county_fips": "007",
+      "county_name": "Carbon County",
+      "valuation_1": 12847746,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 42,
+          "buildings": 42,
+          "valuation_usd": 12847746
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 12847746,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49009",
+      "units": 17,
+      "units_1": 17,
+      "units_2": 0,
+      "buildings": 17,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 17,
+      "buildings_2": 0,
+      "county_fips": "009",
+      "county_name": "Daggett County",
+      "valuation_1": 5072265,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 11,
+          "buildings": 11,
+          "valuation_usd": 3307886
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 5072265,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49011",
+      "units": 3812,
+      "units_1": 2004,
+      "units_2": 2,
+      "buildings": 2051,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 2004,
+      "buildings_2": 1,
+      "county_fips": "011",
+      "county_name": "Davis County",
+      "valuation_1": 556622561,
+      "valuation_2": 494625,
+      "units_5_plus": 1802,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 2004,
+          "buildings": 2004,
+          "valuation_usd": 556622561
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 494625
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 380000
+        },
+        "5_plus": {
+          "units": 1802,
+          "buildings": 45,
+          "valuation_usd": 261002511
+        }
+      },
+      "valuation_3_4": 380000,
+      "valuation_usd": 818499697,
+      "buildings_5_plus": 45,
+      "valuation_5_plus": 261002511,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49013",
+      "units": 136,
+      "units_1": 130,
+      "units_2": 2,
+      "buildings": 132,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 130,
+      "buildings_2": 1,
+      "county_fips": "013",
+      "county_name": "Duchesne County",
+      "valuation_1": 33379488,
+      "valuation_2": 415110,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 70,
+          "buildings": 70,
+          "valuation_usd": 20403095
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 415110
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 285524,
+      "valuation_usd": 34080122,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49015",
+      "units": 14,
+      "units_1": 14,
+      "units_2": 0,
+      "buildings": 14,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 14,
+      "buildings_2": 0,
+      "county_fips": "015",
+      "county_name": "Emery County",
+      "valuation_1": 2746330,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 14,
+          "buildings": 14,
+          "valuation_usd": 2746330
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 2746330,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49017",
+      "units": 76,
+      "units_1": 76,
+      "units_2": 0,
+      "buildings": 76,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 76,
+      "buildings_2": 0,
+      "county_fips": "017",
+      "county_name": "Garfield County",
+      "valuation_1": 17370698,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 76,
+          "buildings": 76,
+          "valuation_usd": 17370698
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 17370698,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49019",
+      "units": 93,
+      "units_1": 81,
+      "units_2": 6,
+      "buildings": 85,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 81,
+      "buildings_2": 3,
+      "county_fips": "019",
+      "county_name": "Grand County",
+      "valuation_1": 21846924,
+      "valuation_2": 1532052,
+      "units_5_plus": 6,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 81,
+          "buildings": 81,
+          "valuation_usd": 21846924
+        },
+        "2": {
+          "units": 6,
+          "buildings": 3,
+          "valuation_usd": 1532052
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 6,
+          "buildings": 1,
+          "valuation_usd": 1385234
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 24764210,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 1385234,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49021",
+      "units": 891,
+      "units_1": 552,
+      "units_2": 110,
+      "buildings": 664,
+      "units_3_4": 114,
+      "state_fips": "49",
+      "buildings_1": 552,
+      "buildings_2": 55,
+      "county_fips": "021",
+      "county_name": "Iron County",
+      "valuation_1": 150680400,
+      "valuation_2": 9291606,
+      "units_5_plus": 115,
+      "buildings_3_4": 38,
+      "reported_only": {
+        "1": {
+          "units": 552,
+          "buildings": 552,
+          "valuation_usd": 150680400
+        },
+        "2": {
+          "units": 110,
+          "buildings": 55,
+          "valuation_usd": 9291606
+        },
+        "3_4": {
+          "units": 114,
+          "buildings": 38,
+          "valuation_usd": 20884943
+        },
+        "5_plus": {
+          "units": 115,
+          "buildings": 19,
+          "valuation_usd": 20896953
+        }
+      },
+      "valuation_3_4": 20884943,
+      "valuation_usd": 201753902,
+      "buildings_5_plus": 19,
+      "valuation_5_plus": 20896953,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49023",
+      "units": 135,
+      "units_1": 112,
+      "units_2": 4,
+      "buildings": 119,
+      "units_3_4": 14,
+      "state_fips": "49",
+      "buildings_1": 112,
+      "buildings_2": 2,
+      "county_fips": "023",
+      "county_name": "Juab County",
+      "valuation_1": 33499210,
+      "valuation_2": 848000,
+      "units_5_plus": 5,
+      "buildings_3_4": 4,
+      "reported_only": {
+        "1": {
+          "units": 95,
+          "buildings": 95,
+          "valuation_usd": 27262273
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 848000
+        },
+        "3_4": {
+          "units": 14,
+          "buildings": 4,
+          "valuation_usd": 2590688
+        },
+        "5_plus": {
+          "units": 5,
+          "buildings": 1,
+          "valuation_usd": 917435
+        }
+      },
+      "valuation_3_4": 2590688,
+      "valuation_usd": 37855333,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 917435,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49025",
+      "units": 338,
+      "units_1": 327,
+      "units_2": 0,
+      "buildings": 330,
+      "units_3_4": 11,
+      "state_fips": "49",
+      "buildings_1": 327,
+      "buildings_2": 0,
+      "county_fips": "025",
+      "county_name": "Kane County",
+      "valuation_1": 63463688,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 3,
+      "reported_only": {
+        "1": {
+          "units": 112,
+          "buildings": 112,
+          "valuation_usd": 14125512
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 850000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1690000,
+      "valuation_usd": 65153688,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49027",
+      "units": 53,
+      "units_1": 49,
+      "units_2": 0,
+      "buildings": 50,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 49,
+      "buildings_2": 0,
+      "county_fips": "027",
+      "county_name": "Millard County",
+      "valuation_1": 10512485,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 45,
+          "buildings": 45,
+          "valuation_usd": 9345832
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 351360
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 351360,
+      "valuation_usd": 10863845,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49029",
+      "units": 153,
+      "units_1": 98,
+      "units_2": 4,
+      "buildings": 113,
+      "units_3_4": 36,
+      "state_fips": "49",
+      "buildings_1": 98,
+      "buildings_2": 2,
+      "county_fips": "029",
+      "county_name": "Morgan County",
+      "valuation_1": 47435580,
+      "valuation_2": 763642,
+      "units_5_plus": 15,
+      "buildings_3_4": 10,
+      "reported_only": {
+        "1": {
+          "units": 98,
+          "buildings": 98,
+          "valuation_usd": 47435580
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 763642
+        },
+        "3_4": {
+          "units": 36,
+          "buildings": 10,
+          "valuation_usd": 7149178
+        },
+        "5_plus": {
+          "units": 15,
+          "buildings": 3,
+          "valuation_usd": 2769655
+        }
+      },
+      "valuation_3_4": 7149178,
+      "valuation_usd": 58118055,
+      "buildings_5_plus": 3,
+      "valuation_5_plus": 2769655,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49031",
+      "units": 33,
+      "units_1": 33,
+      "units_2": 0,
+      "buildings": 33,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 33,
+      "buildings_2": 0,
+      "county_fips": "031",
+      "county_name": "Piute County",
+      "valuation_1": 5258556,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 5258556,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49033",
+      "units": 68,
+      "units_1": 68,
+      "units_2": 0,
+      "buildings": 68,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 68,
+      "buildings_2": 0,
+      "county_fips": "033",
+      "county_name": "Rich County",
+      "valuation_1": 22067697,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 22067697,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49035",
+      "units": 10649,
+      "units_1": 4350,
+      "units_2": 188,
+      "buildings": 4642,
+      "units_3_4": 260,
+      "state_fips": "49",
+      "buildings_1": 4350,
+      "buildings_2": 94,
+      "county_fips": "035",
+      "county_name": "Salt Lake County",
+      "valuation_1": 1160717215,
+      "valuation_2": 24394915,
+      "units_5_plus": 5851,
+      "buildings_3_4": 74,
+      "reported_only": {
+        "1": {
+          "units": 4019,
+          "buildings": 4019,
+          "valuation_usd": 1069817946
+        },
+        "2": {
+          "units": 144,
+          "buildings": 72,
+          "valuation_usd": 20881027
+        },
+        "3_4": {
+          "units": 192,
+          "buildings": 53,
+          "valuation_usd": 32936226
+        },
+        "5_plus": {
+          "units": 2320,
+          "buildings": 73,
+          "valuation_usd": 416851950
+        }
+      },
+      "valuation_3_4": 45270202,
+      "valuation_usd": 2125291285,
+      "buildings_5_plus": 124,
+      "valuation_5_plus": 894908953,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49037",
+      "units": 161,
+      "units_1": 161,
+      "units_2": 0,
+      "buildings": 161,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 161,
+      "buildings_2": 0,
+      "county_fips": "037",
+      "county_name": "San Juan County",
+      "valuation_1": 48658403,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 161,
+          "buildings": 161,
+          "valuation_usd": 48658403
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 48658403,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49039",
+      "units": 227,
+      "units_1": 227,
+      "units_2": 0,
+      "buildings": 227,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 227,
+      "buildings_2": 0,
+      "county_fips": "039",
+      "county_name": "Sanpete County",
+      "valuation_1": 40905899,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 227,
+          "buildings": 227,
+          "valuation_usd": 40905899
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 40905899,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49041",
+      "units": 188,
+      "units_1": 66,
+      "units_2": 2,
+      "buildings": 68,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 66,
+      "buildings_2": 1,
+      "county_fips": "041",
+      "county_name": "Sevier County",
+      "valuation_1": 18290709,
+      "valuation_2": 290000,
+      "units_5_plus": 120,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 66,
+          "buildings": 66,
+          "valuation_usd": 18290709
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 290000
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 120,
+          "buildings": 1,
+          "valuation_usd": 22000000
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 40580709,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 22000000,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49043",
+      "units": 439,
+      "units_1": 286,
+      "units_2": 0,
+      "buildings": 318,
+      "units_3_4": 30,
+      "state_fips": "49",
+      "buildings_1": 286,
+      "buildings_2": 0,
+      "county_fips": "043",
+      "county_name": "Summit County",
+      "valuation_1": 190879582,
+      "valuation_2": 0,
+      "units_5_plus": 123,
+      "buildings_3_4": 10,
+      "reported_only": {
+        "1": {
+          "units": 139,
+          "buildings": 139,
+          "valuation_usd": 115357322
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 11,
+          "buildings": 1,
+          "valuation_usd": 3820500
+        }
+      },
+      "valuation_3_4": 8415300,
+      "valuation_usd": 222251344,
+      "buildings_5_plus": 22,
+      "valuation_5_plus": 22956462,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49045",
+      "units": 993,
+      "units_1": 988,
+      "units_2": 2,
+      "buildings": 990,
+      "units_3_4": 3,
+      "state_fips": "49",
+      "buildings_1": 988,
+      "buildings_2": 1,
+      "county_fips": "045",
+      "county_name": "Tooele County",
+      "valuation_1": 259138696,
+      "valuation_2": 264303,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 988,
+          "buildings": 988,
+          "valuation_usd": 259138696
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 264303
+        },
+        "3_4": {
+          "units": 3,
+          "buildings": 1,
+          "valuation_usd": 394636
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 394636,
+      "valuation_usd": 259797635,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49047",
+      "units": 86,
+      "units_1": 86,
+      "units_2": 0,
+      "buildings": 86,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 86,
+      "buildings_2": 0,
+      "county_fips": "047",
+      "county_name": "Uintah County",
+      "valuation_1": 25614985,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 86,
+          "buildings": 86,
+          "valuation_usd": 25614985
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 25614985,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49049",
+      "units": 11040,
+      "units_1": 7450,
+      "units_2": 98,
+      "buildings": 7794,
+      "units_3_4": 232,
+      "state_fips": "49",
+      "buildings_1": 7450,
+      "buildings_2": 49,
+      "county_fips": "049",
+      "county_name": "Utah County",
+      "valuation_1": 2229217666,
+      "valuation_2": 18793655,
+      "units_5_plus": 3260,
+      "buildings_3_4": 62,
+      "reported_only": {
+        "1": {
+          "units": 7436,
+          "buildings": 7436,
+          "valuation_usd": 2223138334
+        },
+        "2": {
+          "units": 98,
+          "buildings": 49,
+          "valuation_usd": 18793655
+        },
+        "3_4": {
+          "units": 232,
+          "buildings": 62,
+          "valuation_usd": 37031021
+        },
+        "5_plus": {
+          "units": 3260,
+          "buildings": 233,
+          "valuation_usd": 448318047
+        }
+      },
+      "valuation_3_4": 37031021,
+      "valuation_usd": 2733360389,
+      "buildings_5_plus": 233,
+      "valuation_5_plus": 448318047,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49051",
+      "units": 1179,
+      "units_1": 894,
+      "units_2": 8,
+      "buildings": 912,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 894,
+      "buildings_2": 4,
+      "county_fips": "051",
+      "county_name": "Wasatch County",
+      "valuation_1": 580140193,
+      "valuation_2": 1973680,
+      "units_5_plus": 277,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 888,
+          "buildings": 888,
+          "valuation_usd": 577528693
+        },
+        "2": {
+          "units": 8,
+          "buildings": 4,
+          "valuation_usd": 1973680
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 277,
+          "buildings": 14,
+          "valuation_usd": 43145829
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 625259702,
+      "buildings_5_plus": 14,
+      "valuation_5_plus": 43145829,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49053",
+      "units": 3484,
+      "units_1": 3218,
+      "units_2": 44,
+      "buildings": 3273,
+      "units_3_4": 28,
+      "state_fips": "49",
+      "buildings_1": 3218,
+      "buildings_2": 22,
+      "county_fips": "053",
+      "county_name": "Washington County",
+      "valuation_1": 681326708,
+      "valuation_2": 7945465,
+      "units_5_plus": 194,
+      "buildings_3_4": 8,
+      "reported_only": {
+        "1": {
+          "units": 2764,
+          "buildings": 2764,
+          "valuation_usd": 609027066
+        },
+        "2": {
+          "units": 44,
+          "buildings": 22,
+          "valuation_usd": 7945465
+        },
+        "3_4": {
+          "units": 28,
+          "buildings": 8,
+          "valuation_usd": 4924104
+        },
+        "5_plus": {
+          "units": 194,
+          "buildings": 25,
+          "valuation_usd": 27086970
+        }
+      },
+      "valuation_3_4": 4924104,
+      "valuation_usd": 721283247,
+      "buildings_5_plus": 25,
+      "valuation_5_plus": 27086970,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49055",
+      "units": 35,
+      "units_1": 33,
+      "units_2": 2,
+      "buildings": 34,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 33,
+      "buildings_2": 1,
+      "county_fips": "055",
+      "county_name": "Wayne County",
+      "valuation_1": 7142861,
+      "valuation_2": 400000,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 33,
+          "buildings": 33,
+          "valuation_usd": 7142861
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 400000
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 7542861,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2021,
+      "basis": "annual",
+      "geoid": "49057",
+      "units": 2636,
+      "units_1": 1635,
+      "units_2": 4,
+      "buildings": 1690,
+      "units_3_4": 57,
+      "state_fips": "49",
+      "buildings_1": 1635,
+      "buildings_2": 2,
+      "county_fips": "057",
+      "county_name": "Weber County",
+      "valuation_1": 399437776,
+      "valuation_2": 1415544,
+      "units_5_plus": 940,
+      "buildings_3_4": 17,
+      "reported_only": {
+        "1": {
+          "units": 1497,
+          "buildings": 1497,
+          "valuation_usd": 362954054
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 1415544
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 884,
+          "buildings": 25,
+          "valuation_usd": 110947218
+        }
+      },
+      "valuation_3_4": 10764276,
+      "valuation_usd": 528655280,
+      "buildings_5_plus": 36,
+      "valuation_5_plus": 117037684,
+      "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49001",
+      "units": 63,
+      "units_1": 63,
+      "units_2": 0,
+      "buildings": 63,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 63,
+      "buildings_2": 0,
+      "county_fips": "001",
+      "county_name": "Beaver County",
+      "valuation_1": 15183118,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 63,
+          "buildings": 63,
+          "valuation_usd": 15183118
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 15183118,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49003",
+      "units": 478,
+      "units_1": 327,
+      "units_2": 2,
+      "buildings": 346,
+      "units_3_4": 24,
+      "state_fips": "49",
+      "buildings_1": 327,
+      "buildings_2": 1,
+      "county_fips": "003",
+      "county_name": "Box Elder County",
+      "valuation_1": 108537983,
+      "valuation_2": 220000,
+      "units_5_plus": 125,
+      "buildings_3_4": 6,
+      "reported_only": {
+        "1": {
+          "units": 260,
+          "buildings": 260,
+          "valuation_usd": 91268725
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 220000
+        },
+        "3_4": {
+          "units": 24,
+          "buildings": 6,
+          "valuation_usd": 4042000
+        },
+        "5_plus": {
+          "units": 125,
+          "buildings": 12,
+          "valuation_usd": 13292000
+        }
+      },
+      "valuation_3_4": 4042000,
+      "valuation_usd": 126091983,
+      "buildings_5_plus": 12,
+      "valuation_5_plus": 13292000,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49005",
+      "units": 1045,
+      "units_1": 724,
+      "units_2": 4,
+      "buildings": 753,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 724,
+      "buildings_2": 2,
+      "county_fips": "005",
+      "county_name": "Cache County",
+      "valuation_1": 247442573,
+      "valuation_2": 891374,
+      "units_5_plus": 313,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 716,
+          "buildings": 716,
+          "valuation_usd": 245171123
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 891374
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 1013156
+        },
+        "5_plus": {
+          "units": 313,
+          "buildings": 26,
+          "valuation_usd": 46960823
+        }
+      },
+      "valuation_3_4": 1013156,
+      "valuation_usd": 296307926,
+      "buildings_5_plus": 26,
+      "valuation_5_plus": 46960823,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49007",
+      "units": 64,
+      "units_1": 64,
+      "units_2": 0,
+      "buildings": 64,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 64,
+      "buildings_2": 0,
+      "county_fips": "007",
+      "county_name": "Carbon County",
+      "valuation_1": 21067804,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 64,
+          "buildings": 64,
+          "valuation_usd": 21067804
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 21067804,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49009",
+      "units": 20,
+      "units_1": 20,
+      "units_2": 0,
+      "buildings": 20,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 20,
+      "buildings_2": 0,
+      "county_fips": "009",
+      "county_name": "Daggett County",
+      "valuation_1": 5297285,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 20,
+          "buildings": 20,
+          "valuation_usd": 5297285
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 5297285,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49011",
+      "units": 2175,
+      "units_1": 1346,
+      "units_2": 0,
+      "buildings": 1393,
+      "units_3_4": 27,
+      "state_fips": "49",
+      "buildings_1": 1346,
+      "buildings_2": 0,
+      "county_fips": "011",
+      "county_name": "Davis County",
+      "valuation_1": 410935355,
+      "valuation_2": 0,
+      "units_5_plus": 802,
+      "buildings_3_4": 7,
+      "reported_only": {
+        "1": {
+          "units": 1346,
+          "buildings": 1346,
+          "valuation_usd": 410935355
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 27,
+          "buildings": 7,
+          "valuation_usd": 4807440
+        },
+        "5_plus": {
+          "units": 802,
+          "buildings": 40,
+          "valuation_usd": 125423357
+        }
+      },
+      "valuation_3_4": 4807440,
+      "valuation_usd": 541166152,
+      "buildings_5_plus": 40,
+      "valuation_5_plus": 125423357,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49013",
+      "units": 183,
+      "units_1": 176,
+      "units_2": 0,
+      "buildings": 178,
+      "units_3_4": 7,
+      "state_fips": "49",
+      "buildings_1": 176,
+      "buildings_2": 0,
+      "county_fips": "013",
+      "county_name": "Duchesne County",
+      "valuation_1": 44631971,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 117,
+          "buildings": 117,
+          "valuation_usd": 31871852
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 575609
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 789752,
+      "valuation_usd": 45421723,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49015",
+      "units": 40,
+      "units_1": 40,
+      "units_2": 0,
+      "buildings": 40,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 40,
+      "buildings_2": 0,
+      "county_fips": "015",
+      "county_name": "Emery County",
+      "valuation_1": 4824176,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 40,
+          "buildings": 40,
+          "valuation_usd": 4824176
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 4824176,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49017",
+      "units": 66,
+      "units_1": 66,
+      "units_2": 0,
+      "buildings": 66,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 66,
+      "buildings_2": 0,
+      "county_fips": "017",
+      "county_name": "Garfield County",
+      "valuation_1": 14530930,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 66,
+          "buildings": 66,
+          "valuation_usd": 14530930
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 14530930,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49019",
+      "units": 101,
+      "units_1": 64,
+      "units_2": 18,
+      "buildings": 78,
+      "units_3_4": 19,
+      "state_fips": "49",
+      "buildings_1": 64,
+      "buildings_2": 9,
+      "county_fips": "019",
+      "county_name": "Grand County",
+      "valuation_1": 17413772,
+      "valuation_2": 3137043,
+      "units_5_plus": 0,
+      "buildings_3_4": 5,
+      "reported_only": {
+        "1": {
+          "units": 64,
+          "buildings": 64,
+          "valuation_usd": 17413772
+        },
+        "2": {
+          "units": 18,
+          "buildings": 9,
+          "valuation_usd": 3137043
+        },
+        "3_4": {
+          "units": 19,
+          "buildings": 5,
+          "valuation_usd": 2020255
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 2020255,
+      "valuation_usd": 22571070,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49021",
+      "units": 1032,
+      "units_1": 989,
+      "units_2": 0,
+      "buildings": 996,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 989,
+      "buildings_2": 0,
+      "county_fips": "021",
+      "county_name": "Iron County",
+      "valuation_1": 197979492,
+      "valuation_2": 0,
+      "units_5_plus": 43,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 989,
+          "buildings": 989,
+          "valuation_usd": 197979492
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 43,
+          "buildings": 7,
+          "valuation_usd": 14336161
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 212315653,
+      "buildings_5_plus": 7,
+      "valuation_5_plus": 14336161,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49023",
+      "units": 122,
+      "units_1": 73,
+      "units_2": 14,
+      "buildings": 89,
+      "units_3_4": 18,
+      "state_fips": "49",
+      "buildings_1": 73,
+      "buildings_2": 7,
+      "county_fips": "023",
+      "county_name": "Juab County",
+      "valuation_1": 21298934,
+      "valuation_2": 2874992,
+      "units_5_plus": 17,
+      "buildings_3_4": 6,
+      "reported_only": {
+        "1": {
+          "units": 73,
+          "buildings": 73,
+          "valuation_usd": 21298934
+        },
+        "2": {
+          "units": 14,
+          "buildings": 7,
+          "valuation_usd": 2874992
+        },
+        "3_4": {
+          "units": 18,
+          "buildings": 6,
+          "valuation_usd": 3436667
+        },
+        "5_plus": {
+          "units": 17,
+          "buildings": 3,
+          "valuation_usd": 3133000
+        }
+      },
+      "valuation_3_4": 3436667,
+      "valuation_usd": 30743593,
+      "buildings_5_plus": 3,
+      "valuation_5_plus": 3133000,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49025",
+      "units": 207,
+      "units_1": 203,
+      "units_2": 0,
+      "buildings": 204,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 203,
+      "buildings_2": 0,
+      "county_fips": "025",
+      "county_name": "Kane County",
+      "valuation_1": 58099680,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 184,
+          "buildings": 184,
+          "valuation_usd": 54204680
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 425000,
+      "valuation_usd": 58524680,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49027",
+      "units": 64,
+      "units_1": 58,
+      "units_2": 2,
+      "buildings": 60,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 58,
+      "buildings_2": 1,
+      "county_fips": "027",
+      "county_name": "Millard County",
+      "valuation_1": 11514723,
+      "valuation_2": 163200,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 54,
+          "buildings": 54,
+          "valuation_usd": 10348070
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 163200
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 450000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 450000,
+      "valuation_usd": 12127923,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49029",
+      "units": 63,
+      "units_1": 47,
+      "units_2": 0,
+      "buildings": 52,
+      "units_3_4": 16,
+      "state_fips": "49",
+      "buildings_1": 47,
+      "buildings_2": 0,
+      "county_fips": "029",
+      "county_name": "Morgan County",
+      "valuation_1": 33122470,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 5,
+      "reported_only": {
+        "1": {
+          "units": 47,
+          "buildings": 47,
+          "valuation_usd": 33122470
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 16,
+          "buildings": 5,
+          "valuation_usd": 2985894
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 2985894,
+      "valuation_usd": 36108364,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49031",
+      "units": 36,
+      "units_1": 36,
+      "units_2": 0,
+      "buildings": 36,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 36,
+      "buildings_2": 0,
+      "county_fips": "031",
+      "county_name": "Piute County",
+      "valuation_1": 5944980,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 9,
+          "buildings": 9,
+          "valuation_usd": 1873380
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 5944980,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49033",
+      "units": 71,
+      "units_1": 71,
+      "units_2": 0,
+      "buildings": 71,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 71,
+      "buildings_2": 0,
+      "county_fips": "033",
+      "county_name": "Rich County",
+      "valuation_1": 23127537,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 23127537,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49035",
+      "units": 9375,
+      "units_1": 3339,
+      "units_2": 84,
+      "buildings": 3519,
+      "units_3_4": 63,
+      "state_fips": "49",
+      "buildings_1": 3339,
+      "buildings_2": 42,
+      "county_fips": "035",
+      "county_name": "Salt Lake County",
+      "valuation_1": 950033147,
+      "valuation_2": 12810544,
+      "units_5_plus": 5889,
+      "buildings_3_4": 18,
+      "reported_only": {
+        "1": {
+          "units": 3171,
+          "buildings": 3171,
+          "valuation_usd": 909558176
+        },
+        "2": {
+          "units": 42,
+          "buildings": 21,
+          "valuation_usd": 8959706
+        },
+        "3_4": {
+          "units": 42,
+          "buildings": 11,
+          "valuation_usd": 10973206
+        },
+        "5_plus": {
+          "units": 2215,
+          "buildings": 70,
+          "valuation_usd": 364582232
+        }
+      },
+      "valuation_3_4": 14816718,
+      "valuation_usd": 1837477116,
+      "buildings_5_plus": 120,
+      "valuation_5_plus": 859816707,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49037",
+      "units": 92,
+      "units_1": 92,
+      "units_2": 0,
+      "buildings": 92,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 92,
+      "buildings_2": 0,
+      "county_fips": "037",
+      "county_name": "San Juan County",
+      "valuation_1": 30578627,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 90,
+          "buildings": 90,
+          "valuation_usd": 30313395
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 30578627,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49039",
+      "units": 202,
+      "units_1": 186,
+      "units_2": 0,
+      "buildings": 190,
+      "units_3_4": 16,
+      "state_fips": "49",
+      "buildings_1": 186,
+      "buildings_2": 0,
+      "county_fips": "039",
+      "county_name": "Sanpete County",
+      "valuation_1": 34655877,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 4,
+      "reported_only": {
+        "1": {
+          "units": 186,
+          "buildings": 186,
+          "valuation_usd": 34655877
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 16,
+          "buildings": 4,
+          "valuation_usd": 1650520
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1650520,
+      "valuation_usd": 36306397,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49041",
+      "units": 163,
+      "units_1": 105,
+      "units_2": 22,
+      "buildings": 119,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 105,
+      "buildings_2": 11,
+      "county_fips": "041",
+      "county_name": "Sevier County",
+      "valuation_1": 24783500,
+      "valuation_2": 3315000,
+      "units_5_plus": 36,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 97,
+          "buildings": 97,
+          "valuation_usd": 22851000
+        },
+        "2": {
+          "units": 16,
+          "buildings": 8,
+          "valuation_usd": 2526000
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 36,
+          "buildings": 3,
+          "valuation_usd": 6000000
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 34098500,
+      "buildings_5_plus": 3,
+      "valuation_5_plus": 6000000,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49043",
+      "units": 560,
+      "units_1": 470,
+      "units_2": 0,
+      "buildings": 472,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 470,
+      "buildings_2": 0,
+      "county_fips": "043",
+      "county_name": "Summit County",
+      "valuation_1": 294773953,
+      "valuation_2": 0,
+      "units_5_plus": 90,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 470,
+          "buildings": 470,
+          "valuation_usd": 294773953
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 90,
+          "buildings": 2,
+          "valuation_usd": 48799866
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 343573819,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 48799866,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49045",
+      "units": 727,
+      "units_1": 653,
+      "units_2": 0,
+      "buildings": 668,
+      "units_3_4": 31,
+      "state_fips": "49",
+      "buildings_1": 653,
+      "buildings_2": 0,
+      "county_fips": "045",
+      "county_name": "Tooele County",
+      "valuation_1": 184826950,
+      "valuation_2": 0,
+      "units_5_plus": 43,
+      "buildings_3_4": 8,
+      "reported_only": {
+        "1": {
+          "units": 653,
+          "buildings": 653,
+          "valuation_usd": 184826950
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 31,
+          "buildings": 8,
+          "valuation_usd": 7124706
+        },
+        "5_plus": {
+          "units": 43,
+          "buildings": 7,
+          "valuation_usd": 10489312
+        }
+      },
+      "valuation_3_4": 7124706,
+      "valuation_usd": 202440968,
+      "buildings_5_plus": 7,
+      "valuation_5_plus": 10489312,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49047",
+      "units": 90,
+      "units_1": 86,
+      "units_2": 4,
+      "buildings": 88,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 86,
+      "buildings_2": 2,
+      "county_fips": "047",
+      "county_name": "Uintah County",
+      "valuation_1": 34054448,
+      "valuation_2": 717635,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 86,
+          "buildings": 86,
+          "valuation_usd": 34054448
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 717635
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 34772083,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49049",
+      "units": 8165,
+      "units_1": 5080,
+      "units_2": 138,
+      "buildings": 5328,
+      "units_3_4": 140,
+      "state_fips": "49",
+      "buildings_1": 5080,
+      "buildings_2": 69,
+      "county_fips": "049",
+      "county_name": "Utah County",
+      "valuation_1": 1694452771,
+      "valuation_2": 27213853,
+      "units_5_plus": 2807,
+      "buildings_3_4": 37,
+      "reported_only": {
+        "1": {
+          "units": 5069,
+          "buildings": 5069,
+          "valuation_usd": 1689833701
+        },
+        "2": {
+          "units": 138,
+          "buildings": 69,
+          "valuation_usd": 27213853
+        },
+        "3_4": {
+          "units": 140,
+          "buildings": 37,
+          "valuation_usd": 25005314
+        },
+        "5_plus": {
+          "units": 2807,
+          "buildings": 142,
+          "valuation_usd": 466722175
+        }
+      },
+      "valuation_3_4": 25005314,
+      "valuation_usd": 2213394113,
+      "buildings_5_plus": 142,
+      "valuation_5_plus": 466722175,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49051",
+      "units": 1009,
+      "units_1": 991,
+      "units_2": 0,
+      "buildings": 994,
+      "units_3_4": 6,
+      "state_fips": "49",
+      "buildings_1": 991,
+      "buildings_2": 0,
+      "county_fips": "051",
+      "county_name": "Wasatch County",
+      "valuation_1": 623850968,
+      "valuation_2": 0,
+      "units_5_plus": 12,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 985,
+          "buildings": 985,
+          "valuation_usd": 621239468
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 6,
+          "buildings": 2,
+          "valuation_usd": 2604249
+        },
+        "5_plus": {
+          "units": 12,
+          "buildings": 1,
+          "valuation_usd": 3980115
+        }
+      },
+      "valuation_3_4": 2604249,
+      "valuation_usd": 630435332,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 3980115,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49053",
+      "units": 3196,
+      "units_1": 2486,
+      "units_2": 0,
+      "buildings": 2548,
+      "units_3_4": 40,
+      "state_fips": "49",
+      "buildings_1": 2486,
+      "buildings_2": 0,
+      "county_fips": "053",
+      "county_name": "Washington County",
+      "valuation_1": 520893854,
+      "valuation_2": 0,
+      "units_5_plus": 670,
+      "buildings_3_4": 11,
+      "reported_only": {
+        "1": {
+          "units": 2470,
+          "buildings": 2470,
+          "valuation_usd": 516440724
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 40,
+          "buildings": 11,
+          "valuation_usd": 7430750
+        },
+        "5_plus": {
+          "units": 670,
+          "buildings": 51,
+          "valuation_usd": 80299950
+        }
+      },
+      "valuation_3_4": 7430750,
+      "valuation_usd": 608624554,
+      "buildings_5_plus": 51,
+      "valuation_5_plus": 80299950,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49055",
+      "units": 29,
+      "units_1": 25,
+      "units_2": 0,
+      "buildings": 26,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 25,
+      "buildings_2": 0,
+      "county_fips": "055",
+      "county_name": "Wayne County",
+      "valuation_1": 7568251,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 25,
+          "buildings": 25,
+          "valuation_usd": 7568251
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 590000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 590000,
+      "valuation_usd": 8158251,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2022,
+      "basis": "annual",
+      "geoid": "49057",
+      "units": 2311,
+      "units_1": 1252,
+      "units_2": 6,
+      "buildings": 1328,
+      "units_3_4": 89,
+      "state_fips": "49",
+      "buildings_1": 1252,
+      "buildings_2": 3,
+      "county_fips": "057",
+      "county_name": "Weber County",
+      "valuation_1": 378083692,
+      "valuation_2": 1150477,
+      "units_5_plus": 964,
+      "buildings_3_4": 24,
+      "reported_only": {
+        "1": {
+          "units": 938,
+          "buildings": 938,
+          "valuation_usd": 280540230
+        },
+        "2": {
+          "units": 6,
+          "buildings": 3,
+          "valuation_usd": 1150477
+        },
+        "3_4": {
+          "units": 39,
+          "buildings": 10,
+          "valuation_usd": 4562500
+        },
+        "5_plus": {
+          "units": 892,
+          "buildings": 35,
+          "valuation_usd": 140276870
+        }
+      },
+      "valuation_3_4": 13984918,
+      "valuation_usd": 541330852,
+      "buildings_5_plus": 49,
+      "valuation_5_plus": 148111765,
+      "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49001",
+      "units": 37,
+      "units_1": 37,
+      "units_2": 0,
+      "buildings": 37,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 37,
+      "buildings_2": 0,
+      "county_fips": "001",
+      "county_name": "Beaver County",
+      "valuation_1": 13156727,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 37,
+          "buildings": 37,
+          "valuation_usd": 13156727
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 13156727,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49003",
+      "units": 270,
+      "units_1": 238,
+      "units_2": 0,
+      "buildings": 243,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 238,
+      "buildings_2": 0,
+      "county_fips": "003",
+      "county_name": "Box Elder County",
+      "valuation_1": 70478792,
+      "valuation_2": 0,
+      "units_5_plus": 28,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 180,
+          "buildings": 180,
+          "valuation_usd": 55845040
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 686000
+        },
+        "5_plus": {
+          "units": 28,
+          "buildings": 4,
+          "valuation_usd": 4015690
+        }
+      },
+      "valuation_3_4": 686000,
+      "valuation_usd": 75180482,
+      "buildings_5_plus": 4,
+      "valuation_5_plus": 4015690,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49005",
+      "units": 957,
+      "units_1": 610,
+      "units_2": 4,
+      "buildings": 629,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 610,
+      "buildings_2": 2,
+      "county_fips": "005",
+      "county_name": "Cache County",
+      "valuation_1": 249265902,
+      "valuation_2": 975760,
+      "units_5_plus": 339,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 603,
+          "buildings": 603,
+          "valuation_usd": 247278385
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 975760
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 856006
+        },
+        "5_plus": {
+          "units": 339,
+          "buildings": 16,
+          "valuation_usd": 50221950
+        }
+      },
+      "valuation_3_4": 856006,
+      "valuation_usd": 301319618,
+      "buildings_5_plus": 16,
+      "valuation_5_plus": 50221950,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49007",
+      "units": 41,
+      "units_1": 41,
+      "units_2": 0,
+      "buildings": 41,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 41,
+      "buildings_2": 0,
+      "county_fips": "007",
+      "county_name": "Carbon County",
+      "valuation_1": 17619642,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 41,
+          "buildings": 41,
+          "valuation_usd": 17619642
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 17619642,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49009",
+      "units": 20,
+      "units_1": 20,
+      "units_2": 0,
+      "buildings": 20,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 20,
+      "buildings_2": 0,
+      "county_fips": "009",
+      "county_name": "Daggett County",
+      "valuation_1": 6428722,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 11,
+          "buildings": 11,
+          "valuation_usd": 4157006
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 6428722,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49011",
+      "units": 1547,
+      "units_1": 684,
+      "units_2": 0,
+      "buildings": 752,
+      "units_3_4": 35,
+      "state_fips": "49",
+      "buildings_1": 684,
+      "buildings_2": 0,
+      "county_fips": "011",
+      "county_name": "Davis County",
+      "valuation_1": 230901338,
+      "valuation_2": 0,
+      "units_5_plus": 828,
+      "buildings_3_4": 9,
+      "reported_only": {
+        "1": {
+          "units": 683,
+          "buildings": 683,
+          "valuation_usd": 230502297
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 35,
+          "buildings": 9,
+          "valuation_usd": 8367438
+        },
+        "5_plus": {
+          "units": 828,
+          "buildings": 59,
+          "valuation_usd": 135197135
+        }
+      },
+      "valuation_3_4": 8367438,
+      "valuation_usd": 374465911,
+      "buildings_5_plus": 59,
+      "valuation_5_plus": 135197135,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49013",
+      "units": 113,
+      "units_1": 107,
+      "units_2": 0,
+      "buildings": 109,
+      "units_3_4": 6,
+      "state_fips": "49",
+      "buildings_1": 107,
+      "buildings_2": 0,
+      "county_fips": "013",
+      "county_name": "Duchesne County",
+      "valuation_1": 33485287,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 58,
+          "buildings": 58,
+          "valuation_usd": 22887898
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 428286,
+      "valuation_usd": 33913573,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49015",
+      "units": 55,
+      "units_1": 43,
+      "units_2": 0,
+      "buildings": 45,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 43,
+      "buildings_2": 0,
+      "county_fips": "015",
+      "county_name": "Emery County",
+      "valuation_1": 5246385,
+      "valuation_2": 0,
+      "units_5_plus": 12,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 43,
+          "buildings": 43,
+          "valuation_usd": 5246385
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 12,
+          "buildings": 2,
+          "valuation_usd": 5908120
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 11154505,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 5908120,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49017",
+      "units": 53,
+      "units_1": 45,
+      "units_2": 0,
+      "buildings": 46,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 45,
+      "buildings_2": 0,
+      "county_fips": "017",
+      "county_name": "Garfield County",
+      "valuation_1": 16304082,
+      "valuation_2": 0,
+      "units_5_plus": 8,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 45,
+          "buildings": 45,
+          "valuation_usd": 16304082
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 8,
+          "buildings": 1,
+          "valuation_usd": 729390
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 17033472,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 729390,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49019",
+      "units": 82,
+      "units_1": 55,
+      "units_2": 10,
+      "buildings": 63,
+      "units_3_4": 8,
+      "state_fips": "49",
+      "buildings_1": 55,
+      "buildings_2": 5,
+      "county_fips": "019",
+      "county_name": "Grand County",
+      "valuation_1": 18337013,
+      "valuation_2": 1283234,
+      "units_5_plus": 9,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 55,
+          "buildings": 55,
+          "valuation_usd": 18337013
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 1283234
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 593894
+        },
+        "5_plus": {
+          "units": 9,
+          "buildings": 1,
+          "valuation_usd": 1649236
+        }
+      },
+      "valuation_3_4": 593894,
+      "valuation_usd": 21863377,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 1649236,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49021",
+      "units": 460,
+      "units_1": 460,
+      "units_2": 0,
+      "buildings": 460,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 460,
+      "buildings_2": 0,
+      "county_fips": "021",
+      "county_name": "Iron County",
+      "valuation_1": 129784356,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 460,
+          "buildings": 460,
+          "valuation_usd": 129784356
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 129784356,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49023",
+      "units": 145,
+      "units_1": 88,
+      "units_2": 0,
+      "buildings": 101,
+      "units_3_4": 26,
+      "state_fips": "49",
+      "buildings_1": 88,
+      "buildings_2": 0,
+      "county_fips": "023",
+      "county_name": "Juab County",
+      "valuation_1": 26764621,
+      "valuation_2": 0,
+      "units_5_plus": 31,
+      "buildings_3_4": 8,
+      "reported_only": {
+        "1": {
+          "units": 88,
+          "buildings": 88,
+          "valuation_usd": 26764621
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 26,
+          "buildings": 8,
+          "valuation_usd": 4105560
+        },
+        "5_plus": {
+          "units": 31,
+          "buildings": 5,
+          "valuation_usd": 5471471
+        }
+      },
+      "valuation_3_4": 4105560,
+      "valuation_usd": 36341652,
+      "buildings_5_plus": 5,
+      "valuation_5_plus": 5471471,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49025",
+      "units": 153,
+      "units_1": 153,
+      "units_2": 0,
+      "buildings": 153,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 153,
+      "buildings_2": 0,
+      "county_fips": "025",
+      "county_name": "Kane County",
+      "valuation_1": 35948218,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 129,
+          "buildings": 129,
+          "valuation_usd": 30645973
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 35948218,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49027",
+      "units": 94,
+      "units_1": 57,
+      "units_2": 12,
+      "buildings": 69,
+      "units_3_4": 19,
+      "state_fips": "49",
+      "buildings_1": 57,
+      "buildings_2": 6,
+      "county_fips": "027",
+      "county_name": "Millard County",
+      "valuation_1": 10935395,
+      "valuation_2": 2800000,
+      "units_5_plus": 6,
+      "buildings_3_4": 5,
+      "reported_only": {
+        "1": {
+          "units": 56,
+          "buildings": 56,
+          "valuation_usd": 10638561
+        },
+        "2": {
+          "units": 12,
+          "buildings": 6,
+          "valuation_usd": 2800000
+        },
+        "3_4": {
+          "units": 19,
+          "buildings": 5,
+          "valuation_usd": 2262652
+        },
+        "5_plus": {
+          "units": 6,
+          "buildings": 1,
+          "valuation_usd": 1334550
+        }
+      },
+      "valuation_3_4": 2262652,
+      "valuation_usd": 17332597,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 1334550,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49029",
+      "units": 143,
+      "units_1": 73,
+      "units_2": 0,
+      "buildings": 89,
+      "units_3_4": 37,
+      "state_fips": "49",
+      "buildings_1": 73,
+      "buildings_2": 0,
+      "county_fips": "029",
+      "county_name": "Morgan County",
+      "valuation_1": 22044801,
+      "valuation_2": 0,
+      "units_5_plus": 33,
+      "buildings_3_4": 10,
+      "reported_only": {
+        "1": {
+          "units": 73,
+          "buildings": 73,
+          "valuation_usd": 22044801
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 37,
+          "buildings": 10,
+          "valuation_usd": 7174631
+        },
+        "5_plus": {
+          "units": 33,
+          "buildings": 6,
+          "valuation_usd": 5559792
+        }
+      },
+      "valuation_3_4": 7174631,
+      "valuation_usd": 34779224,
+      "buildings_5_plus": 6,
+      "valuation_5_plus": 5559792,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49031",
+      "units": 25,
+      "units_1": 25,
+      "units_2": 0,
+      "buildings": 25,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 25,
+      "buildings_2": 0,
+      "county_fips": "031",
+      "county_name": "Piute County",
+      "valuation_1": 3956100,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 1,
+          "buildings": 1,
+          "valuation_usd": 336900
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 3956100,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49033",
+      "units": 53,
+      "units_1": 53,
+      "units_2": 0,
+      "buildings": 53,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 53,
+      "buildings_2": 0,
+      "county_fips": "033",
+      "county_name": "Rich County",
+      "valuation_1": 22822120,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 15,
+          "buildings": 15,
+          "valuation_usd": 9394000
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 22822120,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49035",
+      "units": 8315,
+      "units_1": 2572,
+      "units_2": 70,
+      "buildings": 2813,
+      "units_3_4": 236,
+      "state_fips": "49",
+      "buildings_1": 2572,
+      "buildings_2": 35,
+      "county_fips": "035",
+      "county_name": "Salt Lake County",
+      "valuation_1": 893907933,
+      "valuation_2": 10848916,
+      "units_5_plus": 5437,
+      "buildings_3_4": 65,
+      "reported_only": {
+        "1": {
+          "units": 2367,
+          "buildings": 2367,
+          "valuation_usd": 835469704
+        },
+        "2": {
+          "units": 22,
+          "buildings": 11,
+          "valuation_usd": 5572476
+        },
+        "3_4": {
+          "units": 200,
+          "buildings": 53,
+          "valuation_usd": 45378957
+        },
+        "5_plus": {
+          "units": 2769,
+          "buildings": 91,
+          "valuation_usd": 647168237
+        }
+      },
+      "valuation_3_4": 52347624,
+      "valuation_usd": 1969574680,
+      "buildings_5_plus": 141,
+      "valuation_5_plus": 1012470207,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49037",
+      "units": 65,
+      "units_1": 65,
+      "units_2": 0,
+      "buildings": 65,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 65,
+      "buildings_2": 0,
+      "county_fips": "037",
+      "county_name": "San Juan County",
+      "valuation_1": 22079241,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 25,
+          "buildings": 25,
+          "valuation_usd": 8876843
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 22079241,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49039",
+      "units": 238,
+      "units_1": 200,
+      "units_2": 26,
+      "buildings": 216,
+      "units_3_4": 12,
+      "state_fips": "49",
+      "buildings_1": 200,
+      "buildings_2": 13,
+      "county_fips": "039",
+      "county_name": "Sanpete County",
+      "valuation_1": 32333712,
+      "valuation_2": 2658009,
+      "units_5_plus": 0,
+      "buildings_3_4": 3,
+      "reported_only": {
+        "1": {
+          "units": 200,
+          "buildings": 200,
+          "valuation_usd": 32333712
+        },
+        "2": {
+          "units": 26,
+          "buildings": 13,
+          "valuation_usd": 2658009
+        },
+        "3_4": {
+          "units": 12,
+          "buildings": 3,
+          "valuation_usd": 1233585
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1233585,
+      "valuation_usd": 36225306,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49041",
+      "units": 140,
+      "units_1": 82,
+      "units_2": 10,
+      "buildings": 92,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 82,
+      "buildings_2": 5,
+      "county_fips": "041",
+      "county_name": "Sevier County",
+      "valuation_1": 24938000,
+      "valuation_2": 1677000,
+      "units_5_plus": 44,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 82,
+          "buildings": 82,
+          "valuation_usd": 24938000
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 1677000
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 561000
+        },
+        "5_plus": {
+          "units": 44,
+          "buildings": 4,
+          "valuation_usd": 5619469
+        }
+      },
+      "valuation_3_4": 561000,
+      "valuation_usd": 32795469,
+      "buildings_5_plus": 4,
+      "valuation_5_plus": 5619469,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49043",
+      "units": 333,
+      "units_1": 270,
+      "units_2": 2,
+      "buildings": 276,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 270,
+      "buildings_2": 1,
+      "county_fips": "043",
+      "county_name": "Summit County",
+      "valuation_1": 244990644,
+      "valuation_2": 413052,
+      "units_5_plus": 57,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 270,
+          "buildings": 270,
+          "valuation_usd": 244990644
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 413052
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 1288059
+        },
+        "5_plus": {
+          "units": 57,
+          "buildings": 4,
+          "valuation_usd": 61810700
+        }
+      },
+      "valuation_3_4": 1288059,
+      "valuation_usd": 308502455,
+      "buildings_5_plus": 4,
+      "valuation_5_plus": 61810700,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49045",
+      "units": 920,
+      "units_1": 591,
+      "units_2": 26,
+      "buildings": 654,
+      "units_3_4": 58,
+      "state_fips": "49",
+      "buildings_1": 591,
+      "buildings_2": 13,
+      "county_fips": "045",
+      "county_name": "Tooele County",
+      "valuation_1": 172912706,
+      "valuation_2": 5244038,
+      "units_5_plus": 245,
+      "buildings_3_4": 15,
+      "reported_only": {
+        "1": {
+          "units": 591,
+          "buildings": 591,
+          "valuation_usd": 172912706
+        },
+        "2": {
+          "units": 26,
+          "buildings": 13,
+          "valuation_usd": 5244038
+        },
+        "3_4": {
+          "units": 58,
+          "buildings": 15,
+          "valuation_usd": 10302915
+        },
+        "5_plus": {
+          "units": 245,
+          "buildings": 35,
+          "valuation_usd": 37591343
+        }
+      },
+      "valuation_3_4": 10302915,
+      "valuation_usd": 226051002,
+      "buildings_5_plus": 35,
+      "valuation_5_plus": 37591343,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49047",
+      "units": 86,
+      "units_1": 70,
+      "units_2": 8,
+      "buildings": 76,
+      "units_3_4": 8,
+      "state_fips": "49",
+      "buildings_1": 70,
+      "buildings_2": 4,
+      "county_fips": "047",
+      "county_name": "Uintah County",
+      "valuation_1": 27263252,
+      "valuation_2": 1603297,
+      "units_5_plus": 0,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 70,
+          "buildings": 70,
+          "valuation_usd": 27263252
+        },
+        "2": {
+          "units": 8,
+          "buildings": 4,
+          "valuation_usd": 1603297
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 1609677
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1609677,
+      "valuation_usd": 30476226,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49049",
+      "units": 6036,
+      "units_1": 4575,
+      "units_2": 38,
+      "buildings": 4695,
+      "units_3_4": 108,
+      "state_fips": "49",
+      "buildings_1": 4575,
+      "buildings_2": 19,
+      "county_fips": "049",
+      "county_name": "Utah County",
+      "valuation_1": 1465872140,
+      "valuation_2": 9516518,
+      "units_5_plus": 1315,
+      "buildings_3_4": 28,
+      "reported_only": {
+        "1": {
+          "units": 4529,
+          "buildings": 4529,
+          "valuation_usd": 1420266871
+        },
+        "2": {
+          "units": 36,
+          "buildings": 18,
+          "valuation_usd": 8847185
+        },
+        "3_4": {
+          "units": 108,
+          "buildings": 28,
+          "valuation_usd": 23002575
+        },
+        "5_plus": {
+          "units": 1315,
+          "buildings": 73,
+          "valuation_usd": 273166044
+        }
+      },
+      "valuation_3_4": 23002575,
+      "valuation_usd": 1771557277,
+      "buildings_5_plus": 73,
+      "valuation_5_plus": 273166044,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49051",
+      "units": 700,
+      "units_1": 669,
+      "units_2": 6,
+      "buildings": 679,
+      "units_3_4": 25,
+      "state_fips": "49",
+      "buildings_1": 669,
+      "buildings_2": 3,
+      "county_fips": "051",
+      "county_name": "Wasatch County",
+      "valuation_1": 516087391,
+      "valuation_2": 2316956,
+      "units_5_plus": 0,
+      "buildings_3_4": 7,
+      "reported_only": {
+        "1": {
+          "units": 669,
+          "buildings": 669,
+          "valuation_usd": 516087391
+        },
+        "2": {
+          "units": 6,
+          "buildings": 3,
+          "valuation_usd": 2316956
+        },
+        "3_4": {
+          "units": 25,
+          "buildings": 7,
+          "valuation_usd": 7233778
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 7233778,
+      "valuation_usd": 525638125,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49053",
+      "units": 2820,
+      "units_1": 2134,
+      "units_2": 10,
+      "buildings": 2182,
+      "units_3_4": 38,
+      "state_fips": "49",
+      "buildings_1": 2134,
+      "buildings_2": 5,
+      "county_fips": "053",
+      "county_name": "Washington County",
+      "valuation_1": 435832861,
+      "valuation_2": 1364859,
+      "units_5_plus": 638,
+      "buildings_3_4": 11,
+      "reported_only": {
+        "1": {
+          "units": 2105,
+          "buildings": 2105,
+          "valuation_usd": 428777438
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 1364859
+        },
+        "3_4": {
+          "units": 38,
+          "buildings": 11,
+          "valuation_usd": 8514401
+        },
+        "5_plus": {
+          "units": 638,
+          "buildings": 32,
+          "valuation_usd": 96532127
+        }
+      },
+      "valuation_3_4": 8514401,
+      "valuation_usd": 542244248,
+      "buildings_5_plus": 32,
+      "valuation_5_plus": 96532127,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49055",
+      "units": 20,
+      "units_1": 20,
+      "units_2": 0,
+      "buildings": 20,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 20,
+      "buildings_2": 0,
+      "county_fips": "055",
+      "county_name": "Wayne County",
+      "valuation_1": 6920969,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 20,
+          "buildings": 20,
+          "valuation_usd": 6920969
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 6920969,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2023,
+      "basis": "annual",
+      "geoid": "49057",
+      "units": 1440,
+      "units_1": 876,
+      "units_2": 2,
+      "buildings": 928,
+      "units_3_4": 80,
+      "state_fips": "49",
+      "buildings_1": 876,
+      "buildings_2": 1,
+      "county_fips": "057",
+      "county_name": "Weber County",
+      "valuation_1": 276041572,
+      "valuation_2": 300000,
+      "units_5_plus": 482,
+      "buildings_3_4": 23,
+      "reported_only": {
+        "1": {
+          "units": 466,
+          "buildings": 466,
+          "valuation_usd": 160964120
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 300000
+        },
+        "3_4": {
+          "units": 30,
+          "buildings": 8,
+          "valuation_usd": 4879099
+        },
+        "5_plus": {
+          "units": 15,
+          "buildings": 3,
+          "valuation_usd": 3343885
+        }
+      },
+      "valuation_3_4": 13890156,
+      "valuation_usd": 361975364,
+      "buildings_5_plus": 28,
+      "valuation_5_plus": 71743636,
+      "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49001",
+      "units": 39,
+      "units_1": 39,
+      "units_2": 0,
+      "buildings": 39,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 39,
+      "buildings_2": 0,
+      "county_fips": "001",
+      "county_name": "Beaver County",
+      "valuation_1": 14086117,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 39,
+          "buildings": 39,
+          "valuation_usd": 14086117
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 14086117,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49003",
+      "units": 479,
+      "units_1": 397,
+      "units_2": 0,
+      "buildings": 407,
+      "units_3_4": 8,
+      "state_fips": "49",
+      "buildings_1": 397,
+      "buildings_2": 0,
+      "county_fips": "003",
+      "county_name": "Box Elder County",
+      "valuation_1": 124708271,
+      "valuation_2": 0,
+      "units_5_plus": 74,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 347,
+          "buildings": 347,
+          "valuation_usd": 112081551
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 1859301
+        },
+        "5_plus": {
+          "units": 74,
+          "buildings": 8,
+          "valuation_usd": 14024560
+        }
+      },
+      "valuation_3_4": 1859301,
+      "valuation_usd": 140592132,
+      "buildings_5_plus": 8,
+      "valuation_5_plus": 14024560,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49005",
+      "units": 1021,
+      "units_1": 871,
+      "units_2": 4,
+      "buildings": 882,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 871,
+      "buildings_2": 2,
+      "county_fips": "005",
+      "county_name": "Cache County",
+      "valuation_1": 328743992,
+      "valuation_2": 812500,
+      "units_5_plus": 146,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 871,
+          "buildings": 871,
+          "valuation_usd": 328743992
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 812500
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 146,
+          "buildings": 9,
+          "valuation_usd": 14598000
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 344154492,
+      "buildings_5_plus": 9,
+      "valuation_5_plus": 14598000,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49007",
+      "units": 196,
+      "units_1": 28,
+      "units_2": 0,
+      "buildings": 35,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 28,
+      "buildings_2": 0,
+      "county_fips": "007",
+      "county_name": "Carbon County",
+      "valuation_1": 13269748,
+      "valuation_2": 0,
+      "units_5_plus": 168,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 28,
+          "buildings": 28,
+          "valuation_usd": 13269748
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 168,
+          "buildings": 7,
+          "valuation_usd": 26472156
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 39741904,
+      "buildings_5_plus": 7,
+      "valuation_5_plus": 26472156,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49009",
+      "units": 10,
+      "units_1": 10,
+      "units_2": 0,
+      "buildings": 10,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 10,
+      "buildings_2": 0,
+      "county_fips": "009",
+      "county_name": "Daggett County",
+      "valuation_1": 3566205,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 10,
+          "buildings": 10,
+          "valuation_usd": 3566205
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 3566205,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49011",
+      "units": 1468,
+      "units_1": 920,
+      "units_2": 2,
+      "buildings": 960,
+      "units_3_4": 38,
+      "state_fips": "49",
+      "buildings_1": 920,
+      "buildings_2": 1,
+      "county_fips": "011",
+      "county_name": "Davis County",
+      "valuation_1": 312353818,
+      "valuation_2": 586000,
+      "units_5_plus": 508,
+      "buildings_3_4": 10,
+      "reported_only": {
+        "1": {
+          "units": 920,
+          "buildings": 920,
+          "valuation_usd": 312353818
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 586000
+        },
+        "3_4": {
+          "units": 38,
+          "buildings": 10,
+          "valuation_usd": 9432788
+        },
+        "5_plus": {
+          "units": 508,
+          "buildings": 29,
+          "valuation_usd": 100906556
+        }
+      },
+      "valuation_3_4": 9432788,
+      "valuation_usd": 423279162,
+      "buildings_5_plus": 29,
+      "valuation_5_plus": 100906556,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49013",
+      "units": 123,
+      "units_1": 123,
+      "units_2": 0,
+      "buildings": 123,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 123,
+      "buildings_2": 0,
+      "county_fips": "013",
+      "county_name": "Duchesne County",
+      "valuation_1": 41080142,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 70,
+          "buildings": 70,
+          "valuation_usd": 29617661
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 41080142,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49015",
+      "units": 55,
+      "units_1": 55,
+      "units_2": 0,
+      "buildings": 55,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 55,
+      "buildings_2": 0,
+      "county_fips": "015",
+      "county_name": "Emery County",
+      "valuation_1": 6092325,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 55,
+          "buildings": 55,
+          "valuation_usd": 6092325
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 6092325,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49017",
+      "units": 57,
+      "units_1": 57,
+      "units_2": 0,
+      "buildings": 57,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 57,
+      "buildings_2": 0,
+      "county_fips": "017",
+      "county_name": "Garfield County",
+      "valuation_1": 17217025,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 57,
+          "buildings": 57,
+          "valuation_usd": 17217025
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 17217025,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49019",
+      "units": 238,
+      "units_1": 120,
+      "units_2": 18,
+      "buildings": 135,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 120,
+      "buildings_2": 9,
+      "county_fips": "019",
+      "county_name": "Grand County",
+      "valuation_1": 34810024,
+      "valuation_2": 2708132,
+      "units_5_plus": 100,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 120,
+          "buildings": 120,
+          "valuation_usd": 34810024
+        },
+        "2": {
+          "units": 18,
+          "buildings": 9,
+          "valuation_usd": 2708132
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 100,
+          "buildings": 6,
+          "valuation_usd": 4266330
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 41784486,
+      "buildings_5_plus": 6,
+      "valuation_5_plus": 4266330,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49021",
+      "units": 655,
+      "units_1": 655,
+      "units_2": 0,
+      "buildings": 655,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 655,
+      "buildings_2": 0,
+      "county_fips": "021",
+      "county_name": "Iron County",
+      "valuation_1": 202538802,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 655,
+          "buildings": 655,
+          "valuation_usd": 202538802
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 202538802,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49023",
+      "units": 107,
+      "units_1": 72,
+      "units_2": 6,
+      "buildings": 83,
+      "units_3_4": 22,
+      "state_fips": "49",
+      "buildings_1": 72,
+      "buildings_2": 3,
+      "county_fips": "023",
+      "county_name": "Juab County",
+      "valuation_1": 28396331,
+      "valuation_2": 1148512,
+      "units_5_plus": 7,
+      "buildings_3_4": 7,
+      "reported_only": {
+        "1": {
+          "units": 72,
+          "buildings": 72,
+          "valuation_usd": 28396331
+        },
+        "2": {
+          "units": 6,
+          "buildings": 3,
+          "valuation_usd": 1148512
+        },
+        "3_4": {
+          "units": 22,
+          "buildings": 7,
+          "valuation_usd": 4424877
+        },
+        "5_plus": {
+          "units": 7,
+          "buildings": 1,
+          "valuation_usd": 1467905
+        }
+      },
+      "valuation_3_4": 4424877,
+      "valuation_usd": 35437625,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 1467905,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49025",
+      "units": 202,
+      "units_1": 196,
+      "units_2": 2,
+      "buildings": 198,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 196,
+      "buildings_2": 1,
+      "county_fips": "025",
+      "county_name": "Kane County",
+      "valuation_1": 69581717,
+      "valuation_2": 549000,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 165,
+          "buildings": 165,
+          "valuation_usd": 62438003
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 549000
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 875000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 875000,
+      "valuation_usd": 71005717,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49027",
+      "units": 93,
+      "units_1": 76,
+      "units_2": 2,
+      "buildings": 81,
+      "units_3_4": 15,
+      "state_fips": "49",
+      "buildings_1": 76,
+      "buildings_2": 1,
+      "county_fips": "027",
+      "county_name": "Millard County",
+      "valuation_1": 16431077,
+      "valuation_2": 254000,
+      "units_5_plus": 0,
+      "buildings_3_4": 4,
+      "reported_only": {
+        "1": {
+          "units": 74,
+          "buildings": 74,
+          "valuation_usd": 15837409
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 254000
+        },
+        "3_4": {
+          "units": 15,
+          "buildings": 4,
+          "valuation_usd": 1752435
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1752435,
+      "valuation_usd": 18437512,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49029",
+      "units": 196,
+      "units_1": 132,
+      "units_2": 16,
+      "buildings": 149,
+      "units_3_4": 19,
+      "state_fips": "49",
+      "buildings_1": 132,
+      "buildings_2": 8,
+      "county_fips": "029",
+      "county_name": "Morgan County",
+      "valuation_1": 60565445,
+      "valuation_2": 3084473,
+      "units_5_plus": 29,
+      "buildings_3_4": 5,
+      "reported_only": {
+        "1": {
+          "units": 132,
+          "buildings": 132,
+          "valuation_usd": 60565445
+        },
+        "2": {
+          "units": 16,
+          "buildings": 8,
+          "valuation_usd": 3084473
+        },
+        "3_4": {
+          "units": 19,
+          "buildings": 5,
+          "valuation_usd": 3733035
+        },
+        "5_plus": {
+          "units": 29,
+          "buildings": 4,
+          "valuation_usd": 4399366
+        }
+      },
+      "valuation_3_4": 3733035,
+      "valuation_usd": 71782319,
+      "buildings_5_plus": 4,
+      "valuation_5_plus": 4399366,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49031",
+      "units": 25,
+      "units_1": 25,
+      "units_2": 0,
+      "buildings": 25,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 25,
+      "buildings_2": 0,
+      "county_fips": "031",
+      "county_name": "Piute County",
+      "valuation_1": 3847375,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 1,
+          "buildings": 1,
+          "valuation_usd": 228175
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 3847375,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49033",
+      "units": 97,
+      "units_1": 72,
+      "units_2": 2,
+      "buildings": 76,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 72,
+      "buildings_2": 1,
+      "county_fips": "033",
+      "county_name": "Rich County",
+      "valuation_1": 41168316,
+      "valuation_2": 500000,
+      "units_5_plus": 19,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 29,
+          "buildings": 29,
+          "valuation_usd": 25973339
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 500000
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 1200000
+        },
+        "5_plus": {
+          "units": 19,
+          "buildings": 2,
+          "valuation_usd": 5250000
+        }
+      },
+      "valuation_3_4": 1200000,
+      "valuation_usd": 48118316,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 5250000,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49035",
+      "units": 4550,
+      "units_1": 2848,
+      "units_2": 30,
+      "buildings": 2944,
+      "units_3_4": 93,
+      "state_fips": "49",
+      "buildings_1": 2848,
+      "buildings_2": 15,
+      "county_fips": "035",
+      "county_name": "Salt Lake County",
+      "valuation_1": 934075043,
+      "valuation_2": 5299462,
+      "units_5_plus": 1579,
+      "buildings_3_4": 27,
+      "reported_only": {
+        "1": {
+          "units": 2836,
+          "buildings": 2836,
+          "valuation_usd": 926993566
+        },
+        "2": {
+          "units": 20,
+          "buildings": 10,
+          "valuation_usd": 3326056
+        },
+        "3_4": {
+          "units": 87,
+          "buildings": 25,
+          "valuation_usd": 24845841
+        },
+        "5_plus": {
+          "units": 1579,
+          "buildings": 54,
+          "valuation_usd": 319785089
+        }
+      },
+      "valuation_3_4": 26047545,
+      "valuation_usd": 1285207139,
+      "buildings_5_plus": 54,
+      "valuation_5_plus": 319785089,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49037",
+      "units": 52,
+      "units_1": 48,
+      "units_2": 4,
+      "buildings": 50,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 48,
+      "buildings_2": 2,
+      "county_fips": "037",
+      "county_name": "San Juan County",
+      "valuation_1": 18931162,
+      "valuation_2": 838025,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 48,
+          "buildings": 48,
+          "valuation_usd": 18931162
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 838025
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 19769187,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49039",
+      "units": 266,
+      "units_1": 210,
+      "units_2": 8,
+      "buildings": 220,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 210,
+      "buildings_2": 4,
+      "county_fips": "039",
+      "county_name": "Sanpete County",
+      "valuation_1": 85875329,
+      "valuation_2": 2111832,
+      "units_5_plus": 44,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 210,
+          "buildings": 210,
+          "valuation_usd": 85875329
+        },
+        "2": {
+          "units": 8,
+          "buildings": 4,
+          "valuation_usd": 2111832
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 719929
+        },
+        "5_plus": {
+          "units": 44,
+          "buildings": 5,
+          "valuation_usd": 8479901
+        }
+      },
+      "valuation_3_4": 719929,
+      "valuation_usd": 97186991,
+      "buildings_5_plus": 5,
+      "valuation_5_plus": 8479901,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49041",
+      "units": 109,
+      "units_1": 91,
+      "units_2": 14,
+      "buildings": 99,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 91,
+      "buildings_2": 7,
+      "county_fips": "041",
+      "county_name": "Sevier County",
+      "valuation_1": 33285210,
+      "valuation_2": 2274000,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 91,
+          "buildings": 91,
+          "valuation_usd": 33285210
+        },
+        "2": {
+          "units": 14,
+          "buildings": 7,
+          "valuation_usd": 2274000
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 1300000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1300000,
+      "valuation_usd": 36859210,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49043",
+      "units": 919,
+      "units_1": 388,
+      "units_2": 2,
+      "buildings": 392,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 388,
+      "buildings_2": 1,
+      "county_fips": "043",
+      "county_name": "Summit County",
+      "valuation_1": 311038030,
+      "valuation_2": 413052,
+      "units_5_plus": 529,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 388,
+          "buildings": 388,
+          "valuation_usd": 311038030
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 413052
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 529,
+          "buildings": 3,
+          "valuation_usd": 169159418
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 480610500,
+      "buildings_5_plus": 3,
+      "valuation_5_plus": 169159418,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49045",
+      "units": 897,
+      "units_1": 677,
+      "units_2": 50,
+      "buildings": 738,
+      "units_3_4": 83,
+      "state_fips": "49",
+      "buildings_1": 677,
+      "buildings_2": 25,
+      "county_fips": "045",
+      "county_name": "Tooele County",
+      "valuation_1": 277819548,
+      "valuation_2": 10960098,
+      "units_5_plus": 87,
+      "buildings_3_4": 22,
+      "reported_only": {
+        "1": {
+          "units": 677,
+          "buildings": 677,
+          "valuation_usd": 277819548
+        },
+        "2": {
+          "units": 50,
+          "buildings": 25,
+          "valuation_usd": 10960098
+        },
+        "3_4": {
+          "units": 83,
+          "buildings": 22,
+          "valuation_usd": 26159730
+        },
+        "5_plus": {
+          "units": 87,
+          "buildings": 14,
+          "valuation_usd": 24118749
+        }
+      },
+      "valuation_3_4": 26159730,
+      "valuation_usd": 339058125,
+      "buildings_5_plus": 14,
+      "valuation_5_plus": 24118749,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49047",
+      "units": 86,
+      "units_1": 74,
+      "units_2": 4,
+      "buildings": 78,
+      "units_3_4": 8,
+      "state_fips": "49",
+      "buildings_1": 74,
+      "buildings_2": 2,
+      "county_fips": "047",
+      "county_name": "Uintah County",
+      "valuation_1": 27813857,
+      "valuation_2": 632420,
+      "units_5_plus": 0,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 74,
+          "buildings": 74,
+          "valuation_usd": 27813857
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 632420
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 1320000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 1320000,
+      "valuation_usd": 29766277,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49049",
+      "units": 6321,
+      "units_1": 5174,
+      "units_2": 10,
+      "buildings": 5317,
+      "units_3_4": 97,
+      "state_fips": "49",
+      "buildings_1": 5174,
+      "buildings_2": 5,
+      "county_fips": "049",
+      "county_name": "Utah County",
+      "valuation_1": 1729118498,
+      "valuation_2": 4226208,
+      "units_5_plus": 1040,
+      "buildings_3_4": 26,
+      "reported_only": {
+        "1": {
+          "units": 5013,
+          "buildings": 5013,
+          "valuation_usd": 1680645954
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 4226208
+        },
+        "3_4": {
+          "units": 97,
+          "buildings": 26,
+          "valuation_usd": 23576229
+        },
+        "5_plus": {
+          "units": 1040,
+          "buildings": 112,
+          "valuation_usd": 176049902
+        }
+      },
+      "valuation_3_4": 23576229,
+      "valuation_usd": 1932970837,
+      "buildings_5_plus": 112,
+      "valuation_5_plus": 176049902,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49051",
+      "units": 835,
+      "units_1": 784,
+      "units_2": 0,
+      "buildings": 796,
+      "units_3_4": 29,
+      "state_fips": "49",
+      "buildings_1": 784,
+      "buildings_2": 0,
+      "county_fips": "051",
+      "county_name": "Wasatch County",
+      "valuation_1": 549041999,
+      "valuation_2": 0,
+      "units_5_plus": 22,
+      "buildings_3_4": 8,
+      "reported_only": {
+        "1": {
+          "units": 783,
+          "buildings": 783,
+          "valuation_usd": 548606749
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 29,
+          "buildings": 8,
+          "valuation_usd": 11535032
+        },
+        "5_plus": {
+          "units": 22,
+          "buildings": 4,
+          "valuation_usd": 7688117
+        }
+      },
+      "valuation_3_4": 11535032,
+      "valuation_usd": 568265148,
+      "buildings_5_plus": 4,
+      "valuation_5_plus": 7688117,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49053",
+      "units": 3152,
+      "units_1": 2467,
+      "units_2": 0,
+      "buildings": 2510,
+      "units_3_4": 35,
+      "state_fips": "49",
+      "buildings_1": 2467,
+      "buildings_2": 0,
+      "county_fips": "053",
+      "county_name": "Washington County",
+      "valuation_1": 514755174,
+      "valuation_2": 0,
+      "units_5_plus": 650,
+      "buildings_3_4": 9,
+      "reported_only": {
+        "1": {
+          "units": 2380,
+          "buildings": 2380,
+          "valuation_usd": 488322557
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 35,
+          "buildings": 9,
+          "valuation_usd": 6647685
+        },
+        "5_plus": {
+          "units": 650,
+          "buildings": 34,
+          "valuation_usd": 92474976
+        }
+      },
+      "valuation_3_4": 6647685,
+      "valuation_usd": 613877835,
+      "buildings_5_plus": 34,
+      "valuation_5_plus": 92474976,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49055",
+      "units": 24,
+      "units_1": 21,
+      "units_2": 0,
+      "buildings": 22,
+      "units_3_4": 3,
+      "state_fips": "49",
+      "buildings_1": 21,
+      "buildings_2": 0,
+      "county_fips": "055",
+      "county_name": "Wayne County",
+      "valuation_1": 6958057,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 21,
+          "buildings": 21,
+          "valuation_usd": 6958057
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 3,
+          "buildings": 1,
+          "valuation_usd": 715000
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 715000,
+      "valuation_usd": 7673057,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2024,
+      "basis": "annual",
+      "geoid": "49057",
+      "units": 1630,
+      "units_1": 1044,
+      "units_2": 10,
+      "buildings": 1104,
+      "units_3_4": 55,
+      "state_fips": "49",
+      "buildings_1": 1044,
+      "buildings_2": 5,
+      "county_fips": "057",
+      "county_name": "Weber County",
+      "valuation_1": 387469917,
+      "valuation_2": 1868353,
+      "units_5_plus": 521,
+      "buildings_3_4": 16,
+      "reported_only": {
+        "1": {
+          "units": 684,
+          "buildings": 684,
+          "valuation_usd": 291457790
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 1868353
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 2142655
+        },
+        "5_plus": {
+          "units": 182,
+          "buildings": 15,
+          "valuation_usd": 36997399
+        }
+      },
+      "valuation_3_4": 11002865,
+      "valuation_usd": 487007915,
+      "buildings_5_plus": 39,
+      "valuation_5_plus": 86666780,
+      "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49001",
+      "units": 48,
+      "units_1": 38,
+      "units_2": 0,
+      "buildings": 40,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 38,
+      "buildings_2": 0,
+      "county_fips": "001",
+      "county_name": "Beaver County",
+      "valuation_1": 15757330,
+      "valuation_2": 0,
+      "units_5_plus": 10,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 38,
+          "buildings": 38,
+          "valuation_usd": 15757330
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 10,
+          "buildings": 2,
+          "valuation_usd": 1943622
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 17700952,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 1943622,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49003",
+      "units": 456,
+      "units_1": 369,
+      "units_2": 0,
+      "buildings": 386,
+      "units_3_4": 35,
+      "state_fips": "49",
+      "buildings_1": 369,
+      "buildings_2": 0,
+      "county_fips": "003",
+      "county_name": "Box Elder County",
+      "valuation_1": 133963042,
+      "valuation_2": 0,
+      "units_5_plus": 52,
+      "buildings_3_4": 9,
+      "reported_only": {
+        "1": {
+          "units": 345,
+          "buildings": 345,
+          "valuation_usd": 127176789
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 35,
+          "buildings": 9,
+          "valuation_usd": 6947830
+        },
+        "5_plus": {
+          "units": 52,
+          "buildings": 8,
+          "valuation_usd": 14473418
+        }
+      },
+      "valuation_3_4": 6947830,
+      "valuation_usd": 155384290,
+      "buildings_5_plus": 8,
+      "valuation_5_plus": 14473418,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49005",
+      "units": 1112,
+      "units_1": 850,
+      "units_2": 0,
+      "buildings": 864,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 850,
+      "buildings_2": 0,
+      "county_fips": "005",
+      "county_name": "Cache County",
+      "valuation_1": 330143028,
+      "valuation_2": 0,
+      "units_5_plus": 262,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 850,
+          "buildings": 850,
+          "valuation_usd": 330143028
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 262,
+          "buildings": 14,
+          "valuation_usd": 25804400
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 355947428,
+      "buildings_5_plus": 14,
+      "valuation_5_plus": 25804400,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49007",
+      "units": 45,
+      "units_1": 45,
+      "units_2": 0,
+      "buildings": 45,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 45,
+      "buildings_2": 0,
+      "county_fips": "007",
+      "county_name": "Carbon County",
+      "valuation_1": 19900132,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 45,
+          "buildings": 45,
+          "valuation_usd": 19900132
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 19900132,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49009",
+      "units": 17,
+      "units_1": 17,
+      "units_2": 0,
+      "buildings": 17,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 17,
+      "buildings_2": 0,
+      "county_fips": "009",
+      "county_name": "Daggett County",
+      "valuation_1": 6678405,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 17,
+          "buildings": 17,
+          "valuation_usd": 6678405
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 6678405,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49011",
+      "units": 1917,
+      "units_1": 841,
+      "units_2": 8,
+      "buildings": 888,
+      "units_3_4": 72,
+      "state_fips": "49",
+      "buildings_1": 841,
+      "buildings_2": 4,
+      "county_fips": "011",
+      "county_name": "Davis County",
+      "valuation_1": 340323749,
+      "valuation_2": 1288614,
+      "units_5_plus": 996,
+      "buildings_3_4": 18,
+      "reported_only": {
+        "1": {
+          "units": 841,
+          "buildings": 841,
+          "valuation_usd": 340323749
+        },
+        "2": {
+          "units": 8,
+          "buildings": 4,
+          "valuation_usd": 1288614
+        },
+        "3_4": {
+          "units": 72,
+          "buildings": 18,
+          "valuation_usd": 12969165
+        },
+        "5_plus": {
+          "units": 996,
+          "buildings": 25,
+          "valuation_usd": 135044234
+        }
+      },
+      "valuation_3_4": 12969165,
+      "valuation_usd": 489625762,
+      "buildings_5_plus": 25,
+      "valuation_5_plus": 135044234,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49013",
+      "units": 127,
+      "units_1": 123,
+      "units_2": 0,
+      "buildings": 124,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 123,
+      "buildings_2": 0,
+      "county_fips": "013",
+      "county_name": "Duchesne County",
+      "valuation_1": 38389117,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 62,
+          "buildings": 62,
+          "valuation_usd": 23284707
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 728059
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 728059,
+      "valuation_usd": 39117176,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49015",
+      "units": 77,
+      "units_1": 77,
+      "units_2": 0,
+      "buildings": 77,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 77,
+      "buildings_2": 0,
+      "county_fips": "015",
+      "county_name": "Emery County",
+      "valuation_1": 7299770,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 77,
+          "buildings": 77,
+          "valuation_usd": 7299770
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 7299770,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49017",
+      "units": 27,
+      "units_1": 27,
+      "units_2": 0,
+      "buildings": 27,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 27,
+      "buildings_2": 0,
+      "county_fips": "017",
+      "county_name": "Garfield County",
+      "valuation_1": 10535601,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 27,
+          "buildings": 27,
+          "valuation_usd": 10535601
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 10535601,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49019",
+      "units": 124,
+      "units_1": 42,
+      "units_2": 6,
+      "buildings": 49,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 42,
+      "buildings_2": 3,
+      "county_fips": "019",
+      "county_name": "Grand County",
+      "valuation_1": 15960382,
+      "valuation_2": 933525,
+      "units_5_plus": 76,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 42,
+          "buildings": 42,
+          "valuation_usd": 15960382
+        },
+        "2": {
+          "units": 6,
+          "buildings": 3,
+          "valuation_usd": 933525
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 76,
+          "buildings": 4,
+          "valuation_usd": 12675781
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 29569688,
+      "buildings_5_plus": 4,
+      "valuation_5_plus": 12675781,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49021",
+      "units": 678,
+      "units_1": 678,
+      "units_2": 0,
+      "buildings": 678,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 678,
+      "buildings_2": 0,
+      "county_fips": "021",
+      "county_name": "Iron County",
+      "valuation_1": 190390382,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 678,
+          "buildings": 678,
+          "valuation_usd": 190390382
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 190390382,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49023",
+      "units": 102,
+      "units_1": 71,
+      "units_2": 12,
+      "buildings": 81,
+      "units_3_4": 11,
+      "state_fips": "49",
+      "buildings_1": 71,
+      "buildings_2": 6,
+      "county_fips": "023",
+      "county_name": "Juab County",
+      "valuation_1": 30829823,
+      "valuation_2": 2575217,
+      "units_5_plus": 8,
+      "buildings_3_4": 3,
+      "reported_only": {
+        "1": {
+          "units": 64,
+          "buildings": 64,
+          "valuation_usd": 26897720
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 2191090
+        },
+        "3_4": {
+          "units": 11,
+          "buildings": 3,
+          "valuation_usd": 1201634
+        },
+        "5_plus": {
+          "units": 8,
+          "buildings": 1,
+          "valuation_usd": 1396589
+        }
+      },
+      "valuation_3_4": 1201634,
+      "valuation_usd": 36003263,
+      "buildings_5_plus": 1,
+      "valuation_5_plus": 1396589,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49025",
+      "units": 146,
+      "units_1": 122,
+      "units_2": 4,
+      "buildings": 127,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 122,
+      "buildings_2": 2,
+      "county_fips": "025",
+      "county_name": "Kane County",
+      "valuation_1": 47048917,
+      "valuation_2": 639952,
+      "units_5_plus": 16,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 104,
+          "buildings": 104,
+          "valuation_usd": 40990128
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 639952
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 16,
+          "buildings": 2,
+          "valuation_usd": 2038620
+        }
+      },
+      "valuation_3_4": 875000,
+      "valuation_usd": 50602489,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 2038620,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49027",
+      "units": 73,
+      "units_1": 67,
+      "units_2": 6,
+      "buildings": 70,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 67,
+      "buildings_2": 3,
+      "county_fips": "027",
+      "county_name": "Millard County",
+      "valuation_1": 17848507,
+      "valuation_2": 1535646,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 67,
+          "buildings": 67,
+          "valuation_usd": 17848507
+        },
+        "2": {
+          "units": 6,
+          "buildings": 3,
+          "valuation_usd": 1535646
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 19384153,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49029",
+      "units": 192,
+      "units_1": 92,
+      "units_2": 12,
+      "buildings": 117,
+      "units_3_4": 42,
+      "state_fips": "49",
+      "buildings_1": 92,
+      "buildings_2": 6,
+      "county_fips": "029",
+      "county_name": "Morgan County",
+      "valuation_1": 29875373,
+      "valuation_2": 2202287,
+      "units_5_plus": 46,
+      "buildings_3_4": 11,
+      "reported_only": {
+        "1": {
+          "units": 92,
+          "buildings": 92,
+          "valuation_usd": 29875373
+        },
+        "2": {
+          "units": 12,
+          "buildings": 6,
+          "valuation_usd": 2202287
+        },
+        "3_4": {
+          "units": 42,
+          "buildings": 11,
+          "valuation_usd": 8738371
+        },
+        "5_plus": {
+          "units": 46,
+          "buildings": 8,
+          "valuation_usd": 7681723
+        }
+      },
+      "valuation_3_4": 8738371,
+      "valuation_usd": 48497754,
+      "buildings_5_plus": 8,
+      "valuation_5_plus": 7681723,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49031",
+      "units": 21,
+      "units_1": 21,
+      "units_2": 0,
+      "buildings": 21,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 21,
+      "buildings_2": 0,
+      "county_fips": "031",
+      "county_name": "Piute County",
+      "valuation_1": 3166800,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 3166800,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49033",
+      "units": 82,
+      "units_1": 62,
+      "units_2": 0,
+      "buildings": 65,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 62,
+      "buildings_2": 0,
+      "county_fips": "033",
+      "county_name": "Rich County",
+      "valuation_1": 34335352,
+      "valuation_2": 0,
+      "units_5_plus": 16,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 22,
+          "buildings": 22,
+          "valuation_usd": 20200489
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 1400000
+        },
+        "5_plus": {
+          "units": 16,
+          "buildings": 2,
+          "valuation_usd": 6000000
+        }
+      },
+      "valuation_3_4": 1400000,
+      "valuation_usd": 41735352,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 6000000,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49035",
+      "units": 7179,
+      "units_1": 2576,
+      "units_2": 68,
+      "buildings": 2721,
+      "units_3_4": 101,
+      "state_fips": "49",
+      "buildings_1": 2576,
+      "buildings_2": 34,
+      "county_fips": "035",
+      "county_name": "Salt Lake County",
+      "valuation_1": 917035696,
+      "valuation_2": 16011506,
+      "units_5_plus": 4434,
+      "buildings_3_4": 29,
+      "reported_only": {
+        "1": {
+          "units": 2566,
+          "buildings": 2566,
+          "valuation_usd": 911132492
+        },
+        "2": {
+          "units": 54,
+          "buildings": 27,
+          "valuation_usd": 13321491
+        },
+        "3_4": {
+          "units": 101,
+          "buildings": 29,
+          "valuation_usd": 30508274
+        },
+        "5_plus": {
+          "units": 4434,
+          "buildings": 82,
+          "valuation_usd": 1023835457
+        }
+      },
+      "valuation_3_4": 30508274,
+      "valuation_usd": 1987390933,
+      "buildings_5_plus": 82,
+      "valuation_5_plus": 1023835457,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49037",
+      "units": 55,
+      "units_1": 49,
+      "units_2": 6,
+      "buildings": 52,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 49,
+      "buildings_2": 3,
+      "county_fips": "037",
+      "county_name": "San Juan County",
+      "valuation_1": 18881061,
+      "valuation_2": 896537,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 4,
+          "buildings": 4,
+          "valuation_usd": 1146423
+        },
+        "2": {
+          "units": 4,
+          "buildings": 2,
+          "valuation_usd": 477524
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 19777598,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49039",
+      "units": 238,
+      "units_1": 190,
+      "units_2": 32,
+      "buildings": 209,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 190,
+      "buildings_2": 16,
+      "county_fips": "039",
+      "county_name": "Sanpete County",
+      "valuation_1": 78638443,
+      "valuation_2": 8572342,
+      "units_5_plus": 12,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 190,
+          "buildings": 190,
+          "valuation_usd": 78638443
+        },
+        "2": {
+          "units": 32,
+          "buildings": 16,
+          "valuation_usd": 8572342
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 970458
+        },
+        "5_plus": {
+          "units": 12,
+          "buildings": 2,
+          "valuation_usd": 3231184
+        }
+      },
+      "valuation_3_4": 970458,
+      "valuation_usd": 91412427,
+      "buildings_5_plus": 2,
+      "valuation_5_plus": 3231184,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49041",
+      "units": 97,
+      "units_1": 97,
+      "units_2": 0,
+      "buildings": 97,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 97,
+      "buildings_2": 0,
+      "county_fips": "041",
+      "county_name": "Sevier County",
+      "valuation_1": 43574509,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 97,
+          "buildings": 97,
+          "valuation_usd": 43574509
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 43574509,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49043",
+      "units": 563,
+      "units_1": 334,
+      "units_2": 2,
+      "buildings": 345,
+      "units_3_4": 8,
+      "state_fips": "49",
+      "buildings_1": 334,
+      "buildings_2": 1,
+      "county_fips": "043",
+      "county_name": "Summit County",
+      "valuation_1": 316214651,
+      "valuation_2": 3135968,
+      "units_5_plus": 219,
+      "buildings_3_4": 2,
+      "reported_only": {
+        "1": {
+          "units": 334,
+          "buildings": 334,
+          "valuation_usd": 316214651
+        },
+        "2": {
+          "units": 2,
+          "buildings": 1,
+          "valuation_usd": 3135968
+        },
+        "3_4": {
+          "units": 8,
+          "buildings": 2,
+          "valuation_usd": 3483242
+        },
+        "5_plus": {
+          "units": 219,
+          "buildings": 8,
+          "valuation_usd": 80340026
+        }
+      },
+      "valuation_3_4": 3483242,
+      "valuation_usd": 403173887,
+      "buildings_5_plus": 8,
+      "valuation_5_plus": 80340026,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49045",
+      "units": 523,
+      "units_1": 439,
+      "units_2": 8,
+      "buildings": 460,
+      "units_3_4": 39,
+      "state_fips": "49",
+      "buildings_1": 439,
+      "buildings_2": 4,
+      "county_fips": "045",
+      "county_name": "Tooele County",
+      "valuation_1": 166219520,
+      "valuation_2": 2638011,
+      "units_5_plus": 37,
+      "buildings_3_4": 10,
+      "reported_only": {
+        "1": {
+          "units": 432,
+          "buildings": 432,
+          "valuation_usd": 163677645
+        },
+        "2": {
+          "units": 8,
+          "buildings": 4,
+          "valuation_usd": 2638011
+        },
+        "3_4": {
+          "units": 39,
+          "buildings": 10,
+          "valuation_usd": 11220741
+        },
+        "5_plus": {
+          "units": 37,
+          "buildings": 7,
+          "valuation_usd": 11379178
+        }
+      },
+      "valuation_3_4": 11220741,
+      "valuation_usd": 191457450,
+      "buildings_5_plus": 7,
+      "valuation_5_plus": 11379178,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49047",
+      "units": 170,
+      "units_1": 98,
+      "units_2": 0,
+      "buildings": 102,
+      "units_3_4": 4,
+      "state_fips": "49",
+      "buildings_1": 98,
+      "buildings_2": 0,
+      "county_fips": "047",
+      "county_name": "Uintah County",
+      "valuation_1": 37938843,
+      "valuation_2": 0,
+      "units_5_plus": 68,
+      "buildings_3_4": 1,
+      "reported_only": {
+        "1": {
+          "units": 98,
+          "buildings": 98,
+          "valuation_usd": 37938843
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 4,
+          "buildings": 1,
+          "valuation_usd": 1227008
+        },
+        "5_plus": {
+          "units": 68,
+          "buildings": 3,
+          "valuation_usd": 9000000
+        }
+      },
+      "valuation_3_4": 1227008,
+      "valuation_usd": 48165851,
+      "buildings_5_plus": 3,
+      "valuation_5_plus": 9000000,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49049",
+      "units": 7202,
+      "units_1": 5324,
+      "units_2": 22,
+      "buildings": 5525,
+      "units_3_4": 169,
+      "state_fips": "49",
+      "buildings_1": 5324,
+      "buildings_2": 11,
+      "county_fips": "049",
+      "county_name": "Utah County",
+      "valuation_1": 1782326563,
+      "valuation_2": 5426800,
+      "units_5_plus": 1687,
+      "buildings_3_4": 45,
+      "reported_only": {
+        "1": {
+          "units": 5294,
+          "buildings": 5294,
+          "valuation_usd": 1754018661
+        },
+        "2": {
+          "units": 22,
+          "buildings": 11,
+          "valuation_usd": 5426800
+        },
+        "3_4": {
+          "units": 169,
+          "buildings": 45,
+          "valuation_usd": 35810197
+        },
+        "5_plus": {
+          "units": 1687,
+          "buildings": 145,
+          "valuation_usd": 278948299
+        }
+      },
+      "valuation_3_4": 35810197,
+      "valuation_usd": 2102511859,
+      "buildings_5_plus": 145,
+      "valuation_5_plus": 278948299,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49051",
+      "units": 1128,
+      "units_1": 786,
+      "units_2": 0,
+      "buildings": 794,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 786,
+      "buildings_2": 0,
+      "county_fips": "051",
+      "county_name": "Wasatch County",
+      "valuation_1": 728972938,
+      "valuation_2": 0,
+      "units_5_plus": 342,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 758,
+          "buildings": 758,
+          "valuation_usd": 701960751
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 342,
+          "buildings": 8,
+          "valuation_usd": 62026492
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 790999430,
+      "buildings_5_plus": 8,
+      "valuation_5_plus": 62026492,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49053",
+      "units": 2857,
+      "units_1": 2497,
+      "units_2": 10,
+      "buildings": 2528,
+      "units_3_4": 24,
+      "state_fips": "49",
+      "buildings_1": 2497,
+      "buildings_2": 5,
+      "county_fips": "053",
+      "county_name": "Washington County",
+      "valuation_1": 607103625,
+      "valuation_2": 2320946,
+      "units_5_plus": 326,
+      "buildings_3_4": 6,
+      "reported_only": {
+        "1": {
+          "units": 2475,
+          "buildings": 2475,
+          "valuation_usd": 603310585
+        },
+        "2": {
+          "units": 10,
+          "buildings": 5,
+          "valuation_usd": 2320946
+        },
+        "3_4": {
+          "units": 24,
+          "buildings": 6,
+          "valuation_usd": 7181263
+        },
+        "5_plus": {
+          "units": 326,
+          "buildings": 20,
+          "valuation_usd": 39412227
+        }
+      },
+      "valuation_3_4": 7181263,
+      "valuation_usd": 656018061,
+      "buildings_5_plus": 20,
+      "valuation_5_plus": 39412227,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49055",
+      "units": 29,
+      "units_1": 29,
+      "units_2": 0,
+      "buildings": 29,
+      "units_3_4": 0,
+      "state_fips": "49",
+      "buildings_1": 29,
+      "buildings_2": 0,
+      "county_fips": "055",
+      "county_name": "Wayne County",
+      "valuation_1": 10893780,
+      "valuation_2": 0,
+      "units_5_plus": 0,
+      "buildings_3_4": 0,
+      "reported_only": {
+        "1": {
+          "units": 29,
+          "buildings": 29,
+          "valuation_usd": 10893780
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "5_plus": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        }
+      },
+      "valuation_3_4": 0,
+      "valuation_usd": 10893780,
+      "buildings_5_plus": 0,
+      "valuation_5_plus": 0,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    },
+    {
+      "year": 2025,
+      "basis": "annual",
+      "geoid": "49057",
+      "units": 1490,
+      "units_1": 813,
+      "units_2": 6,
+      "buildings": 889,
+      "units_3_4": 57,
+      "state_fips": "49",
+      "buildings_1": 813,
+      "buildings_2": 3,
+      "county_fips": "057",
+      "county_name": "Weber County",
+      "valuation_1": 313976308,
+      "valuation_2": 1138764,
+      "units_5_plus": 614,
+      "buildings_3_4": 16,
+      "reported_only": {
+        "1": {
+          "units": 516,
+          "buildings": 516,
+          "valuation_usd": 223407972
+        },
+        "2": {
+          "units": 0,
+          "buildings": 0,
+          "valuation_usd": 0
+        },
+        "3_4": {
+          "units": 57,
+          "buildings": 16,
+          "valuation_usd": 12534421
+        },
+        "5_plus": {
+          "units": 272,
+          "buildings": 42,
+          "valuation_usd": 62117279
+        }
+      },
+      "valuation_3_4": 12534421,
+      "valuation_usd": 442546376,
+      "buildings_5_plus": 57,
+      "valuation_5_plus": 114896883,
+      "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www2.census.gov/econ/bps/County/co2021a.txt",
+      "sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6",
+      "retrieved_at": "2026-11-24T20:22:16.723112+00:00",
+      "accepted_at": "2026-11-24T20:22:16.745801+00:00",
+      "period": "2021",
+      "basis": "annual",
+      "row_count": 29,
+      "bytes": 372012,
+      "synthetic": false
+    },
+    {
+      "url": "https://www2.census.gov/econ/bps/County/co2022a.txt",
+      "sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c",
+      "retrieved_at": "2026-11-24T20:22:17.062499+00:00",
+      "accepted_at": "2026-11-24T20:22:17.088920+00:00",
+      "period": "2022",
+      "basis": "annual",
+      "row_count": 29,
+      "bytes": 374937,
+      "synthetic": false
+    },
+    {
+      "url": "https://www2.census.gov/econ/bps/County/co2023a.txt",
+      "sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158",
+      "retrieved_at": "2026-11-24T20:22:17.396268+00:00",
+      "accepted_at": "2026-11-24T20:22:17.417575+00:00",
+      "period": "2023",
+      "basis": "annual",
+      "row_count": 29,
+      "bytes": 374707,
+      "synthetic": false
+    },
+    {
+      "url": "https://www2.census.gov/econ/bps/County/co2024a.txt",
+      "sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6",
+      "retrieved_at": "2026-11-24T20:22:17.734948+00:00",
+      "accepted_at": "2026-11-24T20:22:17.761549+00:00",
+      "period": "2024",
+      "basis": "annual",
+      "row_count": 29,
+      "bytes": 375214,
+      "synthetic": false
+    },
+    {
+      "url": "https://www2.census.gov/econ/bps/County/co2025a.txt",
+      "sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e",
+      "retrieved_at": "2026-11-24T20:22:17.998194+00:00",
+      "accepted_at": "2026-11-24T20:22:18.024388+00:00",
+      "period": "2025",
+      "basis": "annual",
+      "row_count": 29,
+      "bytes": 375314,
+      "synthetic": false
+    }
+  ],
+  "quality": {
+    "checks": [
+      {
+        "name": "published_rows",
+        "passed": true,
+        "detail": "145 active county/year rows"
+      },
+      {
+        "name": "unique_grain",
+        "passed": true,
+        "detail": "Unique year and county FIPS"
+      },
+      {
+        "name": "source_bindings",
+        "passed": true,
+        "detail": "Every active row binds to an accepted source SHA256"
+      },
+      {
+        "name": "known_unit_counts",
+        "passed": true,
+        "detail": "Unknown source values remain null, never zero-filled"
+      },
+      {
+        "name": "component_reconciliation",
+        "passed": true,
+        "detail": "Total units sum the four estimated categories, excluding reported-only duplicates"
+      },
+      {
+        "name": "annual_only",
+        "passed": true,
+        "detail": "No monthly/YTD records mixed into annual totals"
+      },
+      {
+        "name": "county_coverage",
+        "passed": true,
+        "detail": "29 Utah counties per published annual source"
+      }
+    ],
+    "status": "passed"
+  },
+  "operations": {
+    "mode": "recorded_warehouse_runs",
+    "runs": [
+      {
+        "run_id": "d082ed54-556f-4e05-b3b8-f0f4478fba5f",
+        "command": "backfill",
+        "period": 2025,
+        "started_at": "2026-11-24T20:22:17.775444+00:00",
+        "finished_at": "2026-11-24T20:22:18.024388+00:00",
+        "status": "succeeded",
+        "source_sha256": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e",
+        "version_id": "b57b5ca6-10b8-4b42-bcf3-04e34b6399f6",
+        "rows_loaded": 29,
+        "changed_rows": 29,
+        "error": null,
+        "synthetic": false
+      },
+      {
+        "run_id": "89a200bc-9c21-4d4e-81d7-3e3649f8b196",
+        "command": "backfill",
+        "period": 2024,
+        "started_at": "2026-11-24T20:22:17.429343+00:00",
+        "finished_at": "2026-11-24T20:22:17.761549+00:00",
+        "status": "succeeded",
+        "source_sha256": "a64c2dd19be96c469763c10d637575a584ef16a6878f451bba80c847bcafc8c6",
+        "version_id": "3fbe0d0b-41ed-4633-8cdc-db86f8a9cdb1",
+        "rows_loaded": 29,
+        "changed_rows": 29,
+        "error": null,
+        "synthetic": false
+      },
+      {
+        "run_id": "feaf894f-36cb-42d6-bdb3-6b929740dd18",
+        "command": "backfill",
+        "period": 2023,
+        "started_at": "2026-11-24T20:22:17.102529+00:00",
+        "finished_at": "2026-11-24T20:22:17.417575+00:00",
+        "status": "succeeded",
+        "source_sha256": "fab11d759e905ff61838b8dfa41c0f2082e150cad07a20c65ddd620a007aa158",
+        "version_id": "f6f19460-9423-48b5-bb5d-027ef2036837",
+        "rows_loaded": 29,
+        "changed_rows": 29,
+        "error": null,
+        "synthetic": false
+      },
+      {
+        "run_id": "898977f4-5052-47f8-9a0e-8d8e75261641",
+        "command": "backfill",
+        "period": 2022,
+        "started_at": "2026-11-24T20:22:16.759150+00:00",
+        "finished_at": "2026-11-24T20:22:17.088920+00:00",
+        "status": "succeeded",
+        "source_sha256": "0a88c16861ede81b04f8785e1c626e772510f33f1de9452f7592d86d308e2b5c",
+        "version_id": "304807bb-b8cb-4be9-b88d-b8cf873a99e2",
+        "rows_loaded": 29,
+        "changed_rows": 29,
+        "error": null,
+        "synthetic": false
+      },
+      {
+        "run_id": "16990c27-c0ac-4a19-900e-0c81ba40f265",
+        "command": "backfill",
+        "period": 2021,
+        "started_at": "2026-11-24T20:22:16.370829+00:00",
+        "finished_at": "2026-11-24T20:22:16.745801+00:00",
+        "status": "succeeded",
+        "source_sha256": "ce2c9aa7b7c036ddbc99d6dc398ddf71e4a0ad0fc2782db883b559ca264f14b6",
+        "version_id": "6acfa308-2d32-497d-9bd3-76042b3550a2",
+        "rows_loaded": 29,
+        "changed_rows": 29,
+        "error": null,
+        "synthetic": false
+      }
+    ],
+    "accepted_source_versions": 5,
+    "active_sources": 5,
+    "note": "Actual local warehouse run ledger captured at export; this public snapshot does not launch jobs."
+  }
+}

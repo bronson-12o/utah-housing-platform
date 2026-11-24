@@ -1,0 +1,25 @@
+{
+  "renderer": "Chromium",
+  "version": "153.0.8010.12",
+  "status": "passed",
+  "checks": [
+    {
+      "file": "docs/images/architecture.svg",
+      "sha256": "4858332603027aec62dbb792a4ac04422137c16880ee7fb80b216048e0f9b3b7",
+      "width": 1200,
+      "height": 660,
+      "text_count": 26,
+      "outside": [],
+      "rendered": true
+    },
+    {
+      "file": "docs/images/data-model.svg",
+      "sha256": "85ee9f6c8cc4747c5106552c206c22642a026c55842b6591fb2da7a98f0b6f0a",
+      "width": 1200,
+      "height": 600,
+      "text_count": 29,
+      "outside": [],
+      "rendered": true
+    }
+  ]
+}
