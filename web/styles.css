@@ -3,12 +3,12 @@
   --white: #fffefa;
   --ink: #173d35;
   --body: #3b5149;
-  --muted: #67766d;
+  --muted: #606f66;
   --line: #d5ddd2;
   --forest: #153e35;
   --forest-dark: #0f3029;
   --sage: #dfe9dc;
-  --amber: #c8944a;
+  --amber: #b17e35;
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color-scheme: light;
@@ -613,7 +613,7 @@ select {
   overflow: visible;
 }
 .chart-axis {
-  fill: #718075;
+  fill: var(--muted);
   font: 9px var(--sans);
 }
 .chart-grid {
@@ -756,7 +756,7 @@ tbody tr:hover {
   font-size: 9px;
   display: inline-block;
   width: 24px;
-  color: #899487;
+  color: var(--muted);
 }
 .change-negative {
   color: #95683d;
@@ -809,6 +809,11 @@ tbody tr:hover {
   border: 1px solid #cbd9c2;
   border-radius: 2px;
   line-height: 1.6;
+}
+.quality-summary.attention {
+  background: #f2e6d3;
+  color: #6f471f;
+  border-color: #ddc4a0;
 }
 .quality-checks {
   padding: 0;

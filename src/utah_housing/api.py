@@ -28,9 +28,22 @@ def validate_frozen_format(result):
         raise ValueError("Captured run history must be an array of objects.")
     if not isinstance(quality.get("checks", []), list):
         raise ValueError("Quality checks must be an array.")
+    for check in quality.get("checks", []):
+        if (not isinstance(check, dict) or not isinstance(check.get("name"), str)
+                or type(check.get("passed")) is not bool or not isinstance(check.get("detail"), str)):
+            raise ValueError("Invalid quality check record.")
+        if quality["status"] == "passed" and not check["passed"]:
+            raise ValueError("A passing frozen export cannot contain a failed quality check.")
+    metadata = result["metadata"]
+    if type(metadata.get("synthetic", False)) is not bool:
+        raise ValueError("Synthetic metadata must be a boolean.")
+    periods = metadata.get("periods")
+    if not isinstance(periods, list) or any(type(year) is not int for year in periods):
+        raise ValueError("Reference periods must be an array of annual years.")
     if not isinstance(result.get("sources"), list):
         raise ValueError("Sources must be an array.")
     bindings = set()
+    source_periods = set()
     for source in result["sources"]:
         if (not isinstance(source, dict) or source.get("basis") != "annual"
                 or not isinstance(source.get("url"), str) or not source["url"]
@@ -38,11 +51,19 @@ def validate_frozen_format(result):
                 or not re.fullmatch(r"[0-9a-f]{64}", str(source.get("sha256", "")))
                 or not re.fullmatch(r"\d{4}", str(source.get("period", "")))):
             raise ValueError("Invalid source record structure.")
+        period = int(source["period"])
+        if "year" in source and (type(source["year"]) is not int or source["year"] != period):
+            raise ValueError("Explicit source year must match its annual reference period.")
+        if period in source_periods:
+            raise ValueError("Duplicate active source reference period.")
+        source_periods.add(period)
         bindings.add((source["sha256"], str(source["period"])))
     seen = set()
     for row in result["annual"]:
         if not isinstance(row, dict):
             raise ValueError("Annual rows must be objects.")
+        if "basis" in row and row["basis"] != "annual":
+            raise ValueError("Explicit county row basis must be annual.")
         if (type(row.get("year")) is not int or not 2000 <= row["year"] <= 2100
                 or row.get("state_fips") != "49" or not isinstance(row.get("county_fips"), str)
                 or row["county_fips"] not in UTAH_COUNTIES
@@ -66,7 +87,18 @@ def validate_frozen_format(result):
         components = complete_sum([row[field] for field in ("units_1", "units_2", "units_3_4", "units_5_plus")])
         if components is not None and row["units"] is not None and components != row["units"]:
             raise ValueError("Frozen unit components do not reconcile to the declared total.")
-    for year in {row["year"] for row in result["annual"]}:
+    annual_periods = {row["year"] for row in result["annual"]}
+    if periods != sorted(annual_periods) or source_periods != annual_periods:
+        raise ValueError("Metadata, source and county reference periods must agree.")
+    for source in result["sources"]:
+        count = sum(row["year"] == int(source["period"]) for row in result["annual"])
+        for field in ("county_rows", "row_count"):
+            if field in source and (type(source[field]) is not int or source[field] < 0 or source[field] != count):
+                raise ValueError("Explicit source county count must match its published annual rows.")
+    for year in annual_periods:
+        if not metadata.get("synthetic", False) and {
+                row["county_fips"] for row in result["annual"] if row["year"] == year} != UTAH_COUNTIES:
+            raise ValueError("A real frozen annual source requires all 29 Utah counties.")
         for field in ("buildings", "units", "valuation_usd", "units_1", "units_2", "units_3_4", "units_5_plus"):
             complete_sum([row[field] for row in result["annual"] if row["year"] == year])
 

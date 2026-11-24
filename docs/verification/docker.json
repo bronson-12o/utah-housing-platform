@@ -1,32 +1,38 @@
 {
-  "schema_version": 1,
-  "checked_at": "2026-11-24T20:39:51.146005+00:00",
+  "schema_version": 2,
+  "checked_at": "2026-11-24T21:50:57.523234+00:00",
   "status": "passed",
   "image": {
     "tag": "utah-housing-platform:local",
-    "id": "sha256:7de5005949a0eb26eec9cbeddb5229b3c24f6b3cbd54c3c517fa26d3742c699a",
-    "reviewed_worktree_manifest_sha256": "0ab0112670afa71a7f856a5e56821748a584104de7733857d1c2522f71c5daf3",
+    "id": "sha256:134e9f6e698d9ea8c206e51b33849a486af4c83626586f1ff1fe922b0645d087",
     "package_file_sha256": {
       "cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
       "schema.sql": "ffaaecfdb27deed8ee3fa18cb6cd1c8c9d7f1cc446aa7e18afc9be3e8eda4acd",
-      "warehouse.py": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb",
+      "warehouse.py": "7c3661453082aa6d5cb07c26d509ce3061e68131975dd8343cab00e46cd0e9fc",
       "__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
       "definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
       "pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
-      "api.py": "47ba1b298857e8f3f9168dd81b8f7693050c32ea86a7dd9e007a9483349b9470",
+      "api.py": "014da4e14b6091f3774e4be9b5d395ee949ce879b2ec3bba1a01ce6d405995d4",
       "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
       "parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef"
     },
-    "package_manifest_sha256": "f4c216a783cbbf9b07de30ce49202e5942867b6f204a6f69bfee7a468caeb4ff",
-    "source_match": "Every installed package file/schema matches the corresponding published src/utah_housing file; reviewed worktree aggregate additionally included development packaging metadata."
+    "package_manifest_sha256": "7be1653cfcaca6cd0275459cd39d30238ec0cd0add27f35eab3a9f3b310e265d",
+    "web_file_sha256": {
+      "app.js": "f4e7daebfeb1ea2cba139c3a44ca8c44d97545a25dbe84588acc442fdb34c1d2",
+      "index.html": "c9b4d2f38ac262fa1de150e7b04eca7ace0bee3d500a262497e665f7d9771f5c",
+      "styles.css": "468159f2c10d326ed95cefd0b8978079ea12c2db289e9366b91eaba2f8da58f5",
+      "data/housing.json": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+      "data/utah-counties.geojson": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc"
+    },
+    "source_match": "Installed package and bundled web files match combined reviewed source."
   },
-  "scope": "Local Docker Compose, separate PostgreSQL real and synthetic-fixture databases; no paid services.",
+  "scope": "Dedicated local Docker Compose; realhousing and isolated synthetic-fixture PostgreSQL databases. No paid services.",
   "tests": {
-    "passed": 39,
+    "passed": 62,
     "failed": 0,
     "skipped": 0,
-    "postgresql_integration_tests": 9,
-    "note": "Synthetic isolated schemas; no real source rows modified by tests."
+    "postgresql_integration_tests": 11,
+    "note": "All mutating tests use random isolated fixture schemas."
   },
   "real_backfill": {
     "years": [
@@ -54,9 +60,15 @@
       "2025": "5d523b1ff172c886ee7f2bc770c82c8c5470b5aaaec5f63441a18c621c80b30e"
     }
   },
+  "fixture": {
+    "rows": 2,
+    "synthetic": true,
+    "repeat_status": "noop",
+    "isolated_from_real": true
+  },
   "dagster": {
     "job": "housing_refresh",
-    "run_id": "0fc113c3-8eae-4ead-a4e8-201ef00c135c",
+    "run_id": "b57e2441-5801-436f-b998-e862dd44554f",
     "status": "RUN_SUCCESS",
     "source_bound_export": "passed",
     "monthly_schedule": "stopped_by_default"
@@ -100,29 +112,50 @@
   },
   "commands": [
     {
-      "check": "final-docker-tests",
+      "check": "compose-final-up",
       "exit_code": 0,
-      "seconds": 2.08
+      "seconds": 10.63
     },
     {
-      "check": "final-real-backfill",
+      "check": "container-tests",
       "exit_code": 0,
-      "seconds": 2.33
+      "seconds": 1.8
     },
     {
-      "check": "final-fixture-load",
+      "check": "real-refresh",
       "exit_code": 0,
-      "seconds": 0.85
+      "seconds": 2.28
     },
     {
-      "check": "final-dagster-job",
+      "check": "fixture-refresh",
       "exit_code": 0,
-      "seconds": 9.8
+      "seconds": 0.71
+    },
+    {
+      "check": "dagster-refresh",
+      "exit_code": 0,
+      "seconds": 6.84
+    },
+    {
+      "check": "controlled-db-stop",
+      "exit_code": 0,
+      "seconds": 0.21
+    },
+    {
+      "check": "controlled-db-restore",
+      "exit_code": 0,
+      "seconds": 3.67
+    },
+    {
+      "check": "app-restart",
+      "exit_code": 0,
+      "seconds": 0.45
     }
   ],
   "limits": [
-    "Annual building authorizations, not completions or current listings.",
-    "Controlled database outage and ordinary restart were verified; hard-killed run reconciliation is not implemented.",
-    "Frozen public demo is a verified captured snapshot, not a hosted live warehouse."
-  ]
+    "Annual building authorizations, not completions or listings.",
+    "Hard-killed run reconciliation is not implemented.",
+    "Public demo is a captured verified snapshot, not a hosted live warehouse."
+  ],
+  "source_code_commit": "f091cc8d8bfa57d4f8240d2085ee10b10e7b723e"
 }

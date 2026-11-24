@@ -13,21 +13,43 @@
   },
   "errors": [],
   "invalid_job": {
-    "name": "controlled-invalid-1795552628",
+    "name": "controlled-invalid-1795557054",
     "failed_attempts": 2
   },
-  "application_image_id": "docker.io/library/import-2026-11-24@sha256:70d671664acb6d638b345abc519d4638e1ec3024140be6ec39551684da6e9661",
-  "runtime_warehouse_sha256": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb",
-  "status": "passed",
+  "application_image_id": "docker.io/library/import-2026-11-24@sha256:ff59704e9d4581b041223993c507a5cc56d5188da7d4821384c38b669048a9cf",
+  "runtime_warehouse_sha256": "7c3661453082aa6d5cb07c26d509ce3061e68131975dd8343cab00e46cd0e9fc",
   "package_files": {
     "cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
     "schema.sql": "ffaaecfdb27deed8ee3fa18cb6cd1c8c9d7f1cc446aa7e18afc9be3e8eda4acd",
-    "warehouse.py": "391263eca9f810ad42e4ab434d37102db256768823d8d114e34f6dead515bebb",
+    "warehouse.py": "7c3661453082aa6d5cb07c26d509ce3061e68131975dd8343cab00e46cd0e9fc",
     "__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
     "definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
     "pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
-    "api.py": "47ba1b298857e8f3f9168dd81b8f7693050c32ea86a7dd9e007a9483349b9470",
+    "api.py": "014da4e14b6091f3774e4be9b5d395ee949ce879b2ec3bba1a01ce6d405995d4",
     "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
     "parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef"
-  }
+  },
+  "status": "passed",
+  "checked_at": "2026-11-24T21:52:31.029351+00:00",
+  "source_code_commit": "f091cc8d8bfa57d4f8240d2085ee10b10e7b723e",
+  "docker_image_index_id": "sha256:134e9f6e698d9ea8c206e51b33849a486af4c83626586f1ff1fe922b0645d087",
+  "kubernetes_image_configuration_id": "sha256:1bf50045966f9c56ee643811ca88a524fccd5541326265d086bc6f3355d3d645",
+  "web_file_sha256": {
+    "app.js": "f4e7daebfeb1ea2cba139c3a44ca8c44d97545a25dbe84588acc442fdb34c1d2",
+    "index.html": "c9b4d2f38ac262fa1de150e7b04eca7ace0bee3d500a262497e665f7d9771f5c",
+    "styles.css": "468159f2c10d326ed95cefd0b8978079ea12c2db289e9366b91eaba2f8da58f5",
+    "data/housing.json": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+    "data/utah-counties.geojson": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc"
+  },
+  "invalid_job_ledger": {
+    "recorded_failed_attempts": 2,
+    "input_sha256": "06c213726765e9ca029e6aba5da824cb598e1f33795de70dea10db0c953d3067",
+    "published_data_unchanged": true
+  },
+  "additional_verifications": {
+    "invalid_job_failures_recorded_in_warehouse": true,
+    "bundled_web_matches_reviewed_source": true,
+    "all_image_filesystem_layers_match_docker_build": true
+  },
+  "image_binding_note": "Docker records the OCI index digest; Kubernetes records the platform manifest/configuration digest. All filesystem layers, installed package files and web files match the reviewed Docker build."
 }

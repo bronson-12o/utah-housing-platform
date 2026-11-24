@@ -14,6 +14,8 @@
     ["units_3_4", "3–4-unit buildings"],
     ["units_5_plus", "5+ unit buildings"],
   ];
+  const countyFips = new Set(Array.from({ length: 29 }, (_, index) => String(index * 2 + 1).padStart(3, "0")));
+  const displayedMetrics = ["buildings", "units", "valuation_usd", ...categoryLabels.map(([key]) => key)];
   let dataset = null;
   let geometry = null;
   let years = [];
@@ -61,48 +63,96 @@
     }
   }
   function validateSnapshot(value) {
+    const record = (item) => item !== null && typeof item === "object" && !Array.isArray(item);
     if (
-      !value ||
+      !record(value) ||
       !Array.isArray(value.annual) ||
       !value.annual.length ||
-      !value.metadata ||
+      !record(value.metadata) ||
       !Array.isArray(value.sources)
     )
       throw new Error("The export is missing its annual records or source metadata.");
+    const quality = value.quality;
+    if (!record(quality) || !["passed", "needs_attention"].includes(quality.status) ||
+        (quality.checks !== undefined && !Array.isArray(quality.checks)))
+      throw new Error("The export is missing a readable validation receipt.");
+    for (const check of quality.checks ?? []) {
+      if (!record(check) || typeof check.name !== "string" || typeof check.passed !== "boolean" ||
+          typeof check.detail !== "string" || (quality.status === "passed" && !check.passed))
+        throw new Error("The validation status conflicts with its recorded checks.");
+    }
+    if ((value.metadata.synthetic !== undefined && typeof value.metadata.synthetic !== "boolean") ||
+        !Array.isArray(value.metadata.periods) || !value.metadata.periods.every(Number.isInteger))
+      throw new Error("The export has invalid reference periods or a missing data-type label.");
+    if (value.operations !== undefined && (!record(value.operations) ||
+        (value.operations.runs !== undefined && !Array.isArray(value.operations.runs)) ||
+        !(value.operations.runs ?? []).every(record)))
+      throw new Error("The captured run receipt is not readable.");
+    const sourcePeriods = new Set(), bindings = new Set();
+    for (const source of value.sources) {
+      if (!record(source) || source.basis !== "annual" || typeof source.url !== "string" || !source.url ||
+          typeof source.retrieved_at !== "string" || typeof source.sha256 !== "string" || !/^[a-f0-9]{64}$/.test(source.sha256) ||
+          !["string", "number"].includes(typeof source.period) || !/^\d{4}$/.test(String(source.period)) || sourcePeriods.has(Number(source.period)) ||
+          (source.year !== undefined && (!Number.isInteger(source.year) || source.year !== Number(source.period))))
+        throw new Error("An original-source receipt has an invalid or conflicting annual reference period.");
+      sourcePeriods.add(Number(source.period));
+      bindings.add(`${source.period}/${source.sha256}`);
+    }
+    const completeSum = (values) => {
+      if (values.some((item) => item === null)) return null;
+      const sum = values.reduce((total, item) => total + item, 0);
+      if (!Number.isSafeInteger(sum))
+        throw new Error("The export contains a total too large to display exactly.");
+      return sum;
+    };
     const keys = new Set();
     for (const row of value.annual) {
       if (
+        !record(row) ||
         !Number.isInteger(row.year) ||
-        !/^49\d{3}$/.test(row.geoid) ||
+        row.year < 2000 || row.year > 2100 ||
         row.state_fips !== "49" ||
-        !/^\d{3}$/.test(row.county_fips) ||
+        !countyFips.has(row.county_fips) ||
         row.geoid !== row.state_fips + row.county_fips ||
+        (row.basis !== undefined && row.basis !== "annual") ||
         typeof row.county_name !== "string" ||
         !row.county_name.trim()
       )
-        throw new Error("The export contains an invalid reporting year or Utah county identifier.");
+        throw new Error("The export contains an invalid annual reporting year or Utah county identifier.");
       const key = `${row.year}/${row.geoid}`;
       if (keys.has(key))
         throw new Error(
           "The export contains duplicate county/year records; this view has been withheld.",
         );
       keys.add(key);
-      for (const field of [
-        "buildings",
-        "units",
-        "valuation_usd",
-        "units_1",
-        "units_2",
-        "units_3_4",
-        "units_5_plus",
-      ]) {
+      for (const field of displayedMetrics) {
         if (row[field] !== null && (!Number.isSafeInteger(row[field]) || row[field] < 0))
           throw new Error(
             `The export has an invalid ${field} value. Missing data must stay separate from zero.`,
           );
+        if (quality.status === "passed" && row[field] === null)
+          throw new Error("The export declares passed checks but contains an unknown displayed value.");
       }
-      if (!/^[a-f0-9]{64}$/i.test(row.source_sha256 || ""))
-        throw new Error("An annual record is missing its original-source fingerprint.");
+      if (!bindings.has(`${row.year}/${row.source_sha256}`))
+        throw new Error("An annual record does not match its original-source fingerprint and reporting year.");
+      const components = completeSum(categoryLabels.map(([field]) => row[field]));
+      if (components !== null && row.units !== null && components !== row.units)
+        throw new Error("The building-type unit counts do not reconcile with the annual total.");
+    }
+    const annualPeriods = [...new Set(value.annual.map((row) => row.year))].sort((a, b) => a - b);
+    if (JSON.stringify(value.metadata.periods) !== JSON.stringify(annualPeriods) ||
+        JSON.stringify([...sourcePeriods].sort((a, b) => a - b)) !== JSON.stringify(annualPeriods))
+      throw new Error("The county records and source receipts cover different reporting years.");
+    for (const year of annualPeriods) {
+      const rows = value.annual.filter((row) => row.year === year);
+      if (!value.metadata.synthetic && rows.length !== countyFips.size)
+        throw new Error("A real annual export must contain all 29 Utah counties.");
+      for (const field of displayedMetrics) completeSum(rows.map((row) => row[field]));
+      const source = value.sources.find((item) => Number(item.period) === year);
+      for (const field of ["row_count", "county_rows"]) {
+        if (source[field] !== undefined && (!Number.isInteger(source[field]) || source[field] !== rows.length))
+          throw new Error("An original-source record count does not match the published county records.");
+      }
     }
     return value;
   }
@@ -632,6 +682,8 @@
       unique_grain: "Unique county and year",
       source_bindings: "Original-source links",
       known_unit_counts: "Missing values stay missing",
+      known_display_metrics: "Displayed metrics are available",
+      source_row_counts: "Source record counts reconcile",
       component_reconciliation: "Building-type totals reconcile",
       annual_only: "Consistent annual scope",
       county_coverage: "Complete county coverage",
@@ -643,6 +695,7 @@
           .replaceAll("_", " ")
           .replace(/^./, (text) => text.toUpperCase())
       : "Validation status was not supplied.";
+    $("quality-summary").classList.toggle("attention", quality.status === "needs_attention");
     $("quality-checks").replaceChildren(
       ...checks.slice(0, 8).map((check) => {
         const object =

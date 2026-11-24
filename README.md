@@ -69,6 +69,8 @@ Dagster and Kubernetes are **alternative local execution paths**. This project d
 
 Every accepted source has a URL, retrieval timestamp and SHA256. Current county facts and history publish in one transaction. Concurrent loads serialize by period; unchanged bytes do not duplicate records; known superseded content and older observations cannot overwrite a newer accepted revision. Export writers serialize the complete snapshot-to-file operation and replace the target atomically.
 
+The static dashboard also checks the exported records against their annual source receipts before displaying them. Contradictory periods, fingerprints, counts or validation receipts are withheld. An honest `needs_attention` export keeps unknown values visible as unknown.
+
 An independent standard-library CSV reader makes **1,305 value, name and fingerprint comparisons** across all 145 rows without importing the application parser. Annual county unit sums also reconcile to five separately published state files. State valuation is reported in thousands of dollars, so its rounding differences are recorded instead of forced to zero.
 
 ```bash
@@ -104,6 +106,8 @@ python -m pytest -q
 ```
 
 Without `TEST_DATABASE_URL`, actual PostgreSQL tests explicitly skip. For a full run, point that variable at a disposable PostgreSQL database whose name contains `test` or `fixture`. Each test uses a unique schema and removes only that schema. GitHub Actions provisions a separate test database and runs these checks. Never point tests at a user database. The lock was verified on macOS/Linux with Python 3.12; native Windows is not claimed (use Docker).
+
+Optional [browser regression checks](docs/verification/README.md#optional-browser-regression-checks) exercise the actual dashboard in Chromium and WebKit, including malformed exports, missing values, retry behavior, keyboard controls and exact JSON downloads. Playwright is a development tool and is not needed to run the app.
 
 ## Limits and practical tradeoffs
 

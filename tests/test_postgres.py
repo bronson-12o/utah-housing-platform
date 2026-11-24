@@ -116,6 +116,41 @@ def test_overlapping_retries_publish_one_version(warehouse):
     assert len(result["operations"]["runs"]) == 2
 
 
+def test_revision_removes_obsolete_counties_but_preserves_source_history(warehouse):
+    load_bytes(synthetic_fixture(), 2025, "fixture://two-counties", synthetic=True)
+    # Independent expected case: keep only the first data row, revise its
+    # 5+ category from six to seven units, and remove the second county.
+    reduced = b"\n".join(synthetic_fixture(revised=True).splitlines()[:3]) + b"\n"
+    receipt = load_bytes(reduced, 2025, "fixture://one-county", synthetic=True)
+    assert receipt["rows_loaded"] == 1
+    assert receipt["changed_rows"] == 2  # One changed county and one removed.
+    result = export_snapshot(synthetic=True)
+    assert [row["geoid"] for row in result["annual"]] == ["49001"]
+    assert result["annual"][0]["units"] == 24
+    assert result["sources"][0]["row_count"] == 1
+    assert result["quality"]["status"] == "passed"
+    with connection() as db:
+        assert db.execute("SELECT count(*) AS n FROM housing_county_history").fetchone()["n"] == 3
+        assert db.execute("SELECT count(*) AS n FROM housing_source_versions WHERE active").fetchone()["n"] == 1
+    assert load_bytes(reduced, 2025, "fixture://repeat", synthetic=True)["status"] == "noop"
+
+
+def test_failed_replacement_restores_removed_counties_as_well_as_values(warehouse):
+    import psycopg
+    load_bytes(synthetic_fixture(), 2025, "fixture://initial", synthetic=True)
+    before = export_snapshot(synthetic=True)
+    reduced = b"\n".join(synthetic_fixture(revised=True).splitlines()[:3]) + b"\n"
+    with connection() as db:
+        db.execute("ALTER TABLE housing_county_annual ADD CONSTRAINT deliberate_first_row_failure CHECK (geoid <> '49001') NOT VALID")
+    with pytest.raises(psycopg.errors.CheckViolation):
+        load_bytes(reduced, 2025, "fixture://failed-replacement", synthetic=True)
+    after = export_snapshot(synthetic=True)
+    assert after["annual"] == before["annual"]
+    assert after["sources"] == before["sources"]
+    assert after["operations"]["runs"][0]["status"] == "failed"
+    assert after["operations"]["accepted_source_versions"] == 1
+
+
 def test_network_failure_is_a_visible_failed_run_without_touching_published_rows(warehouse, monkeypatch):
     from utah_housing.pipeline import backfill
     load_bytes(synthetic_fixture(), 2025, "fixture://initial", synthetic=True)

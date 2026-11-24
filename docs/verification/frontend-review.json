@@ -1,0 +1,847 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-11-24T21:53:20.562397+00:00",
+  "scope": "Bounded browser workflows and controlled exported-record mutations. This is not an accuracy percentage, original-source audit or complete accessibility certification.",
+  "runtime_files": {
+    "web/app.js": "f4e7daebfeb1ea2cba139c3a44ca8c44d97545a25dbe84588acc442fdb34c1d2",
+    "web/index.html": "c9b4d2f38ac262fa1de150e7b04eca7ace0bee3d500a262497e665f7d9771f5c",
+    "web/styles.css": "468159f2c10d326ed95cefd0b8978079ea12c2db289e9366b91eaba2f8da58f5"
+  },
+  "snapshot_sha256": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+  "geometry_sha256": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc",
+  "original_images_preserved": {
+    "docs/images/architecture.svg": "4858332603027aec62dbb792a4ac04422137c16880ee7fb80b216048e0f9b3b7",
+    "docs/images/dashboard-county-view.png": "e1955e66b4e93003540f5ed8e532bc70b9fa9ac99a643ad18ffa8b0654e696fa",
+    "docs/images/dashboard-mobile.png": "4da0cd817e3225d36bf511bae78af6507ed0e80d1f582a4e8cc91466e5ccc648",
+    "docs/images/dashboard-overview.png": "f0012705b82eee487887241047cb37d4ea5e9eff66429b668dfb8a6305435c9c",
+    "docs/images/data-model.svg": "85ee9f6c8cc4747c5106552c206c22642a026c55842b6591fb2da7a98f0b6f0a"
+  },
+  "source_snapshot_unchanged": true,
+  "geometry_unchanged": true,
+  "checks_total": 89,
+  "case_counts": {
+    "actual_workflows": 6,
+    "controlled_contract_cases": 80,
+    "loading_fallback_cases": 3,
+    "independent_reviewer_cases": 17
+  },
+  "results": [
+    {
+      "group": "actual_workflow",
+      "engine": "chromium",
+      "width": 1440,
+      "rows": 145,
+      "annual_totals": 5,
+      "counties": 29,
+      "keyboard": "Enter and Space",
+      "download": "exact served JSON",
+      "ratios": {
+        "small_text": 4.686136452379717,
+        "chart_axis": 5.25086199597735,
+        "focus_on_paper": 3.255777631333326,
+        "focus_on_map": 3.331843331081201
+      },
+      "passed": true
+    },
+    {
+      "group": "actual_workflow",
+      "engine": "chromium",
+      "width": 390,
+      "rows": 145,
+      "annual_totals": 5,
+      "counties": 29,
+      "keyboard": "Enter and Space",
+      "download": "exact served JSON",
+      "ratios": {
+        "small_text": 4.686136452379717,
+        "chart_axis": 5.25086199597735,
+        "focus_on_paper": 3.255777631333326,
+        "focus_on_map": 3.331843331081201
+      },
+      "passed": true
+    },
+    {
+      "group": "actual_workflow",
+      "engine": "chromium",
+      "width": 320,
+      "rows": 145,
+      "annual_totals": 5,
+      "counties": 29,
+      "keyboard": "Enter and Space",
+      "download": "exact served JSON",
+      "ratios": {
+        "small_text": 4.686136452379717,
+        "chart_axis": 5.25086199597735,
+        "focus_on_paper": 3.255777631333326,
+        "focus_on_map": 3.331843331081201
+      },
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "unbound_source",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "row_monthly_basis",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_year_conflict",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_year_boolean",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_period_conflict",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_period_array",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_hash_array",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_monthly_basis",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_duplicate_period",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_row_count_mismatch",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_county_rows_mismatch",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_row_count_string",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "source_null",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "invalid_county",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "metadata_period_conflict",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "metadata_period_reversed",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "synthetic_not_boolean",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "declared_passed_failed_check",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "quality_boolean_string",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "quality_checks_null",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "quality_check_nonobject",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "quality_status_unknown",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "quality_missing",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "run_receipt_nonobject",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "run_receipt_null_runs",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "run_receipt_null_element",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "passed_missing_units",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "component_sum_mismatch",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "real_county_coverage",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "unsafe_state_total",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "unsafe_component_total",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "unsafe_scalar",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "negative_metric",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "boolean_metric",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "invalid_reference_year",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "width": 1440,
+      "case": "honest_unknown_needs_attention",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "width": 390,
+      "case": "honest_unknown_needs_attention",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "width": 320,
+      "case": "honest_unknown_needs_attention",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "optional_fields_absent",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "chromium",
+      "case": "explicit_synthetic_partial_coverage",
+      "passed": true
+    },
+    {
+      "group": "loading",
+      "case": "HTTP failure then retry",
+      "passed": true
+    },
+    {
+      "group": "loading",
+      "case": "duplicate county/year withheld",
+      "passed": true
+    },
+    {
+      "group": "loading",
+      "case": "missing geometry retains table",
+      "passed": true
+    },
+    {
+      "group": "actual_workflow",
+      "engine": "webkit",
+      "width": 1440,
+      "rows": 145,
+      "annual_totals": 5,
+      "counties": 29,
+      "keyboard": "Enter and Space",
+      "download": "exact served JSON",
+      "ratios": {
+        "small_text": 4.686136452379717,
+        "chart_axis": 5.25086199597735,
+        "focus_on_paper": 3.255777631333326,
+        "focus_on_map": 3.331843331081201
+      },
+      "passed": true
+    },
+    {
+      "group": "actual_workflow",
+      "engine": "webkit",
+      "width": 390,
+      "rows": 145,
+      "annual_totals": 5,
+      "counties": 29,
+      "keyboard": "Enter and Space",
+      "download": "exact served JSON",
+      "ratios": {
+        "small_text": 4.686136452379717,
+        "chart_axis": 5.25086199597735,
+        "focus_on_paper": 3.255777631333326,
+        "focus_on_map": 3.331843331081201
+      },
+      "passed": true
+    },
+    {
+      "group": "actual_workflow",
+      "engine": "webkit",
+      "width": 320,
+      "rows": 145,
+      "annual_totals": 5,
+      "counties": 29,
+      "keyboard": "Enter and Space",
+      "download": "exact served JSON",
+      "ratios": {
+        "small_text": 4.686136452379717,
+        "chart_axis": 5.25086199597735,
+        "focus_on_paper": 3.255777631333326,
+        "focus_on_map": 3.331843331081201
+      },
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "unbound_source",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "row_monthly_basis",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_year_conflict",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_year_boolean",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_period_conflict",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_period_array",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_hash_array",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_monthly_basis",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_duplicate_period",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_row_count_mismatch",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_county_rows_mismatch",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_row_count_string",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "source_null",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "invalid_county",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "metadata_period_conflict",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "metadata_period_reversed",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "synthetic_not_boolean",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "declared_passed_failed_check",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "quality_boolean_string",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "quality_checks_null",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "quality_check_nonobject",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "quality_status_unknown",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "quality_missing",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "run_receipt_nonobject",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "run_receipt_null_runs",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "run_receipt_null_element",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "passed_missing_units",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "component_sum_mismatch",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "real_county_coverage",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "unsafe_state_total",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "unsafe_component_total",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "unsafe_scalar",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "negative_metric",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "boolean_metric",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "invalid_reference_year",
+      "result": "withheld_with_readable_error",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "width": 1440,
+      "case": "honest_unknown_needs_attention",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "width": 390,
+      "case": "honest_unknown_needs_attention",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "width": 320,
+      "case": "honest_unknown_needs_attention",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "optional_fields_absent",
+      "passed": true
+    },
+    {
+      "group": "controlled_contract",
+      "engine": "webkit",
+      "case": "explicit_synthetic_partial_coverage",
+      "passed": true
+    }
+  ],
+  "independent_review": {
+    "reviewer": "independent_backend_reviewer",
+    "snapshot_rows": 145,
+    "status": "passed",
+    "cases": [
+      {
+        "case": "actual_145",
+        "status": "passed",
+        "dashboard_visible": true
+      },
+      {
+        "case": "explicit_failed_check",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "truthy_string_check",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "malformed_check_record",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "truncated_real_county",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "unknown_county",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "metadata_wrong_year",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "truthy_string_synthetic",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "annual_monthly_row",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "source_contradictory_year",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "source_wrong_county_rows",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "source_wrong_row_count",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "source_binding_wrong_period",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "unit_component_disagreement",
+        "status": "passed",
+        "dashboard_visible": false
+      },
+      {
+        "case": "honest_unknown_needs_attention",
+        "status": "passed",
+        "dashboard_visible": true
+      },
+      {
+        "case": "contract_optional_fields_omitted",
+        "status": "passed",
+        "dashboard_visible": true
+      },
+      {
+        "case": "status_only_receipt",
+        "status": "passed",
+        "dashboard_visible": true
+      }
+    ]
+  },
+  "contrast_measurements": {
+    "scope": "Actual computed CSS foreground/background pairs; selected colors only, not a complete accessibility certification.",
+    "results": [
+      {
+        "stage": "before",
+        "colors": {
+          "text": "rgb(103, 118, 109)",
+          "text_background": "rgb(240, 242, 232)",
+          "axis": "rgb(113, 128, 117)",
+          "axis_background": "rgb(255, 254, 250)",
+          "focus": "rgb(200, 148, 74)",
+          "paper": "rgb(246, 245, 239)",
+          "map": "rgb(21, 62, 53)"
+        },
+        "small_text_ratio": 4.231,
+        "axis_ratio": 4.123,
+        "focus_on_paper_ratio": 2.468,
+        "focus_on_map_ratio": 4.396
+      },
+      {
+        "stage": "after",
+        "colors": {
+          "text": "rgb(96, 111, 102)",
+          "text_background": "rgb(240, 242, 232)",
+          "axis": "rgb(96, 111, 102)",
+          "axis_background": "rgb(255, 254, 250)",
+          "focus": "rgb(177, 126, 53)",
+          "paper": "rgb(246, 245, 239)",
+          "map": "rgb(21, 62, 53)"
+        },
+        "small_text_ratio": 4.686,
+        "axis_ratio": 5.251,
+        "focus_on_paper_ratio": 3.256,
+        "focus_on_map_ratio": 3.332
+      }
+    ]
+  },
+  "reproduce": {
+    "script": "scripts/check_dashboard.cjs",
+    "setup": "docs/verification/README.md#optional-browser-regression-checks",
+    "environment": [
+      "BASE_URL",
+      "PLAYWRIGHT_MODULE",
+      "ARTIFACT_DIR"
+    ],
+    "default_artifacts": "artifacts/dashboard-checks/"
+  },
+  "limits": [
+    "The served annual facts are compared to the captured checked-in snapshot; the separate source-reconciliation command checks original Census records.",
+    "Negative cases intercept requests in isolated browser pages and do not modify public data or a server.",
+    "This receipt records local checks; publication and live verification are separate."
+  ]
+}

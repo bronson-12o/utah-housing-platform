@@ -75,7 +75,9 @@ def load_bytes(raw: bytes, year: int, source_url: str, *, synthetic: bool = Fals
                 raise SourceError("A different source observed no later than the active source cannot supersede it.")
             previous = {row["geoid"]: row["row_data"] for row in db.execute(
                 "SELECT geoid,row_data FROM housing_county_annual WHERE year=%s AND synthetic=%s", (year, synthetic))}
-            changed = sum(previous.get(row["geoid"]) != row for row in source.rows)
+            current_geoids = [row["geoid"] for row in source.rows]
+            changed = (sum(previous.get(row["geoid"]) != row for row in source.rows)
+                       + len(previous.keys() - set(current_geoids)))
             version_id = str(uuid4())
             if current:
                 db.execute("UPDATE housing_source_versions SET active=false WHERE version_id=%s", (current["version_id"],))
@@ -84,6 +86,11 @@ def load_bytes(raw: bytes, year: int, source_url: str, *, synthetic: bool = Fals
                 VALUES(%s,%s,'annual',%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
                 (version_id, year, digest, source_url, retrieved_at, len(raw), len(source.rows), source.national_rows,
                  source.missing_value_count, synthetic, run_id))
+            # A revision replaces the complete published period. Synthetic
+            # sources may intentionally change coverage; removed counties must
+            # remain in history, not leak into the newly active publication.
+            db.execute("DELETE FROM housing_county_annual WHERE year=%s AND synthetic=%s AND NOT (geoid = ANY(%s))",
+                       (year, synthetic, current_geoids))
             for row in source.rows:
                 db.execute("""INSERT INTO housing_county_history(version_id,geoid,row_data) VALUES(%s,%s,%s)""",
                            (version_id, row["geoid"], Jsonb(row)))
@@ -129,7 +136,9 @@ def export_snapshot(db_url: str | None = None, *, synthetic: bool = False) -> di
         checks.append({"name": name, "passed": bool(passed), "detail": detail})
     check("published_rows", bool(annual), f"{len(annual)} active county/year rows")
     check("unique_grain", len(annual) == len({(r["year"], r["geoid"]) for r in annual}), "Unique year and county FIPS")
-    check("source_bindings", all(r["source_sha256"] in {s["sha256"] for s in sources} for r in annual), "Every active row binds to an accepted source SHA256")
+    check("source_bindings", all((r["source_sha256"], r["year"]) in {(s["sha256"], s["year"]) for s in sources} for r in annual), "Every active row binds to an accepted source SHA256 and reference year")
+    check("source_row_counts", all(sum(r["year"] == s["year"] for r in annual) == s["county_rows"] for s in sources),
+          "Published row counts match each active source, including synthetic revisions")
     check("known_unit_counts", all(r["units"] is not None for r in annual), "Unknown source values remain null, never zero-filled")
     check("known_display_metrics", all(all(r[field] is not None for field in ("buildings", "units", "valuation_usd")) for r in annual),
           "Displayed totals require known buildings, units and valuation; missing values remain visible but block a passing export")
