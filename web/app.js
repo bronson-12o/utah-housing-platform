@@ -426,6 +426,7 @@
       : "Compare county quantities using the color scale.";
     $("map-legend").replaceChildren();
     if (!geometry) {
+      $("map-view-note").textContent = "The map is unavailable. Use the county details and comparison table.";
       host.replaceChildren(
         element(
           "p",

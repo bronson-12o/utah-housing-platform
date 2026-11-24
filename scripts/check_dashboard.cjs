@@ -290,6 +290,7 @@ async function loadingCases(browser) {
   assert.ok((await missing.locator("#county-map").innerText()).includes("could not be loaded"));
   await missing.locator("#map-view-focus").click();
   assert.ok((await missing.locator("#county-map").innerText()).includes("could not be loaded"));
+  assert.match(await missing.locator("#map-view-note").innerText(), /map is unavailable/);
   assert.equal(await missing.locator("#county-table tr").count(), 29);
   assert.equal(await missing.locator('a[href="#source-geometry"]').isVisible(), false);
   results.push({ group: "loading", case: "missing geometry retains table", passed: true }); await missing.close();
