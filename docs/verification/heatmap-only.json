@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-24T23:33:58.296145+00:00",
+  "decision": "One blue/cyan county heat map with an orange selected-county outline. View toggle and Focus mode removed at user request.",
+  "frontend_matches_verified_release": "8d5d7c6f67ef34ce81067a6851c2d910cc3ff2c1",
+  "browser_checks": 89,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "widths": [
+    1440,
+    390,
+    320
+  ],
+  "source_data_and_geometry_unchanged": true,
+  "previous_pictures_preserved": true,
+  "runtime_receipt": "heatmap-only-runtime.json",
+  "limits": [
+    "Backend code and data unchanged; no new recovery drill or independent Census download.",
+    "Actual publication is verified separately."
+  ]
+}

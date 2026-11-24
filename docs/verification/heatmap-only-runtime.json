@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "checked_at": "2026-11-24T23:26:53.863249+00:00",
-  "image_id": "sha256:d333e80e6d457ff183f4b16a223854f66217d7115d178bf0dc1434c91b53d27b",
+  "checked_at": "2026-11-24T23:33:24.742441+00:00",
+  "image_id": "sha256:e666f9a147e56040ae7dd82ac5d5314a19b95c9bc79dbd9816bbfa9891652c0d",
   "scope": "Map presentation update only; existing Compose application services and local kind dashboard.",
   "web_file_sha256": {
-    "index.html": "6975b302844e9cae1386cff5dfa76a35978745578dcf95cbdfe2e54f72ebde37",
-    "styles.css": "27d1cfa9654a9277caf2d82e270ed7ebde184cd82156c80024cc9e04101dd77b",
-    "app.js": "da568090badff93e10e60d62caa8699150c82841eb982b3a7b55743d168b77d6",
+    "index.html": "0d4a5c6cbcafe1e090b096573133322ed0f1e285f2d86aaced979bc9a0b6b5cc",
+    "styles.css": "170bb9ac5ef46840242a41dbfcc197a39b0c4876ea13248998717c9b31279e83",
+    "app.js": "fd48f6cf23df1c796f3a8f22a09cde6a4f0bd763464f7c58453b6cd9940e45e7",
     "data/utah-counties.geojson": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc",
     "data/housing.json": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
     "assets/tabler/LICENSE": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",

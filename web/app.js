@@ -21,7 +21,7 @@
   let years = [];
   let countyNames = new Map();
   let rowsByKey = new Map();
-  let state = { year: null, county: "all", metric: "units", view: "compare" };
+  let state = { year: null, county: "all", metric: "units" };
 
   function element(tag, attributes = {}, text) {
     const item = document.createElement(tag);
@@ -228,7 +228,6 @@
     state.metric = ["units", "change", "units_5_plus"].includes(params.get("metric"))
       ? params.get("metric")
       : "units";
-    state.view = params.get("view") === "focus" ? "focus" : "compare";
     $("year-filter").value = String(state.year);
     $("county-filter").value = state.county;
     $("map-metric").value = state.metric;
@@ -246,12 +245,6 @@
       render();
     };
     $("reset-county").onclick = () => selectCounty("all");
-    for (const view of ["compare", "focus"]) {
-      $("map-view-" + view).onclick = () => {
-        state.view = view;
-        render();
-      };
-    }
     $("download-data").onclick = () => {
       const blob = new Blob([JSON.stringify(dataset, null, 2)], { type: "application/json" });
       const url = URL.createObjectURL(blob),
@@ -415,18 +408,7 @@
   }
   function renderMap() {
     const host = $("county-map");
-    const focus = state.view === "focus";
-    host.closest(".map-card").classList.toggle("is-focus", focus);
-    $("map-view-compare").setAttribute("aria-pressed", String(!focus));
-    $("map-view-focus").setAttribute("aria-pressed", String(focus));
-    $("map-view-note").textContent = focus
-      ? state.county === "all"
-        ? "Choose a county to highlight it against the gray map."
-        : `${geography()} is highlighted. Read its quantities in the county details.`
-      : "Compare county quantities using the color scale.";
-    $("map-legend").replaceChildren();
     if (!geometry) {
-      $("map-view-note").textContent = "The map is unavailable. Use the county details and comparison table.";
       host.replaceChildren(
         element(
           "p",
@@ -453,7 +435,7 @@
     const map = svg("svg", {
       viewBox: `0 0 ${width * factor + 44} ${height * factor + 24}`,
       role: "group",
-      "aria-label": `${focus ? "Focus view · " : ""}${metricLabel()} by Utah county, ${state.year}`,
+      "aria-label": `${metricLabel()} by Utah county, ${state.year}`,
     });
     const definitions = svg("defs"),
       pattern = svg("pattern", {
@@ -490,9 +472,7 @@
         .join("");
       const path = svg("path", {
         d: pathData,
-        fill: focus
-          ? value === null ? "url(#missing-fill)" : state.county === id ? "#ff4b35" : "#cbd0d6"
-          : scale.color(value),
+        fill: scale.color(value),
         class: `county-path${state.county === id ? " selected" : ""}`,
         tabindex: 0,
         role: "button",
@@ -515,21 +495,6 @@
     }
     host.replaceChildren(map);
     showMapInsight(state.county);
-    if (focus) {
-      const label = element("p", {}, "Focus view · color marks selection, not quantity");
-      const key = element("div", { class: "focus-legend" });
-      for (const [color, text] of [["#ff4b35", state.county === "all" ? "Selected county" : geography()], ["#cbd0d6", "Other counties"]]) {
-        const step = element("div", { class: "legend-step" });
-        const swatch = element("span", { "aria-hidden": "true" });
-        swatch.style.background = color;
-        step.append(swatch, element("b", {}, text));
-        key.append(step);
-      }
-      const missing = element("div", { class: "missing-legend" });
-      missing.append(element("span", { "aria-hidden": "true" }), document.createTextNode("Unavailable / not reported"));
-      $("map-legend").replaceChildren(label, key, missing);
-      return;
-    }
     const label = element(
       "p",
       {},
@@ -935,8 +900,6 @@
     else url.searchParams.set("county", state.county);
     if (state.metric === "units") url.searchParams.delete("metric");
     else url.searchParams.set("metric", state.metric);
-    if (state.view === "focus") url.searchParams.set("view", "focus");
-    else url.searchParams.delete("view");
     history.replaceState(null, "", url.pathname + url.search + url.hash);
   }
   async function load() {
