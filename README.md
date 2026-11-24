@@ -6,14 +6,14 @@
 
 [Explore the dashboard](https://bronsonhatch.com/utah-housing/) · [Verification evidence](docs/verification/README.md) · [Source and metric guide](docs/SOURCES.md)
 
-![Actual dashboard: Utah county map, annual trend and building mix](docs/images/dashboard-overview.png)
+![Actual county explorer: statewide totals, ranked counties, quantitative map and selected Salt Lake County metrics](docs/images/county-explorer-sharp-v2.jpg)
+
+The map uses five quantity classes from dark blue to cyan. An orange outline marks the selected county without changing its quantity color. Statewide totals stay separate from the selected county's figures; all 29 counties, detailed comparisons, building mix and source receipts remain available.
 
 <details>
-<summary>County detail and phone views</summary>
+<summary>Inspect the actual source and validation receipts</summary>
 
-![Actual selected-county view](docs/images/dashboard-county-view.png)
-
-<img src="docs/images/dashboard-mobile.png" width="390" alt="Actual dashboard on a narrow phone viewport" />
+![Actual captured validation checks, warehouse run receipt and original source records](docs/images/sources-and-checks-sharp-v2.jpg)
 
 </details>
 
@@ -120,3 +120,16 @@ Optional [browser regression checks](docs/verification/README.md#optional-browse
 - No home prices, demographic joins, forecasting model, streaming stack or cloud-scale performance claims are included. Those need separate sources and validation.
 
 Built by Bronson Hatch with AI coding agents for implementation and independent review. Data verification uses original source files and explicit regression cases. The documentation layout was inspired by [practical-data-engineering](https://github.com/ssp-data/practical-data-engineering); this is an original implementation. See [rights and attribution](RIGHTS.md).
+
+<details>
+<summary>Earlier interface captures, preserved for reference</summary>
+
+These are actual captures of the earlier interface. The current county explorer is shown above.
+
+![Actual dashboard: Utah county map, annual trend and building mix](docs/images/dashboard-overview.png)
+
+![Actual selected-county view](docs/images/dashboard-county-view.png)
+
+<img src="docs/images/dashboard-mobile.png" width="390" alt="Actual dashboard on a narrow phone viewport" />
+
+</details>

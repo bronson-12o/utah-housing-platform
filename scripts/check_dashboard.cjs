@@ -125,8 +125,8 @@ async function actualWorkflow(browser, engine, width) {
     trust: getComputedStyle(document.querySelector(".trust-card")).backgroundColor,
     axis: getComputedStyle(document.querySelector(".chart-axis")).fill,
     chart: getComputedStyle(document.querySelector(".chart-card")).backgroundColor,
-    focus: getComputedStyle(document.documentElement).getPropertyValue("--amber").trim(),
-    paper: getComputedStyle(document.body).backgroundColor,
+    focus: getComputedStyle(document.documentElement).getPropertyValue("--focus").trim(),
+    paper: getComputedStyle(document.documentElement).backgroundColor,
     map: getComputedStyle(document.querySelector(".map-card")).backgroundColor,
   }));
   const focusRgb = colors.focus.startsWith("#") ? `rgb(${[1, 3, 5].map(i => parseInt(colors.focus.slice(i, i + 2), 16)).join(",")})` : colors.focus;
@@ -164,6 +164,15 @@ async function contractCases(browser, engine) {
     assert.equal(await page.locator("#metric-change").innerText(), "Unavailable");
     assert.equal(await page.locator("#quality-summary").innerText(), "Needs attention");
     assert.ok((await page.locator("#quality-summary").getAttribute("class")).includes("attention"));
+    const headerBounds = await page.evaluate(() => {
+      const textBounds = id => {
+        const range = document.createRange(); range.selectNodeContents(document.getElementById(id));
+        const box = range.getBoundingClientRect();
+        return { left: box.left, right: box.right };
+      };
+      return { units: textBounds("statewide-units"), buildings: textBounds("statewide-buildings") };
+    });
+    assert.ok(headerBounds.units.right <= headerBounds.buildings.left, "Unknown statewide totals must not overlap their neighboring metric.");
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
     results.push({ group: "controlled_contract", engine, width, case: "honest_unknown_needs_attention", passed: true });
     await page.close();

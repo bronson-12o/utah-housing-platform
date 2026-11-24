@@ -1,182 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta
-      name="description"
-      content="Explore Utah housing construction authorizations with original Census sources, reproducible data checks, and a county-level view."
-    />
-    <meta name="theme-color" content="#153e35" />
-    <title>Utah Housing Data Platform</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to the data</a>
-    <header class="masthead">
-      <a class="brand" href="./" aria-label="Utah Housing Data Platform home"
-        ><span class="brand-mark" aria-hidden="true">UH<span>↗</span></span
-        ><span>Utah Housing<span class="brand-sub">Data Platform</span></span></a
-      >
-      <nav aria-label="Page navigation">
-        <a href="#explore">Explore the data</a><a href="#sources">Sources & checks</a
-        ><a class="portfolio-link" href="https://bronsonhatch.com/#selected-work"
-          >Portfolio <span aria-hidden="true">↗</span></a
-        >
-      </nav>
-    </header>
-    <main id="main">
-      <section class="introduction" aria-labelledby="page-title">
-        <div>
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Public data. A traceable pipeline.
-          </p>
-          <h1 id="page-title">Where is Utah<br />building next?</h1>
-          <p class="intro-copy">
-            Follow residential construction authorizations across Utah’s counties. See what changed,
-            compare the building mix, and trace every number back to its source.
-          </p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Compare Utah county building permits with original Census sources and reproducible source checks." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/svg+xml" href="assets/tabler/building-estate.svg" />
+  <title>Utah Housing Data Platform · County Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the data</a>
+  <header class="masthead">
+    <div class="brand-lockup"><a class="brand" href="./">Utah Housing</a><h1>County Explorer</h1></div>
+    <nav aria-label="Page navigation"><span class="platform-label">Utah Housing Data Platform</span><time id="header-export-date"></time><a class="portfolio-link" href="https://bronsonhatch.com/#selected-work">Portfolio<img src="assets/tabler/external-link.svg" alt="" width="15" height="15" /></a></nav>
+  </header>
+  <main id="main">
+    <div id="loading" class="notice" role="status">Loading the verified data snapshot…</div>
+    <section id="load-error" class="notice error-notice" role="alert" hidden><h2>The data couldn’t be loaded.</h2><p id="load-error-message">Please check your connection and try again.</p><button id="retry-load" class="button">Try again</button></section>
+    <div id="application" hidden>
+      <section class="explore-controls" id="explore" aria-label="Explore filters">
+        <div class="statewide-summary" aria-label="Statewide annual totals">
+          <h2 id="statewide-heading">Utah</h2>
+          <div><strong id="statewide-units"></strong><span>Units authorized</span></div>
+          <div><strong id="statewide-buildings"></strong><span>Buildings authorized</span></div>
         </div>
-        <aside class="intro-note">
-          <span class="note-rule" aria-hidden="true"></span>
-          <p>From public records<br />to a clearer picture.</p>
-          <span id="coverage-label">Annual county data</span
-          ><span class="snapshot-tag">Read-only data snapshot</span>
+        <div class="filters">
+          <div><label for="year-filter">Year</label><select id="year-filter"></select></div>
+          <div><label for="county-filter">County</label><select id="county-filter"><option value="all">All Utah counties</option></select></div>
+          <button id="download-data" class="download-button" type="button"><img src="assets/tabler/download.svg" alt="" width="20" height="20" />Download snapshot</button>
+          <a class="sources-link" href="#sources">Sources</a>
+        </div>
+      </section>
+      <div class="context-line"><p id="filter-context"></p><span id="filter-announcement" class="sr-only" aria-live="polite"></span><span id="coverage-label" class="sr-only">Annual county data</span><span class="snapshot-tag">Read-only data snapshot</span></div>
+      <section class="county-explorer" aria-label="County rankings, map and selected geography">
+        <article class="ranking-panel">
+          <h2 id="ranking-heading">Counties by units authorized</h2>
+          <div class="ranking-columns" aria-hidden="true"><span>#</span><span>County</span><span>Units authorized</span></div>
+          <div id="county-ranking" class="ranking-scroll" role="group" aria-label="Ranked Utah counties"></div>
+          <p class="ranking-note">29 counties · scroll to explore the full ranking</p>
+          <div id="map-legend" class="map-legend"></div>
+        </article>
+        <article class="map-card">
+          <div class="map-control"><label for="map-metric">Map measure</label><select id="map-metric"><option value="units">Units authorized</option><option value="change">Change from prior year (%)</option><option value="units_5_plus">Units in 5+ unit buildings</option></select><span id="map-year"></span></div>
+          <div class="map-layout"><div id="county-map" class="county-map" aria-label="Interactive map of Utah counties"></div></div>
+          <div id="map-insight" class="map-insight" aria-live="polite"><strong>Utah</strong><span>Hover, focus, or select a county.</span></div>
+          <p class="map-caption">Census TIGERweb boundaries · <a href="#source-geometry">Map source</a></p>
+        </article>
+        <aside class="county-inspector" aria-label="Selected annual summary">
+          <div class="inspector-heading"><p class="eyebrow">Selected geography</p><h2 id="selected-county-title">Utah</h2><button id="reset-county" class="map-reset" type="button" hidden>Show all counties</button></div>
+          <section class="metrics" aria-label="Selected geography annual metrics">
+            <article class="metric"><strong id="metric-units">—</strong><p>Units authorized</p><span id="metric-units-note">Residential units, not completed homes</span></article>
+            <article class="metric"><strong id="metric-change">—</strong><p id="metric-change-note">Compared with prior year</p></article>
+            <article class="metric"><strong id="metric-multifamily">—</strong><p>Units in 5+ unit buildings</p><span id="metric-multifamily-note">Share of authorized units</span></article>
+            <article class="metric buildings-metric"><strong id="metric-buildings">—</strong><p>Buildings authorized</p><span>One building can contain multiple units</span></article>
+          </section>
         </aside>
       </section>
-
-      <div id="loading" class="notice" role="status">
-        <span class="loading-dot" aria-hidden="true"></span> Loading the verified data snapshot…
-      </div>
-      <section id="load-error" class="notice error-notice" role="alert" hidden>
-        <h2>The data couldn’t be loaded.</h2>
-        <p id="load-error-message">Please check your connection and try again.</p>
-        <button id="retry-load" class="button">Try again</button>
-      </section>
-
-      <div id="application" hidden>
-        <section class="explore-controls" id="explore" aria-label="Explore filters">
-          <div class="section-intro">
-            <span class="section-number">01 / EXPLORE</span>
-            <h2>Start with the county.</h2>
-          </div>
-          <div class="filters">
-            <div>
-              <label for="year-filter">Reporting year</label
-              ><select id="year-filter"></select>
-            </div>
-            <div>
-              <label for="county-filter">Geography</label
-              ><select id="county-filter">
-                <option value="all">All Utah counties</option>
-              </select>
-            </div>
-            <button id="download-data" class="download-button" type="button">
-              <span aria-hidden="true">↓</span> Download snapshot
-            </button>
-          </div>
-        </section>
-
-        <div class="context-line">
-          <p id="filter-context"></p>
-          <span id="filter-announcement" class="sr-only" aria-live="polite"></span>
+      <section class="annual-strip" aria-label="Statewide annual trend"><div><h2>Annual trend — Utah</h2><p>Units authorized</p></div><div id="annual-totals" class="annual-totals"></div></section>
+      <p class="scope-note">Census BPS · <span id="scope-years">Annual county records</span> · saved snapshot · authorizations, not completed homes.</p>
+      <details class="analysis-details"><summary>Selected geography: annual trend and building mix</summary>
+        <div class="chart-stack">
+          <article class="chart-card"><div class="chart-title"><h2 id="trend-heading">Utah, over time.</h2><span class="mini-label">Units authorized</span></div><div id="trend-chart" class="trend-chart"></div><p class="chart-note">Annual records are compared with annual records. Monthly and year-to-date figures are not added together.</p></article>
+          <article class="chart-card mix-card"><div class="chart-title"><h2 id="mix-heading">What kind of housing?</h2></div><div id="mix-chart" class="mix-chart"></div><p class="chart-note">Authorized units grouped by units in each building. These are not completed homes.</p></article>
         </div>
-        <section class="metrics" aria-label="Selected annual summary">
-          <article class="metric">
-            <p>Units authorized</p>
-            <strong id="metric-units">—</strong
-            ><span id="metric-units-note">Residential units, not completed homes</span>
-          </article>
-          <article class="metric">
-            <p>Change from prior year</p>
-            <strong id="metric-change">—</strong
-            ><span id="metric-change-note">Same counties and annual basis</span>
-          </article>
-          <article class="metric">
-            <p>Buildings authorized</p>
-            <strong id="metric-buildings">—</strong
-            ><span>One building can contain multiple units</span>
-          </article>
-          <article class="metric">
-            <p>Units in 5+ unit buildings</p>
-            <strong id="metric-multifamily">—</strong
-            ><span id="metric-multifamily-note">Share of authorized units</span>
-          </article>
-        </section>
-
-        <section class="map-and-trend" aria-label="County map and annual trends">
-          <article class="map-card">
-            <div class="card-heading">
-              <div>
-                <p class="eyebrow light">THE COUNTY VIEW</p>
-                <h2>A state, many stories.</h2>
-              </div>
-              <span id="map-year" class="map-year"></span>
-            </div>
-            <div class="map-control">
-              <label for="map-metric">Map measure</label
-              ><select id="map-metric">
-                <option value="units">Units authorized</option>
-                <option value="change">Change from prior year (%)</option>
-                <option value="units_5_plus">Units in 5+ unit buildings</option>
-              </select>
-            </div>
-            <div class="map-layout">
-              <div
-                id="county-map"
-                class="county-map"
-                aria-label="Interactive map of Utah counties"
-              ></div>
-              <aside class="map-side">
-                <p class="map-prompt">Choose a county<br />to look closer.</p>
-                <div id="map-insight" class="map-insight" aria-live="polite">
-                  <strong>Utah</strong><span>Hover, focus, or select a county.</span>
-                </div>
-                <button id="reset-county" class="map-reset" type="button" hidden>
-                  Show all counties <span aria-hidden="true">↗</span>
-                </button>
-                <div id="map-legend" class="map-legend"></div>
-              </aside>
-            </div>
-            <p class="map-caption">
-              Official Census TIGERweb boundaries, generalized for display. Counts are not
-              population-adjusted.
-              <a href="#source-geometry">Map source <span aria-hidden="true">↗</span></a>
-            </p>
-          </article>
-
-          <div class="chart-stack">
-            <article class="chart-card">
-              <div class="chart-title">
-                <div>
-                  <p class="eyebrow">THE ANNUAL TREND</p>
-                  <h2 id="trend-heading">Utah, over time.</h2>
-                </div>
-                <span class="mini-label">Units authorized</span>
-              </div>
-              <div id="trend-chart" class="trend-chart"></div>
-              <p class="chart-note">
-                Annual records are compared with annual records. Monthly and year-to-date figures
-                are not added together.
-              </p>
-            </article>
-            <article class="chart-card mix-card">
-              <div class="chart-title">
-                <div>
-                  <p class="eyebrow">THE BUILDING MIX</p>
-                  <h2 id="mix-heading">What kind of housing?</h2>
-                </div>
-              </div>
-              <div id="mix-chart" class="mix-chart"></div>
-              <p class="chart-note">
-                These are authorized <strong>units</strong> grouped by the number of units in each
-                building—not a count of completed homes.
-              </p>
-            </article>
-          </div>
-        </section>
-
+      </details>
         <section class="county-section" aria-labelledby="county-table-title">
           <div class="section-header">
             <div>

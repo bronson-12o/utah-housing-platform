@@ -1,0 +1,148 @@
+{
+  "checked_at": "2026-11-24T23:01:10.689262+00:00",
+  "status": "passed",
+  "source_tree_sha256": "3f8692e003a494bfb4684d6f88e0e958156f4376ec0c8b59c467c63a95c5ebe6",
+  "source_tree_scope": "Installed package files, every web file, dependency manifests, Dockerfile, Compose and Kubernetes platform manifest; documentation and Git author/commit metadata excluded.",
+  "scope": "UI-only application update on existing local Compose and dedicated kind. No database restart, source refresh, pipeline job, schedule change or paid service.",
+  "image": {
+    "tag": "utah-housing-platform:local",
+    "docker_oci_index_id": "sha256:9a6f1e664bc1c9fffbfc8e945fb1409736bd7eeb2dd09711d741a9899262f54c",
+    "compose_services": {
+      "app": {
+        "image_id": "sha256:9a6f1e664bc1c9fffbfc8e945fb1409736bd7eeb2dd09711d741a9899262f54c",
+        "running": true
+      },
+      "dagster": {
+        "image_id": "sha256:9a6f1e664bc1c9fffbfc8e945fb1409736bd7eeb2dd09711d741a9899262f54c",
+        "running": true
+      },
+      "fixture-app": {
+        "image_id": "sha256:9a6f1e664bc1c9fffbfc8e945fb1409736bd7eeb2dd09711d741a9899262f54c",
+        "running": true
+      }
+    },
+    "kubernetes_platform_image_id": "docker.io/library/import-2026-11-24@sha256:f076cc9dfeca431d5796368181b5f7d800b6e47fb4c43d14d0f0770e4210e581",
+    "kubernetes_configuration_id": "sha256:d9a80ae224c024314a599e67546c23766ed708353ad5d3973920907fccb185c8",
+    "all_filesystem_layers_match": true
+  },
+  "checks": {
+    "compose_ready_145_real_and_2_fixture": true,
+    "all_three_compose_services_same_image_and_matching_package_web": true,
+    "dagster_available_schedule_stopped": true,
+    "kubernetes_ready_145": true,
+    "kubernetes_package_and_every_web_file_match": true,
+    "compose_and_kubernetes_annual_rows_identical": true,
+    "compose_database_never_restarted": true,
+    "kubernetes_database_pod_never_restarted": true,
+    "no_kubernetes_jobs_created": true,
+    "cronjob_unchanged_and_suspended": true,
+    "real_data_sources_and_run_history_unchanged": true
+  },
+  "readiness": {
+    "compose_real": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 145,
+      "reference_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "synthetic": false
+    },
+    "compose_fixture": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 2,
+      "reference_years": [
+        2025
+      ],
+      "synthetic": true
+    },
+    "kubernetes_real": {
+      "status": "ready",
+      "mode": "postgresql_warehouse",
+      "rows": 145,
+      "reference_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "synthetic": false
+    }
+  },
+  "database_continuity": {
+    "compose_database_started_at": "2026-11-24T21:50:52.134614792Z",
+    "kubernetes_database_pod_uid": "e2676f33-685b-4631-b6be-3fe03a2e59ac",
+    "kubernetes_database_created_at": "2026-11-24T21:51:13Z",
+    "kubernetes_database_restart_counts": [
+      0
+    ],
+    "note": "Before/after database, job, schedule, data/source and run-history assertions passed during the update; a later pod sampler was retried read-only after a terminating old dashboard pod disappeared."
+  },
+  "package_file_sha256": {
+    "warehouse.py": "7c3661453082aa6d5cb07c26d509ce3061e68131975dd8343cab00e46cd0e9fc",
+    "definitions.py": "bd59481a888cc855bf1fb9b4e9b889a4ff54dc5a7e7f93143cab2de9228f8fdd",
+    "schema.sql": "ffaaecfdb27deed8ee3fa18cb6cd1c8c9d7f1cc446aa7e18afc9be3e8eda4acd",
+    "__init__.py": "063f61c58590fbe54056af0a7e679e9a8c5b93eba611ea7109f63483e8afb58a",
+    "parser.py": "390870b737f3cd98df38011c8f18de74ac42b960d523d3fc1ab990b25c2584ef",
+    "api.py": "014da4e14b6091f3774e4be9b5d395ee949ce879b2ec3bba1a01ce6d405995d4",
+    "cli.py": "dc76719c88858a3be8b8a19a8567230c2695530bfc3d9d151361048ea0b9c793",
+    "pipeline.py": "605823bf9500cf169a7695614ef2bc519c9d1fc3d4769f623b22c5fe76440204",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "all_web_file_sha256": {
+    "index.html": "0d4a5c6cbcafe1e090b096573133322ed0f1e285f2d86aaced979bc9a0b6b5cc",
+    "styles.css": "170bb9ac5ef46840242a41dbfcc197a39b0c4876ea13248998717c9b31279e83",
+    "app.js": "fd48f6cf23df1c796f3a8f22a09cde6a4f0bd763464f7c58453b6cd9940e45e7",
+    "data/utah-counties.geojson": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc",
+    "data/housing.json": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+    "assets/tabler/LICENSE": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+    "assets/tabler/download.svg": "c13f6f9cf87deee99e331622169efd59cd764b376994540347e50d6bb5e2e0ef",
+    "assets/tabler/README.md": "2ba5c4d1fbda5408fef7db031763bcb1a86322cc20ecdb8ce33772de8aae9d47",
+    "assets/tabler/external-link.svg": "95de8d4e3e77d34b39a94e157ff26b5a860015c6ce3056794f63dd3a55805bbc",
+    "assets/tabler/building-estate.svg": "471c0fead15f2f20d9908793c0c6184958063e17933a8ecd4bc73f306f7d7103"
+  },
+  "dependency_and_deployment_file_sha256": {
+    "requirements.lock": "fb4f9d4bbad4d5703120d8dbd9ffbd3e9d7d88431e1383a901aa159c7d279abc",
+    "requirements.txt": "b21c69cad9a9eefb49d032053b87b06601573d71addab9177cef48a22ce7809c",
+    "pyproject.toml": "8d54e1721706c2295d667bd0c7b5ce6434bf3cdb257ef4907d7c4c2701831b5e",
+    "Dockerfile": "adfaf20046528c8f14de72616eafa951b1dfa0f47a3fdcf386f2f92b4b3ebf92",
+    "compose.yaml": "e86e9f2b2101080d862db920ca623f9b26c40e54e1ce0e4899665caa70f13ecf",
+    "deploy/kubernetes/platform.yaml": "d355d5c3ee1431b19ef23b7c840453436b6ec8df8655263188490020a5bfd5c4"
+  },
+  "web_file_count": 10,
+  "annual_rows_sha256": "a52bfc54e8fc513ae3d7fb4ef8e81cdc976353b51a75105b35724b3b87d08c2d",
+  "source_records_sha256": "bff7a536d5dad43b461a1d40fdb8228d2b42c91e1dba7ddf2f4f6aff22a6f3a9",
+  "commands": [
+    {
+      "name": "compose-app-only-update",
+      "exit_code": 0,
+      "seconds": 7.01
+    },
+    {
+      "name": "kind-load-corrected-image",
+      "exit_code": 0,
+      "seconds": 3.22
+    },
+    {
+      "name": "kubernetes-dashboard-only-restart",
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "name": "kubernetes-dashboard-ready",
+      "exit_code": 0,
+      "seconds": 1.33
+    }
+  ],
+  "verification_limits": [
+    "The 62-test backend suite and prior recovery drills were not repeated: backend/package/requirements/data are unchanged.",
+    "This verifies the UI update and existing readiness; it does not claim a new failure-recovery drill.",
+    "The public portfolio is a captured snapshot; the full warehouse/orchestration remains local."
+  ]
+}

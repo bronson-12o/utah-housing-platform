@@ -6,8 +6,8 @@
   const number = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
   const compact = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
   const percentage = new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 });
-  const sequential = ["#e8eee0", "#bed5ba", "#88b18b", "#4d875f", "#235a41"];
-  const divergent = ["#c38b51", "#dfc6a3", "#e8eee0", "#92b68c", "#3f7d55"];
+  const sequential = ["#073b7a", "#086cc3", "#069de0", "#26c6ec", "#80e5f4"];
+  const divergent = ["#ba3e24", "#e8957f", "#e9edf2", "#51c5ef", "#0866bb"];
   const categoryLabels = [
     ["units_1", "1-unit buildings"],
     ["units_2", "2-unit buildings"],
@@ -267,6 +267,11 @@
     const selected = rowsFor(state.year),
       units = total(selected, "units"),
       change = yearChange(state.year, state.county);
+    $("statewide-heading").textContent = `Utah ${state.year}`;
+    $("statewide-units").textContent = format(total(rowsFor(state.year, "all"), "units"));
+    $("statewide-buildings").textContent = format(total(rowsFor(state.year, "all"), "buildings"));
+    $("selected-county-title").textContent = geography();
+    $("reset-county").hidden = state.county === "all";
     $("metric-units").textContent = format(units);
     const countyCount = rowsFor(state.year, "all").length;
     $("metric-units-note").textContent =
@@ -278,16 +283,55 @@
     $("metric-change-note").textContent =
       change === null
         ? `No comparable nonzero ${state.year - 1} total`
-        : `Compared with annual ${state.year - 1}`;
+        : `vs. ${state.year - 1} · annual basis`;
     $("metric-buildings").textContent = format(total(selected, "buildings"));
     $("metric-multifamily").textContent = percent(share(selected));
     $("metric-multifamily-note").textContent =
       `${format(total(selected, "units_5_plus"))} units in 5+ unit buildings`;
+    for (const [id, unknown] of Object.entries({
+      "statewide-units": total(rowsFor(state.year, "all"), "units") === null,
+      "statewide-buildings": total(rowsFor(state.year, "all"), "buildings") === null,
+      "metric-units": units === null,
+      "metric-change": change === null,
+      "metric-multifamily": share(selected) === null,
+      "metric-buildings": total(selected, "buildings") === null,
+    })) $(id).classList.toggle("unknown-value", unknown);
     $("filter-context").textContent =
       `${geography()} · ${state.year} annual construction authorizations · ${state.county === "all" ? countyCount + " counties" : "County FIPS " + state.county}`;
     $("filter-announcement").textContent =
       `${geography()}, ${state.year}: ${format(units)} units authorized.`;
     $("map-year").textContent = String(state.year);
+  }
+  function renderRanking() {
+    const rows = rowsFor(state.year, "all").sort(
+      (a, b) => (b.units ?? -1) - (a.units ?? -1) || a.county_name.localeCompare(b.county_name),
+    );
+    $("ranking-heading").textContent = `Counties by units authorized, ${state.year}`;
+    $("county-ranking").replaceChildren(...rows.map((row, index) => {
+      const button = element("button", {
+        class: `ranking-button${state.county === row.geoid ? " selected" : ""}`,
+        type: "button", "data-geoid": row.geoid,
+        "aria-pressed": String(state.county === row.geoid),
+      });
+      button.append(element("span", { class: "ranking-number", "aria-hidden": "true" }, index + 1),
+        element("span", { class: "ranking-name" }, row.county_name),
+        element("span", { class: "ranking-units" }, format(row.units)));
+      button.onclick = (event) => {
+        selectCounty(row.geoid);
+        if (event.detail === 0) $("county-filter").focus();
+      };
+      return button;
+    }));
+    document.querySelector(".ranking-note").textContent = `${rows.length} counties · scroll to explore the full ranking`;
+  }
+  function renderAnnualTotals() {
+    $("annual-totals").replaceChildren(...years.map((year) => {
+      const button = element("button", { type: "button", class: year === state.year ? "active" : "",
+        "aria-pressed": String(year === state.year), "aria-label": `Utah ${year}: ${format(total(rowsFor(year, "all"), "units"))} units authorized. Select reporting year.` });
+      button.append(element("span", {}, year), element("strong", {}, format(total(rowsFor(year, "all"), "units"))));
+      button.onclick = () => { state.year = year; $("year-filter").value = String(year); render(); $("year-filter").focus(); };
+      return button;
+    }));
   }
   function mapScale() {
     const values = rowsFor(state.year, "all")
@@ -402,8 +446,8 @@
         patternTransform: "rotate(45)",
       });
     pattern.append(
-      svg("rect", { width: 6, height: 6, fill: "#6c806e" }),
-      svg("line", { x1: 0, y1: 0, x2: 0, y2: 6, stroke: "#99aa96", "stroke-width": 2 }),
+      svg("rect", { width: 6, height: 6, fill: "#9ca3af" }),
+      svg("line", { x1: 0, y1: 0, x2: 0, y2: 6, stroke: "#f3f4f6", "stroke-width": 2 }),
     );
     definitions.append(pattern);
     map.append(definitions);
@@ -458,13 +502,18 @@
         ? "All counties report the same value"
         : state.metric === "change"
           ? "Diverging scale · prior-year %"
-          : "Relative scale · county quintiles",
+          : `${metricLabel()} · relative county quintiles`,
     );
-    const ramp = element("div", { class: "legend-ramp", "aria-hidden": "true" });
-    scale.colors.forEach((color) => {
-      const swatch = element("span");
+    const ramp = element("div", { class: "legend-ramp" });
+    const labels = state.metric === "change"
+      ? ["Largest decrease", "Decrease", "Near zero", "Increase", "Largest increase"]
+      : ["Lowest quintile", "Second quintile", "Third quintile", "Fourth quintile", "Highest quintile"];
+    scale.colors.forEach((color, index) => {
+      const step = element("div", { class: "legend-step" });
+      const swatch = element("span", { "aria-hidden": "true" });
       swatch.style.background = color;
-      ramp.append(swatch);
+      step.append(swatch, element("b", {}, labels[index]));
+      ramp.append(step);
     });
     const limits = element("div", { class: "legend-limits" });
     limits.append(
@@ -571,8 +620,8 @@
       if (points.length > 1) {
         const area = line + ` L${points.at(-1)[0]},${y(0)} L${points[0][0]},${y(0)} Z`;
         chart.append(
-          svg("path", { d: area, fill: "#e4eddf" }),
-          svg("path", { d: line, fill: "none", stroke: "#2d6c4e", "stroke-width": 2.3 }),
+          svg("path", { d: area, fill: "#e6f4fc" }),
+          svg("path", { d: line, fill: "none", stroke: "#0866bb", "stroke-width": 2.3 }),
         );
       }
     }
@@ -605,7 +654,7 @@
         item.value === null || !unitTotal
           ? "0%"
           : Math.min(100, (item.value / unitTotal) * 100) + "%";
-      fill.style.background = ["#235e43", "#5f8964", "#9db895", "#c3a567"][index];
+      fill.style.background = ["#073b7a", "#0866bb", "#118ed4", "#24b8e8"][index];
       track.append(fill);
       row.append(
         track,
@@ -677,6 +726,9 @@
       `${rows.length} county records in ${state.year}. A dash or unavailable value is not a reported zero. County comparisons are not adjusted for population or land area.`;
   }
   function renderProvenance() {
+    $("header-export-date").textContent = date(dataset.metadata.generated_at);
+    $("header-export-date").setAttribute("datetime", dataset.metadata.generated_at || "");
+    $("scope-years").textContent = `annual ${years[0]}–${years.at(-1)}`;
     const checkLabels = {
       published_rows: "Published county/year records",
       unique_grain: "Unique county and year",
@@ -836,6 +888,8 @@
   }
   function render() {
     renderSummary();
+    renderRanking();
+    renderAnnualTotals();
     renderMap();
     renderTrend();
     renderMix();

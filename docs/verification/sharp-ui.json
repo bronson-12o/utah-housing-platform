@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at_utc": "2026-11-24T23:00:16.563565+00:00",
+  "scope": "Selected white/graphite county-explorer implementation, actual exported Census facts, real GeoJSON, browser contract and responsive UI checks. This is not an accuracy percentage or a general accessibility certification.",
+  "frozen_runtime_file_sha256": {
+    "index.html": "0d4a5c6cbcafe1e090b096573133322ed0f1e285f2d86aaced979bc9a0b6b5cc",
+    "app.js": "fd48f6cf23df1c796f3a8f22a09cde6a4f0bd763464f7c58453b6cd9940e45e7",
+    "styles.css": "170bb9ac5ef46840242a41dbfcc197a39b0c4876ea13248998717c9b31279e83"
+  },
+  "changes": [
+    "Compact header, year/county controls and independent statewide annual totals.",
+    "All 29 ranked county controls; actual geometry map; selected-county inspector retaining all four original metrics.",
+    "Five monotonic dark-blue-to-cyan quantity classes with unchanged bin assignments. Selection and focus change only the outline, never the quantity fill, opacity or filter.",
+    "Statewide annual-total strip, selected-geography trend/building mix, complete comparisons, source/quality/run receipts, freshness, exact snapshot download and original error/nullable/source-binding safeguards retained.",
+    "Bright orange controls use dark text; large orange changes and small dark accent links measured independently.",
+    "Unknown selected and statewide totals wrap without clipping or overlapping neighboring metrics.",
+    "Self-hosted original MIT Tabler icons and app-specific favicon; no font or icon CDN, new runtime dependency or paid service."
+  ],
+  "verification_rounds": [
+    {
+      "stage": "Initial sharp UI after inspector unknown-value correction",
+      "public_browser_scenarios": 89,
+      "independent_additional_scenarios": {
+        "quantitative_and_mobile_selection": 28,
+        "all_years_actual_and_unknown_mobile_layout": 40,
+        "text_and_selected_controls_contrast": 6
+      },
+      "round_scenarios_total": 163,
+      "quantity_bin_comparisons": 580,
+      "status": "passed"
+    },
+    {
+      "stage": "Bounded statewide unknown-header typography followup",
+      "public_browser_scenarios_rerun": 89,
+      "independent_header_text_scenarios": 80,
+      "header_cases": "Both engines, both phone widths, all five years; actual quantities, unknown units, unknown buildings and both unknown. Range text stays within viewport and does not overlap neighboring header text.",
+      "status": "passed",
+      "note": "The 89 baseline scenarios were rerun. The 80 header cases are an incremental verification round, not 80 unique additions to an accuracy score; they overlap earlier responsive cases."
+    }
+  ],
+  "visual_qa": {
+    "status": "passed",
+    "reference": "User-selected combined direction: compact white/graphite layout and quantitative blue/cyan map.",
+    "desktop_viewport": {
+      "width": 1487,
+      "height": 1058
+    },
+    "mobile_widths": [
+      390,
+      320
+    ],
+    "confirmed_values": {
+      "utah_2025_units": 26775,
+      "utah_2025_buildings": 17427,
+      "salt_lake_2025_units": 7179,
+      "salt_lake_2025_buildings": 2721,
+      "salt_lake_2025_prior_year_change_display": "+57.8%",
+      "salt_lake_2025_five_plus_unit_share_display": "61.8%"
+    },
+    "accepted_differences": [
+      "Official county topology and actual source-derived quantity classes take precedence over illustrative reference geography.",
+      "Four required selected-geography metrics and explicit source context remain visible.",
+      "The wordmark is real text, with licensed utility icons; no generated or handcrafted fake brand mark."
+    ],
+    "screenshots": {
+      "docs/images/county-explorer-sharp-v2.jpg": "c84a23b406bc92a2a82ab651157a13e9c1b994af6a25b27b7a1bfee09225f070",
+      "docs/images/sources-and-checks-sharp-v2.jpg": "8085a0baabc656f4548e7c9530515096c327623a2c3eca4cb59e22e4dc84c584"
+    }
+  },
+  "protected_snapshot_sha256": "dffc0f7430a61e9a0ac2b3065e97773fd3fe5ebb6e2554a3734a8cb746a8f40d",
+  "protected_geometry_sha256": "f2e3e15455169de762e06cd6afd2b83c81173faf77e815517f87fc76c924f4fc",
+  "backend_snapshot_geometry_unchanged": true,
+  "all_original_image_sha256_preserved": {
+    "docs/images/architecture.svg": "4858332603027aec62dbb792a4ac04422137c16880ee7fb80b216048e0f9b3b7",
+    "docs/images/dashboard-county-view.png": "e1955e66b4e93003540f5ed8e532bc70b9fa9ac99a643ad18ffa8b0654e696fa",
+    "docs/images/dashboard-mobile.png": "4da0cd817e3225d36bf511bae78af6507ed0e80d1f582a4e8cc91466e5ccc648",
+    "docs/images/dashboard-overview.png": "f0012705b82eee487887241047cb37d4ea5e9eff66429b668dfb8a6305435c9c",
+    "docs/images/data-model.svg": "85ee9f6c8cc4747c5106552c206c22642a026c55842b6591fb2da7a98f0b6f0a"
+  },
+  "reproduce": "Optional scripts/check_dashboard.cjs uses BASE_URL, PLAYWRIGHT_MODULE and ARTIFACT_DIR. Only CSS token/background selectors and a stronger header non-overlap assertion changed; numeric, source, nullable and error assertions were not weakened.",
+  "limits": [
+    "Source accuracy remains separately verified against original Census files. This UI review did not re-download or modify Census data.",
+    "Contrast checks cover tested text, controls and focus surfaces; they do not establish full WCAG conformance.",
+    "This receipt records local/browser QA; the coordinator verifies actual publication and deployed runtime separately."
+  ]
+}
